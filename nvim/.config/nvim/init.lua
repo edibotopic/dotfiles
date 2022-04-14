@@ -2,7 +2,7 @@ require "user.options"
 require "user.keymaps"
 require "user.plugins"
 require "user.colorscheme"
---require "user.cmp"
+require "user.cmp"
 require "user.lsp"
 require "user.telescope"
 require "user.treesitter"
@@ -23,7 +23,7 @@ require "user.autocommands"
 --extra plugins
 require "user.bookmarks"
 --set default colorscheme
-vim.cmd[[colorscheme everforest]]
+vim.cmd[[colorscheme tokyonight]]
 --read quarto markdown as regular markdown
 vim.cmd[[autocmd BufRead,BufNew,BufNewFile *.qmd setlocal ft=markdown]]
 
