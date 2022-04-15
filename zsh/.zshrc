@@ -117,6 +117,7 @@ alias radio=tera
 alias open=xdg-open
 alias mic=arecord
 alias lls=logo-ls
+alias wall="$HOME/scripts/wallpapers.sh"
 
 # Development
 alias srv="live-server" # runs npm server on index.html
@@ -164,3 +165,6 @@ function rn(){
 
 # Load custom Ranger config
 export RANGER_LOAD_DEFAULT_RC=false
+
+# Append image on opening terminal 
+colorscript -e elfman
