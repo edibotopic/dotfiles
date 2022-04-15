@@ -116,6 +116,7 @@ alias t="cd $HOME/social/twitter/edibo/ && envac && rainbowstream"
 alias radio=tera
 alias open=xdg-open
 alias mic=arecord
+alias lls=logo-ls
 
 # Development
 alias srv="live-server" # runs npm server on index.html
