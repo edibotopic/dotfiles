@@ -34,7 +34,7 @@ ethernet eth0 {
 
 battery 1 {
         format = "%status %percentage %remaining %emptytime"
-		format_down = "No battery"
+		format_down = "☻"
         status_chr = "⚡ CHR"
         status_bat = "🔋 BAT"
         status_unk = "? UNK"
@@ -52,7 +52,7 @@ run_watch VPN {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "%d-%m-%Y %H:%M:%S"
 }
 
 load {

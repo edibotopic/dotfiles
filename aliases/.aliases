@@ -1,0 +1,45 @@
+# Basics
+alias cls=clear
+alias nv="/usr/bin/nvim.appimage"
+alias td="nv $HOME/Dropbox/Notes_vault/todo.md"
+alias rng=ranger
+alias nt=xournalpp
+alias t="cd $HOME/social/twitter/edibo/ && envac && rainbowstream"
+alias radio=tera
+alias open=xdg-open
+alias mic=arecord
+alias lls=logo-ls
+alias wallg="$HOME/scripts/wallpapers.sh"
+
+# Development
+alias srv="live-server" # runs npm server on index.html
+alias bitsy="cd /home/edibotopic/Dev/bitsy-savior/ && npm start && cd ~"
+
+# Go packages
+alias slides="~/go/bin/slides"
+
+# Documents
+alias allpdf="libreoffice --headless --convert-to pdf *.docx" 
+
+# Scripts
+export PATH="$HOME/scripts/:$PATH"
+
+# Python helpers
+alias py=python3
+alias python=python3
+alias envmk="py -m venv env"
+alias envac="source ./env/bin/activate"
+alias deac=deactivate
+
+# Quarto books
+alias qp="quarto preview"
+alias qr="quarto render"
+
+# Orca env 
+alias orca="cd /home/edibotopic/Software/100rabbits/Orca/desktop/ && npm start && cd ~"
+alias orca-c="/home/edibotopic/Software/100rabbits/Orca-c/build/orca"
+alias cst="/home/edibotopic/Software/100rabbits/cassetter-0.1.1.AppImage"
+alias pilot="cd /home/edibotopic/Software/100rabbits/Pilot/desktop/ && npm start"
+
+# Games
+alias u7=exult

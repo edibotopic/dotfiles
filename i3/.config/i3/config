@@ -12,9 +12,9 @@
 set $mod Mod4
 
 # Needed for window gaps
-for_window [class="^.*"] border pixel 2
-gaps inner 5
-gaps outer 5
+for_window [class="^.*"] border pixel 4
+gaps inner 10
+gaps outer 10
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -38,8 +38,11 @@ exec --no-startup-id nm-applet
 # Dropbox
 exec --no-startup-id dropbox start
 
+# Adapt to monitors
+exec_always --no-startup-id autorandr --change
+
 # Wallpaper
-exec_always --no-startup-id feh --randomize --bg-fill /home/edibotopic/Pictures/Wallpapers/
+exec_always --no-startup-id feh --randomize --bg-fill '/home/edibotopic/Pictures/Wallpapers/'
 
 # Compositor
 exec_always --no-startup-id picom --config /home/edibotopic/.config/picom/picom.conf
