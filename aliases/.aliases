@@ -17,6 +17,7 @@ alias bitsy="cd /home/edibotopic/Dev/bitsy-savior/ && npm start && cd ~"
 
 # Go packages
 alias slides="~/go/bin/slides"
+alias glow="~/Software/glow/glow"
 
 # Documents
 alias allpdf="libreoffice --headless --convert-to pdf *.docx" 
