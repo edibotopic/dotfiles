@@ -103,6 +103,7 @@ return packer.startup(function(use)
   use "Mofiqul/dracula.nvim"
   use "NLKNguyen/papercolor-theme"
   use "folke/tokyonight.nvim"
+  use "luizribeiro/vim-cooklang"
   use {
       'glacambre/firenvim',
       run = function() vim.fn['firenvim#install'](0) end 

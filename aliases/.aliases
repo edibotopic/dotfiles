@@ -10,19 +10,21 @@ alias open=xdg-open
 alias mic=arecord
 alias lls=logo-ls
 alias wallg="$HOME/scripts/wallpapers.sh"
+alias slp="sudo pm-suspend"
 
 # Development
 alias srv="live-server" # runs npm server on index.html
 alias bitsy="cd /home/edibotopic/Dev/bitsy-savior/ && npm start && cd ~"
 
-# Go packages
+# Text rendering
 alias slides="~/go/bin/slides"
 alias glow="~/Software/glow/glow"
+alias cook="~/Software/CookCLI_0.1.4_linux_amd64/cook"
 
 # Documents
 alias allpdf="libreoffice --headless --convert-to pdf *.docx" 
 
-# Scripts
+# Scripts TODO move to .zshrc
 export PATH="$HOME/scripts/:$PATH"
 
 # Python helpers
