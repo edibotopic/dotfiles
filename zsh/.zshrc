@@ -77,6 +77,7 @@ export LANG=en_US.UTF-8
 # export ARCHFLAGS="-arch x86_64"
 
 # export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/scripts/:$PATH"
 
 # Software to path
 export PATH="$HOME/Software/pico-8:$PATH"

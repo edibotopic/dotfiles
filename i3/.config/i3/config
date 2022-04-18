@@ -196,6 +196,16 @@ bindsym $mod+r mode "resize"
 bar {
         position top
         status_command i3status
+        strip_workspace_numbers no
+        i3bar_command i3bar -t
         separator_symbol "|"
         # status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
+        colors {
+		 background #00000010
+		 statusline #ffffff
+		 separator #eff0f1
+		 focused_workspace $black #04397d #ffffff
+		 inactive_workspace $black $black $lightgray
+		 urgent_workspace $black $black $darkred
+	}
 }
