@@ -15,6 +15,7 @@ alias slp="sudo pm-suspend"
 # Development
 alias srv="live-server" # runs npm server on index.html
 alias bitsy="cd /home/edibotopic/Dev/bitsy-savior/ && npm start && cd ~"
+alias tw="$HOME/Software/tweego-2.1.1-linux-x64/tweego"
 
 # Text rendering
 alias slides="~/go/bin/slides"

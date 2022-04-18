@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Needed for window gaps
 for_window [class="^.*"] border pixel 4
-gaps inner 10
+gaps inner 20
 gaps outer 10
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -39,12 +39,12 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dropbox start
 
 # Adapt to monitors
-exec_always --no-startup-id autorandr --change
+# exec_always --no-startup-id autorandr --change TODO uncomment after setting up autorandr on laptop
 
 # Wallpaper
 exec_always --no-startup-id feh --randomize --bg-fill '/home/edibotopic/Pictures/Wallpapers/'
 
-# Compositor
+# Compositor NOTE - monitor then wall then comp works 
 exec_always --no-startup-id picom --config /home/edibotopic/.config/picom/picom.conf
 
 # Use pactl to adjust volume in PulseAudio.
