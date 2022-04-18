@@ -78,6 +78,7 @@ export LANG=en_US.UTF-8
 
 # export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/scripts/:$PATH"
+export PATH="$HOME/edibotopic/.npm-global/bin/:$PATH"
 
 # Software to path
 export PATH="$HOME/Software/pico-8:$PATH"
