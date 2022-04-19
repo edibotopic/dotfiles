@@ -47,5 +47,9 @@ alias orca-c="/home/edibotopic/Software/100rabbits/Orca-c/build/orca"
 alias cst="/home/edibotopic/Software/100rabbits/cassetter-0.1.1.AppImage"
 alias pilot="cd /home/edibotopic/Software/100rabbits/Pilot/desktop/ && npm start"
 
+# Wacom
+alias sx="source $HOME/.xinitrc" # sets buttons for Wacom pen
+alias wacompc="source $HOME/scripts/wacom-multimon.sh" # restricts to 180p screen for dual monitor setup
+
 # Games
 alias u7=exult

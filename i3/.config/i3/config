@@ -44,8 +44,11 @@ exec_always --no-startup-id autorandr --change
 # Wallpaper
 exec_always --no-startup-id feh --randomize --bg-fill '/home/edibotopic/Pictures/Wallpapers/'
 
-# Compositor NOTE - monitor then wall then comp works 
+# Compositor
 exec_always --no-startup-id picom --config /home/edibotopic/.config/picom/picom.conf
+
+# Keyboard layout
+exec "setxkbmap -layout us"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -201,7 +204,7 @@ bar {
         separator_symbol "|"
         # status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
         colors {
-		 background #00000010
+		 background #00000050
 		 statusline #ffffff
 		 separator #eff0f1
 		 focused_workspace $black #04397d #ffffff
