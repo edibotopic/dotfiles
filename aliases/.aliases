@@ -6,6 +6,7 @@ alias radio=tera
 alias open=xdg-open
 alias mic=arecord
 alias lls=logo-ls
+alias kbd="setxkbmap -layout us" # (re)set keyboard layour to us
 alias nv="/usr/bin/nvim.appimage"
 alias td="nv $HOME/Dropbox/Notes_vault/todo.md"
 alias t="cd $HOME/social/twitter/edibo/ && envac && rainbowstream"
@@ -50,6 +51,9 @@ alias pilot="cd /home/edibotopic/Software/100rabbits/Pilot/desktop/ && npm start
 # Wacom
 alias sx="source $HOME/.xinitrc" # sets buttons for Wacom pen
 alias wacompc="source $HOME/scripts/wacom-multimon.sh" # restricts to 180p screen for dual monitor setup
+
+# Video
+alias davinci="/opt/resolve/bin/resolve"
 
 # Games
 alias u7=exult

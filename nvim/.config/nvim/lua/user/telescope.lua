@@ -94,8 +94,8 @@ telescope.setup {
     -- please take a look at the readme of the extension you want to configure
     
     bookmarks = {
-     selected_browser = 'brave',
-     url_open_command = 'start \"C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe\"',
+     selected_browser = 'firefox',
+     url_open_command = 'start /usr/bin/firefox',
   }
   -- require('telescope').load_extensions('bookmarks')
   },

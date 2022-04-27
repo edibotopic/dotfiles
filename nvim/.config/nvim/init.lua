@@ -24,6 +24,6 @@ require "user.autocommands"
 require "user.bookmarks"
 
 --set default colorscheme
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme dracula]]
 --read quarto markdown as regular markdown
 vim.cmd[[autocmd BufRead,BufNew,BufNewFile *.qmd setlocal ft=markdown]]

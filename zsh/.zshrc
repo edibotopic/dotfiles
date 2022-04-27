@@ -78,7 +78,7 @@ export LANG=en_US.UTF-8
 
 # export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/scripts/:$PATH"
-export PATH="$HOME/edibotopic/.npm-global/bin/:$PATH"
+# export PATH="$HOME/edibotopic/.npm-global/bin/:$PATH"
 
 # Software to path
 export PATH="$HOME/Software/pico-8:$PATH"
@@ -91,3 +91,6 @@ export RANGER_LOAD_DEFAULT_RC=false
 
 # Append image on opening terminal 
 colorscript -e elfman
+
+# Remap CAPS just-in-case
+# /usr/bin/setxkbmap -option "caps:swapescape"
