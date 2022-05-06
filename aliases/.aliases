@@ -6,8 +6,10 @@ alias radio=tera
 alias open=xdg-open
 alias mic=arecord
 alias lls=logo-ls
+alias sc=sc-im
 alias kbd="setxkbmap -layout us" # (re)set keyboard layour to us
 alias nv="/usr/bin/nvim.appimage"
+alias nvf='nv $(fzf)'
 alias td="nv $HOME/Dropbox/Notes_vault/todo.md"
 alias t="cd $HOME/social/twitter/edibo/ && envac && rainbowstream"
 alias wallg="$HOME/scripts/wallpapers.sh" # gnome only
@@ -28,9 +30,14 @@ alias slides="~/go/bin/slides"
 alias glow="~/Software/glow/glow"
 alias cook="~/Software/CookCLI_0.1.4_linux_amd64/cook"
 
+# Social 
+
+alias tut="~/go/bin/tut"
+
 # Documents
 alias allpdf="libreoffice --headless --convert-to pdf *.docx" # convert all Word docs to pdf
 
+alias foxit="/home/edibotopic/opt/foxitsoftware/foxitreader/FoxitReader"
 # Python
 alias py=python3
 alias python=python3

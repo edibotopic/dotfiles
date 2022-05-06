@@ -21,7 +21,7 @@ require "user.whichkey"
 require "user.autocommands"
 
 --extra plugins
-require "user.bookmarks"
+--require "user.bookmarks"
 
 --set default colorscheme
 vim.cmd[[colorscheme dracula]]

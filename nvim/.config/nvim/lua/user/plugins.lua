@@ -47,7 +47,7 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
-  -- use "kyazdani42/nvim-tree.lua"
+  --use "kyazdani42/nvim-tree.lua" <== issues with plugin
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
@@ -96,7 +96,13 @@ return packer.startup(function(use)
 
   -- Shane's plugins 
   use "junegunn/goyo.vim"
-  use "dhruvmanila/telescope-bookmarks.nvim"
+ -- use {
+ --   "dhruvmanila/telescope-bookmarks.nvim",
+ --
+ --     requires = {"tami5/sqlite.lua",
+ --     }
+ -- } <== BUG: error accessing firefox database
+  use "tyru/open-browser.vim"
   use "metakirby5/codi.vim" -- NOTE: not working on Windows
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
   use "sainnhe/everforest"
@@ -108,7 +114,6 @@ return packer.startup(function(use)
       'glacambre/firenvim',
       run = function() vim.fn['firenvim#install'](0) end 
   }
-  use { "tami5/sqlite.lua" }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

@@ -4,7 +4,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export TERM=xterm-kitty
 
-ZSH_THEME="half-life"
+ZSH_THEME="headline"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -60,8 +60,8 @@ ZSH_THEME="half-life"
 plugins=(git z vi-mode)
 
 source $ZSH/oh-my-zsh.sh
-
 source $HOME/.aliases
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Manually set your language environment
 export LANG=en_US.UTF-8
@@ -93,4 +93,4 @@ export RANGER_LOAD_DEFAULT_RC=false
 colorscript -e elfman
 
 # Remap CAPS just-in-case
-# /usr/bin/setxkbmap -option "caps:swapescape"
+/usr/bin/setxkbmap -option "caps:escape"

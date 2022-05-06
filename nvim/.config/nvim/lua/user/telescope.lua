@@ -86,17 +86,17 @@ telescope.setup {
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
   },
-  extensions = {
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
-    
-    bookmarks = {
-     selected_browser = 'firefox',
-     url_open_command = 'start /usr/bin/firefox',
-  }
+  -- extensions = {
+  --   -- Your extension configuration goes here:
+  --   -- extension_name = {
+  --   --   extension_config_key = value,
+  --   -- }
+  --   -- please take a look at the readme of the extension you want to configure
+  --   
+  --   bookmarks = {
+  --    selected_browser = 'firefox',
+  --    url_open_command = 'open_browser /usr/bin/firefox',
+  -- }
   -- require('telescope').load_extensions('bookmarks')
-  },
+  -- },
 }

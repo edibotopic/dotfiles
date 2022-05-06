@@ -214,11 +214,6 @@ _G.packer_plugins = {
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-    url = "https://github.com/kyazdani42/nvim-tree.lua"
-  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -233,6 +228,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["open-browser.vim"] = {
+    loaded = true,
+    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/open-browser.vim",
+    url = "https://github.com/tyru/open-browser.vim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -258,16 +258,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
-  },
-  ["sqlite.lua"] = {
-    loaded = true,
-    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/sqlite.lua",
-    url = "https://github.com/tami5/sqlite.lua"
-  },
-  ["telescope-bookmarks.nvim"] = {
-    loaded = true,
-    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/telescope-bookmarks.nvim",
-    url = "https://github.com/dhruvmanila/telescope-bookmarks.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
