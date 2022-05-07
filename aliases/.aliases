@@ -64,3 +64,6 @@ alias davinci="/opt/resolve/bin/resolve"
 
 # Games
 alias u7=exult
+
+# Data
+alias weather="curl wttr.in/Cork"
