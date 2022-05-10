@@ -90,7 +90,7 @@ export PATH="$HOME/.local/kitty.app/bin/:$PATH"
 export RANGER_LOAD_DEFAULT_RC=false
 
 # Append image on opening terminal 
-colorscript -e elfman
+# colorscript -e elfman
 
 # Remap CAPS just-in-case
 /usr/bin/setxkbmap -option "caps:escape"
