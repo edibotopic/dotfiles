@@ -22,5 +22,6 @@ require "user.autocommands"
 
 --extra plugins
 --require "user.bookmarks"
---read quarto markdown as regular markdown
+
+--read quarto markdown as regular markdown TODO: move this out of here
 vim.cmd[[autocmd BufRead,BufNew,BufNewFile *.qmd setlocal ft=markdown]]
