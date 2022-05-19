@@ -84,6 +84,7 @@ export PATH="$HOME/scripts/:$PATH"
 export PATH="$HOME/Software/pico-8:$PATH"
 export PATH="$HOME/Software/reaper/REAPER:$PATH"
 export PATH="$HOME/Software/blender/:$PATH"
+export PATH="$HOME/Software/Graph-Easy-0.76/bin/:$PATH"
 export PATH="$HOME/.local/kitty.app/bin/:$PATH"
 
 # Load custom Ranger config
