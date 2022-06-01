@@ -62,7 +62,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Toggle Transparency --
 -- ON --
-keymap("n", "t", ":hi normal guibg=NONE <bar> : hi SignColumn guibg=NONE <CR>", opts)
+keymap("n", "t", ":hi normal guibg=NONE <bar> : hi SignColumn guibg=NONE <CR> : hi LineNr guibg=NONE <CR>", opts)
 -- OFF --
 keymap("n", "T", ":set background=dark<CR>", opts)
 
