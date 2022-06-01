@@ -104,20 +104,23 @@ return packer.startup(function(use)
  --     }
  -- } <== BUG: error accessing firefox database
   use "tyru/open-browser.vim"
-  use "metakirby5/codi.vim" -- NOTE: not working on Windows
+  use "metakirby5/codi.vim"
   use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
-  use "sainnhe/everforest"
   use "Mofiqul/dracula.nvim"
   use "NLKNguyen/papercolor-theme"
   use "mcchrish/zenbones.nvim"
   use "folke/tokyonight.nvim"
   use "luizribeiro/vim-cooklang"
-  use {
-      'glacambre/firenvim',
-      run = function() vim.fn['firenvim#install'](0) end 
-  }
+  use 'ggandor/lightspeed.nvim'
+  use 'davidgranstrom/nvim-markdown-preview'
+
+  -- use {
+  --     'glacambre/firenvim',
+  --     run = function() vim.fn['firenvim#install'](0) end 
+  -- }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
