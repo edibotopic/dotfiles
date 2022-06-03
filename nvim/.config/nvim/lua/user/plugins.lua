@@ -113,7 +113,8 @@ return packer.startup(function(use)
   use "luizribeiro/vim-cooklang"
   use 'ggandor/lightspeed.nvim'
   use 'davidgranstrom/nvim-markdown-preview'
-
+  use {'rrethy/vim-hexokinase', run = 'make hexokinase'}
+    
   -- use {
   --     'glacambre/firenvim',
   --     run = function() vim.fn['firenvim#install'](0) end 
