@@ -299,6 +299,11 @@ _G.packer_plugins = {
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-hexokinase",
     url = "https://github.com/rrethy/vim-hexokinase"
   },
+  ["vim-jinja"] = {
+    loaded = true,
+    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-jinja",
+    url = "https://github.com/lepture/vim-jinja"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/which-key.nvim",
