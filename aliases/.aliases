@@ -16,6 +16,7 @@ alias wallg="$HOME/scripts/wallpapers.sh" # gnome only
 alias slp="sudo pm-suspend"
 
 # Development
+alias blg="cd $HOME/Dev/edibotopic-website/src/posts/" # opens blog dir
 alias srv="live-server"
 alias bitsy="$HOME/Software/bitsy-savior-linux-64/bitsy-savior"
 alias bitsyn="cd /home/edibotopic/Dev/bitsy-savior/ && npm start && cd ~"
@@ -31,14 +32,13 @@ alias glow="~/Software/glow/glow"
 alias cook="~/Software/CookCLI_0.1.4_linux_amd64/cook"
 
 # Social 
-
 alias tut="~/go/bin/tut"
 
 # Documents
 alias docx2pdf="libreoffice --headless --convert-to pdf *.docx" # convert all Word docs to pdf
 alias odt2pdf="libreoffice --headless --convert-to pdf *.odt" # convert all .odt docs to pdf
-
 alias foxit="/home/edibotopic/opt/foxitsoftware/foxitreader/FoxitReader"
+
 # Python
 alias py=python3
 alias python=python3
