@@ -116,6 +116,7 @@ return packer.startup(function(use)
   use {'rrethy/vim-hexokinase', run = 'make hexokinase'}
   use 'lepture/vim-jinja'
   use 'https://github.com/PolyCement/vim-tweego'
+  use 'jbyuki/venn.nvim'
   -- use {
   --     'glacambre/firenvim',
   --     run = function() vim.fn['firenvim#install'](0) end 
