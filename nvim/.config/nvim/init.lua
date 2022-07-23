@@ -19,9 +19,10 @@ require "user.indentline"
 require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
-
 --extra plugins
 --require "user.bookmarks"
 
 --read quarto markdown as regular markdown TODO: move this out of here
 vim.cmd[[autocmd BufRead,BufNew,BufNewFile *.qmd setlocal ft=markdown]]
+--detect tweego filetype
+vim.cmd[[autocmd BufRead,BufNew,BufNewFile *.tw, *twee setlocal ft=tweego]]
