@@ -11,6 +11,7 @@ alias kbd="setxkbmap -layout us" # (re)set keyboard layour to us
 alias nv="/usr/bin/nvim.appimage"
 alias nvf='nv $(fzf)'
 alias td="nv $HOME/Dropbox/Notes_vault/todo.md"
+alias articles="cd $HOME/Dropbox/Notes_vault/001\ projects/Articles/Research/ && lls"
 alias t="cd $HOME/social/twitter/edibo/ && envac && rainbowstream"
 alias wallg="$HOME/scripts/wallpapers.sh" # gnome only
 alias slp="sudo pm-suspend"
