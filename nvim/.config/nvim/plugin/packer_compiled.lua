@@ -279,11 +279,6 @@ _G.packer_plugins = {
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
-  },
   ["vim-bbye"] = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-bbye",
@@ -303,6 +298,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-jinja",
     url = "https://github.com/lepture/vim-jinja"
+  },
+  ["vim-tweego"] = {
+    loaded = true,
+    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-tweego",
+    url = "https://github.com/PolyCement/vim-tweego"
   },
   ["which-key.nvim"] = {
     loaded = true,
