@@ -109,17 +109,17 @@ return packer.startup(function(use)
   use "Mofiqul/dracula.nvim"
   use "NLKNguyen/papercolor-theme"
   use "mcchrish/zenbones.nvim"
-  use "folke/tokyonight.nvim"
   use "luizribeiro/vim-cooklang"
   use 'ggandor/lightspeed.nvim'
   use 'davidgranstrom/nvim-markdown-preview'
+  -- use 'iamcco/markdown-preview.nvim'
   use {'rrethy/vim-hexokinase', run = 'make hexokinase'}
   use 'lepture/vim-jinja'
-
+  use 'https://github.com/PolyCement/vim-tweego'
   -- use {
   --     'glacambre/firenvim',
   --     run = function() vim.fn['firenvim#install'](0) end 
-  -- }
+  -- }pl
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
 
