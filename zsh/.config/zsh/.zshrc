@@ -46,3 +46,6 @@ export RANGER_LOAD_DEFAULT_RC=false
 
 # Remap CAPS just-in-case
 /usr/bin/setxkbmap -option "caps:escape"
+
+# Print a trippy looping gif
+kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/double150.gif
