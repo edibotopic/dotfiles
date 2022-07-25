@@ -15,6 +15,7 @@ alias articles="cd $HOME/Dropbox/Notes_vault/001\ projects/Articles/Research/ &&
 alias t="cd $HOME/social/twitter/edibo/ && envac && rainbowstream"
 alias wallg="$HOME/scripts/wallpapers.sh" # gnome only
 alias slp="sudo pm-suspend"
+alias pk="pkill picom || picom -b --experimental-backends &"
 
 # Development
 alias blg="cd $HOME/Dev/edibotopic-website/src/posts/" # opens blog dir
@@ -69,3 +70,8 @@ alias u7=exult
 
 # Data
 alias weather="curl wttr.in/Cork"
+
+# Fun
+alias trippy="kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/double150.gif"
+alias trippies="kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/ | sort -R | head -1"
+# alias trippy="kitty +kitten icat --align left ls ~/Dropbox/Notes_vault/Loops/ | shuf -n1"
