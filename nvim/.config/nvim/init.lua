@@ -20,6 +20,7 @@ require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
 require "user.venn"
+require "user.zenmode"
 --extra plugins
 --require "user.bookmarks"
 
