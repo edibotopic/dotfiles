@@ -71,6 +71,9 @@ alias u7=exult
 # Data
 alias weather="curl wttr.in/Cork"
 
+# Reading
+alias rss="newsboat"
+
 # Fun
 alias trippy="kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/double150.gif"
 alias trippies="kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/ | sort -R | head -1"
