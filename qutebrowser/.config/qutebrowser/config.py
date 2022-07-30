@@ -191,8 +191,8 @@ c.tabs.show = 'never'
 
 # Setting default page for when opening new tabs or new windows with
 # commands like :open -t and :open -w .
-c.url.default_page = 'https://duckduckgo.com/'
-c.url.start_pages = 'https://duckduckgo.com/'
+c.url.default_page = 'file:///home/edibotopic/Dev/simpleStartPage/index.html'
+c.url.start_pages = 'file:///home/edibotopic/Dev/simpleStartPage/index.html'
 
 # Search engines which can be used via the address bar.  Maps a search
 # engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`
@@ -382,9 +382,9 @@ c.fonts.statusbar = '11pt "Source Code Pro"'
 config.bind('M', 'hint links spawn mpv {hint-url}')
 config.bind('Z', 'hint links spawn st -e youtube-dl {hint-url}')
 config.bind('t', 'set-cmd-text -s :open -t')
-config.bind('xb', 'config-cycle statusbar.hide false true')
+config.bind('xb', 'config-cycle statusbar.show always never')
 config.bind('xt', 'config-cycle tabs.show always never')
-config.bind('xx', 'config-cycle statusbar.hide false true;; config-cycle tabs.show always never')
+config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
 
 # Bindings for cycling through CSS stylesheets from Solarized Everything CSS:
 # https://github.com/alphapapa/solarized-everything-css
