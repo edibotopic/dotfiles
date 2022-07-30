@@ -11,7 +11,7 @@
 
 set $mod Mod4
 
-# Needed for window gaps
+# Needed for window gaps (no border width set)
 for_window [class="^.*"] border pixel 4
 gaps inner 20
 gaps outer 10
@@ -108,7 +108,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -123,6 +123,9 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+# Open Qutebrowser
+bindsym $mod+q exec --no-startup-id "~/scripts/qutebrowser.sh"
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -224,3 +227,14 @@ bar {
 		 urgent_workspace $black $black $darkred
 	}
 }
+
+# Colors
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #ff69b4   #ff69b4
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
