@@ -111,6 +111,7 @@ return packer.startup(function(use)
     use "Mofiqul/dracula.nvim"
     use "NLKNguyen/papercolor-theme"
     use "mcchrish/zenbones.nvim"
+    use "lunarvim/synthwave84.nvim" -- BUG: errors?
     use "luizribeiro/vim-cooklang"
     use 'ggandor/lightspeed.nvim'
     use 'davidgranstrom/nvim-markdown-preview'
