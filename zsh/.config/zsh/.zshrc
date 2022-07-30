@@ -2,6 +2,7 @@ export PATH=$HOME/edibotopic/.local/bin/:$PATH
 export ZDOTDIR=$HOME/.config/zsh
 export ZSH=$HOME/.oh-my-zsh
 export TERM=xterm-kitty
+export EDITOR=$HOME/edibotopic/.local/kitty.app/bin
 
 source "$ZDOTDIR/zsh-functions"
 
@@ -22,7 +23,7 @@ export LANG=en_US.UTF-8
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
