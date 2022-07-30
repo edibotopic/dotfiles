@@ -7,6 +7,7 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
+        markup = "pango"
         colors = true
         interval = 5
 }
@@ -18,6 +19,7 @@ general {
 # order += "wireless wlan0"
 # order += "ethernet eth0"
 order += "battery 1"
+order += "volume master"
 # order += "load"
 order += "tztime local"
 
@@ -61,4 +63,12 @@ load {
 
 disk "/" {
         format = "%free"
+}
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
 }
