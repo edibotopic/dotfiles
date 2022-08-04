@@ -32,7 +32,7 @@ zenmode.setup {
             ruler = true, -- disables the ruler text in the cmd line area
             showcmd = true, -- disables the command in the last line of the screen
         },
-        twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
+        twilight = { enabled = false }, -- enable to start Twilight when zen mode opens
         gitsigns = { enabled = false }, -- disables git signs
         tmux = { enabled = false }, -- disables the tmux statusline
         -- this will change the font size on kitty when in zen mode
