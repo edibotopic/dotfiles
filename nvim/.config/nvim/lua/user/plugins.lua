@@ -48,7 +48,11 @@ return packer.startup(function(use)
     use "numToStr/Comment.nvim" -- Easily comment stuff
     use "kyazdani42/nvim-web-devicons"
     use "kyazdani42/nvim-tree.lua"
-    use "akinsho/bufferline.nvim"
+    --[[ use {"akinsho/bufferline.nvim", tag = 'v1.*'} ]]
+    use {
+        'romgrk/barbar.nvim',
+        requires = {'kyazdani42/nvim-web-devicons'}
+        }
     use "moll/vim-bbye"
     use "nvim-lualine/lualine.nvim"
     use "akinsho/toggleterm.nvim"
@@ -116,6 +120,13 @@ return packer.startup(function(use)
     use 'ggandor/lightspeed.nvim'
     use 'davidgranstrom/nvim-markdown-preview'
     -- use 'iamcco/markdown-preview.nvim'
+    use({
+       "quarto-dev/quarto-vim",
+       requires = {
+          {"vim-pandoc/vim-pandoc-syntax"},
+       },
+       ft = {"quarto"},
+    })
     use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
     use 'lepture/vim-jinja'
     use 'https://github.com/PolyCement/vim-tweego'
