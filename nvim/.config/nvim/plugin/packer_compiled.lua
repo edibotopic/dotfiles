@@ -89,10 +89,10 @@ _G.packer_plugins = {
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
-  ["bufferline.nvim"] = {
+  ["barbar.nvim"] = {
     loaded = true,
-    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
-    url = "https://github.com/akinsho/bufferline.nvim"
+    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -264,6 +264,13 @@ _G.packer_plugins = {
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
+  ["quarto-vim"] = {
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim",
+    url = "https://github.com/quarto-dev/quarto-vim"
+  },
   ["synthwave84.nvim"] = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/synthwave84.nvim",
@@ -309,6 +316,11 @@ _G.packer_plugins = {
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-jinja",
     url = "https://github.com/lepture/vim-jinja"
   },
+  ["vim-pandoc-syntax"] = {
+    loaded = true,
+    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-pandoc-syntax",
+    url = "https://github.com/vim-pandoc/vim-pandoc-syntax"
+  },
   ["vim-tweego"] = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-tweego",
@@ -332,6 +344,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType quarto ++once lua require("packer.load")({'quarto-vim'}, { ft = "quarto" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
+vim.cmd [[augroup filetypedetect]]
+time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]], true)
+vim.cmd [[source /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]]
+time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)
