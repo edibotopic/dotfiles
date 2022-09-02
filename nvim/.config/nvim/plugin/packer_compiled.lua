@@ -332,6 +332,11 @@ _G.packer_plugins = {
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-tweego",
     url = "https://github.com/PolyCement/vim-tweego"
   },
+  vimwiki = {
+    loaded = true,
+    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vimwiki",
+    url = "https://github.com/vimwiki/vimwiki"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/which-key.nvim",

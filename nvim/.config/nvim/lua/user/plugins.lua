@@ -120,6 +120,7 @@ return packer.startup(function(use)
     use 'ggandor/lightspeed.nvim'
     use 'davidgranstrom/nvim-markdown-preview'
     -- use 'iamcco/markdown-preview.nvim'
+    use 'vimwiki/vimwiki'
     use({
         "quarto-dev/quarto-vim",
         requires = {
