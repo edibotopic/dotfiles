@@ -7,11 +7,14 @@ alias open=xdg-open
 alias mic=arecord
 alias lls=logo-ls
 alias sc=sc-im
-alias kbd="setxkbmap -layout us" # (re)set keyboard layour to us
+alias kbd="setxkbmap -layout us" # (re)set keyboard layout to us
 alias nv="/usr/bin/nvim.appimage"
+alias em="emacs -nw" # terminal emacs
 alias nvf='nv $(fzf)'
-alias td="nv $HOME/Dropbox/Notes_vault/todo.md"
+alias td="em $HOME/Dropbox/Notes_vault/org/todo.org" # issue with org giles in nvim
+alias org="em $HOME/Dropbox/Notes_vault/org/notes.org" # issue with org files in nvim
 alias articles="cd $HOME/Dropbox/Notes_vault/001\ projects/Articles/Research/ && lls"
+alias blogs="cd $HOME/Dropbox/Notes_vault/001\ projects/Articles/Blogs/ && lls"
 alias t="cd $HOME/social/twitter/edibo/ && envac && rainbowstream"
 alias wallg="$HOME/scripts/wallpapers.sh" # gnome only
 alias slp="sudo pm-suspend"
@@ -79,3 +82,6 @@ alias rss="newsboat"
 alias trippy="kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/double150.gif"
 alias trippies="kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/ | sort -R | head -1"
 # alias trippy="kitty +kitten icat --align left ls ~/Dropbox/Notes_vault/Loops/ | shuf -n1"
+
+# Crypto
+alias coin="~/go/bin/cointop"
