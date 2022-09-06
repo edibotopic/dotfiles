@@ -22,6 +22,7 @@ require "user.autocommands"
 require "user.venn"
 require "user.zenmode"
 require "user.vimwiki"
+require "user.orgmode"
 --extra plugins
 --require "user.bookmarks"
 

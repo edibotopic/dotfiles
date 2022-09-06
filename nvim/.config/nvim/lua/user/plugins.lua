@@ -115,12 +115,19 @@ return packer.startup(function(use)
     use "Mofiqul/dracula.nvim"
     use "NLKNguyen/papercolor-theme"
     use "mcchrish/zenbones.nvim"
-    use "lunarvim/synthwave84.nvim" -- BUG: errors?
+    use "lunarvim/synthwave84.nvim"
     use "luizribeiro/vim-cooklang"
     use 'ggandor/lightspeed.nvim'
     use 'davidgranstrom/nvim-markdown-preview'
     -- use 'iamcco/markdown-preview.nvim'
     use 'vimwiki/vimwiki'
+    --[[ use 'jceb/vim-orgmode' ]]
+    use { 'nvim-orgmode/orgmode',
+        ft = { 'org' },
+        config = function()
+            require('orgmode').setup {}
+        end
+    }
     use({
         "quarto-dev/quarto-vim",
         requires = {
