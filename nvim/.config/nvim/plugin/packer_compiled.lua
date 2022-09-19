@@ -169,11 +169,6 @@ _G.packer_plugins = {
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["laserwave.vim"] = {
-    loaded = true,
-    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/laserwave.vim",
-    url = "https://github.com/averak/laserwave.vim"
-  },
   ["lightspeed.nvim"] = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/lightspeed.nvim",
@@ -250,11 +245,8 @@ _G.packer_plugins = {
     url = "https://github.com/tyru/open-browser.vim"
   },
   orgmode = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\forgmode\frequire\0" },
-    loaded = false,
-    needs_bufread = true,
-    only_cond = false,
-    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/opt/orgmode",
+    loaded = true,
+    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/orgmode",
     url = "https://github.com/nvim-orgmode/orgmode"
   },
   ["packer.nvim"] = {
@@ -382,7 +374,6 @@ vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
 vim.cmd [[au FileType quarto ++once lua require("packer.load")({'quarto-vim'}, { ft = "quarto" }, _G.packer_plugins)]]
-vim.cmd [[au FileType org ++once lua require("packer.load")({'orgmode'}, { ft = "org" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
