@@ -15,13 +15,13 @@ alias td="em $HOME/Dropbox/Notes_vault/org/todo.org" # issue with org giles in n
 alias org="em $HOME/Dropbox/Notes_vault/org/notes.org" # issue with org files in nvim
 alias articles="cd $HOME/Dropbox/Notes_vault/001\ projects/Articles/Research/ && lls"
 alias blogs="cd $HOME/Dropbox/Notes_vault/001\ projects/Articles/Blogs/ && lls"
+alias org="cd $HOME/Dropbox/Notes_vault/org && lls"
 alias t="cd $HOME/social/twitter/edibo/ && envac && rainbowstream"
 alias wallg="$HOME/scripts/wallpapers.sh" # gnome only
 alias slp="sudo pm-suspend"
 alias pk="pkill picom || picom -b --experimental-backends &"
 
 # Development
-alias blg="cd $HOME/Dev/edibotopic-website/src/posts/" # opens blog dir
 alias srv="live-server"
 alias bitsy="$HOME/Software/bitsy-savior-linux-64/bitsy-savior"
 alias bitsyn="cd /home/edibotopic/Dev/bitsy-savior/ && npm start && cd ~"
