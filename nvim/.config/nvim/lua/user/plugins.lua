@@ -122,12 +122,7 @@ return packer.startup(function(use)
     -- use 'iamcco/markdown-preview.nvim'
     use 'vimwiki/vimwiki'
     --[[ use 'jceb/vim-orgmode' ]]
-    use { 'nvim-orgmode/orgmode',
-        ft = { 'org' },
-        config = function()
-            require('orgmode').setup {}
-        end
-    }
+    use { 'nvim-orgmode/orgmode'}
     use({
         "quarto-dev/quarto-vim",
         requires = {
