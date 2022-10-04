@@ -48,7 +48,7 @@ exec_always --no-startup-id autorandr --change
 exec_always --no-startup-id feh --randomize --bg-fill '/home/edibotopic/Pictures/Wallpapers/'
 
 # Compositor
-exec_always --no-startup-id picom --config /home/edibotopic/.config/picom/picom.conf --experimental-backends
+exec_always --no-startup-id picom --config /home/edibotopic/.config/picom/picom.conf
 
 # Keyboard layout
 exec "setxkbmap -layout us"
