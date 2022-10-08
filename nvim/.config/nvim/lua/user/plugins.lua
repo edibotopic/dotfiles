@@ -117,7 +117,12 @@ return packer.startup(function(use)
     use "mcchrish/zenbones.nvim"
     use "lunarvim/synthwave84.nvim"
     use "luizribeiro/vim-cooklang"
-    use 'ggandor/lightspeed.nvim'
+    -- use 'ggandor/lightspeed.nvim'
+    use {'ggandor/leap.nvim',
+        config = function()
+            require("leap").set_default_keymaps()
+        end
+    }
     use 'davidgranstrom/nvim-markdown-preview'
     -- use 'iamcco/markdown-preview.nvim'
     use 'vimwiki/vimwiki'
