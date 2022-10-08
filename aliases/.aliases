@@ -40,6 +40,7 @@ alias cook="~/Software/CookCLI_0.1.4_linux_amd64/cook"
 alias tut="~/go/bin/tut"
 
 # Documents
+alias doc2pdf="libreoffice --headless --convert-to pdf *.doc" # convert all Word doc files to pdf
 alias docx2pdf="libreoffice --headless --convert-to pdf *.docx" # convert all Word docs to pdf
 alias odt2pdf="libreoffice --headless --convert-to pdf *.odt" # convert all .odt docs to pdf
 alias ppt2pdf="libreoffice --headless --convert-to pdf *.pptx" # convert all .odt docs to pdf
