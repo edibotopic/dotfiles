@@ -125,6 +125,7 @@ return packer.startup(function(use)
     }
     use 'davidgranstrom/nvim-markdown-preview'
     -- use 'iamcco/markdown-preview.nvim'
+    use 'ellisonleao/glow.nvim'
     use 'vimwiki/vimwiki'
     --[[ use 'jceb/vim-orgmode' ]]
     use { 'nvim-orgmode/orgmode'}
