@@ -117,17 +117,12 @@ return packer.startup(function(use)
     use "mcchrish/zenbones.nvim"
     use "lunarvim/synthwave84.nvim"
     use "luizribeiro/vim-cooklang"
-    -- use 'ggandor/lightspeed.nvim'
     use {'ggandor/leap.nvim',
         config = function()
             require("leap").set_default_keymaps()
         end
     }
     use 'davidgranstrom/nvim-markdown-preview'
-    -- use 'iamcco/markdown-preview.nvim'
-    use 'ellisonleao/glow.nvim'
-    use 'vimwiki/vimwiki'
-    --[[ use 'jceb/vim-orgmode' ]]
     use { 'nvim-orgmode/orgmode'}
     use({
         "quarto-dev/quarto-vim",
