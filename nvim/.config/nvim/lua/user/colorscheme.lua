@@ -1,6 +1,6 @@
 vim.cmd [[
 try
-  colorscheme synthwave84 
+  colorscheme dracula 
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
