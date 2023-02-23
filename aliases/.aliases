@@ -33,6 +33,7 @@ alias gd4="$HOME/Software/Godot/Godot_v4.0-alpha6_linux.64"
 
 # Text rendering
 alias slides="~/go/bin/slides"
+alias vhs="~/go/bin/vhs"
 alias glow="~/Software/glow/glow"
 alias cook="~/Software/CookCLI_0.1.4_linux_amd64/cook"
 
