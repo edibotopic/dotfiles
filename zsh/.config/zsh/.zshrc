@@ -3,7 +3,6 @@ export ZDOTDIR=$HOME/.config/zsh
 export ZSH=$HOME/.oh-my-zsh
 export TERM=xterm-kitty
 export EDITOR=$HOME/edibotopic/.local/kitty.app/bin
-
 source "$ZDOTDIR/zsh-functions"
 
 zsh_add_file "zsh-prompt"
@@ -39,6 +38,7 @@ export PATH="$HOME/Software/Graph-Easy-0.76/bin/:$PATH"
 export PATH="$HOME/Software/tweego-2.1.1-linux-x64/:$PATH"
 export PATH="$HOME/.local/kitty.app/bin/:$PATH"
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+export PATH="/usr/local/texlive/2022/bin/x86_64-linux":$PATH
 
 # Load custom Ranger config
 export RANGER_LOAD_DEFAULT_RC=false
