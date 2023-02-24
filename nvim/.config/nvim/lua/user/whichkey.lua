@@ -181,11 +181,6 @@ local mappings = {
         v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
     },
 
-    w = {
-        name = "Vim Wiki",
-        w = { "<cmd>VimwikiIndex<CR>", "vimwiki" }
-
-    }
 }
 
 which_key.setup(setup)
