@@ -115,6 +115,7 @@ cmp.setup {
     { name = "buffer" },
     { name = "path" },
     { name = "latex_symbols" },
+    { name = "neorg" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
