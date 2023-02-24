@@ -117,13 +117,12 @@ return packer.startup(function(use)
     use "mcchrish/zenbones.nvim"
     use "lunarvim/synthwave84.nvim"
     use "luizribeiro/vim-cooklang"
-    use {'ggandor/leap.nvim',
+    use { 'ggandor/leap.nvim',
         config = function()
             require("leap").set_default_keymaps()
         end
     }
     use 'davidgranstrom/nvim-markdown-preview'
-    use { 'nvim-orgmode/orgmode'}
     use({
         "quarto-dev/quarto-vim",
         requires = {
@@ -135,6 +134,41 @@ return packer.startup(function(use)
     use 'lepture/vim-jinja'
     use 'https://github.com/PolyCement/vim-tweego'
     use 'jbyuki/venn.nvim'
+    use {
+        "nvim-neorg/neorg",
+        config = function()
+            require('neorg').setup {
+                load = {
+                    ["core.defaults"] = {}, -- Loads default behaviour
+                    ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+                    ["core.norg.completion"] = {
+                        config = {
+                            engine = "nvim-cmp"
+                        },
+                    },
+                    --[[ ["core.norg.manoeuvre"] = {}, ]]
+                    --[[ ["core.integration.telescope"] = {}, ]]
+                    --[[ ["core.norg.looking-glass"] = {}, ]]
+                    ["core.presenter"] = {
+                        config = {
+                            zen_mode = "zen-mode",
+                        },
+                    },
+                    ["core.norg.dirman"] = { -- Manages Neorg workspaces
+                        config = {
+                            workspaces = {
+                                test = "~/notes/test",
+                                notes = "~/home/edibotopic/Dropbox/Notes_vault/organise/notes",
+                                todo = "~/home/edibotopic/Dropbox/Notes_vault/organise/todo",
+                            },
+                        },
+                    },
+                },
+            }
+        end,
+        run = ":Neorg sync-parsers",
+        requires = "nvim-lua/plenary.nvim",
+    }
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
