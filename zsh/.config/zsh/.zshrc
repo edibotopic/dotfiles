@@ -51,3 +51,6 @@ export RANGER_LOAD_DEFAULT_RC=false
 
 # Print a trippy looping gif
 # kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/double150.gif
+ 
+alias luamake=/home/edibotopic/.config/lsp/lua-language-server/3rd/luamake/luamake
+export PATH="$HOME/.config/lsp/lua-language-server/bin/:$PATH"
