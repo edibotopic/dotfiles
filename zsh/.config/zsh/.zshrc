@@ -25,6 +25,9 @@ export LANG=en_US.UTF-8
 #   export EDITOR='nvim'
 # fi
 
+# Graphical neovim
+alias nvde="neovide --neovim-bin /usr/bin/nvim.appimage"
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
