@@ -14,6 +14,7 @@ plugins=(git z vi-mode)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 # Manually set language environment
 export LANG=en_US.UTF-8
