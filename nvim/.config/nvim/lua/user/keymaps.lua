@@ -60,11 +60,14 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Toggle Transparency --
+-- Toggle (More) Transparency --
 -- ON --
 keymap("n", "t", ":hi normal guibg=NONE <bar> : hi SignColumn guibg=NONE <CR> : hi LineNr guibg=NONE <CR>", opts)
--- OFF --
+-- OFF (default) --
 keymap("n", "T", ":set background=dark<CR>", opts)
+
+-- Toggle Light --
+keymap("n", "L", ":set bg=light<CR>", opts)
 
 -- Terminal --
 -- Better terminal navigation
