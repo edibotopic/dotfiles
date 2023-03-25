@@ -42,10 +42,10 @@ packer.init {
 return packer.startup(function(use)
     -- My plugins here
     use "wbthomason/packer.nvim" -- Have packer manage itself
-    use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-    use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-    use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-    use "numToStr/Comment.nvim" -- Easily comment stuff
+    use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
+    use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
+    use "windwp/nvim-autopairs"  -- Autopairs, integrates with both cmp and treesitter
+    use "numToStr/Comment.nvim"  -- Easily comment stuff
     use "kyazdani42/nvim-web-devicons"
     use "kyazdani42/nvim-tree.lua"
     --[[ use {"akinsho/bufferline.nvim", tag = 'v1.*'} ]]
@@ -64,26 +64,83 @@ return packer.startup(function(use)
     use "folke/which-key.nvim"
 
     -- Colorschemes
-    -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-    use "lunarvim/darkplus.nvim"
+    --[[ use "lunarvim/darkplus.nvim" ]]
+    --[[ use { "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } } ]]
+    --[[ use "mcchrish/zenbones.nvim" ]]
+    --[[ use "lunarvim/synthwave84.nvim" ]]
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+        config = function()
+            require("rose-pine").setup({
+                --- @usage 'auto'|'main'|'moon'|'dawn'
+                variant = 'auto',
+                --- @usage 'main'|'moon'|'dawn'
+                dark_variant = 'main',
+                bold_vert_split = false,
+                dim_nc_background = false,
+                disable_background = false,
+                disable_float_background = false,
+                disable_italics = false,
+                --- @usage string hex value or named color from rosepinetheme.com/palette
+                groups = {
+                    background = 'base',
+                    background_nc = '_experimental_nc',
+                    panel = 'surface',
+                    panel_nc = 'base',
+                    border = 'highlight_med',
+                    comment = 'muted',
+                    link = 'iris',
+                    punctuation = 'subtle',
+
+                    error = 'love',
+                    hint = 'iris',
+                    info = 'foam',
+                    warn = 'gold',
+
+                    headings = {
+                        h1 = 'iris',
+                        h2 = 'foam',
+                        h3 = 'rose',
+                        h4 = 'gold',
+                        h5 = 'pine',
+                        h6 = 'foam',
+                    }
+                    -- or set all headings at once
+                    -- headings = 'subtle'
+                },
+                -- Change specific vim highlight groups
+                -- https://github.com/rose-pine/neovim/wiki/Recipes
+                highlight_groups = {
+                    ColorColumn = { bg = 'rose' },
+
+                    -- Blend colours against the "base" background
+                    CursorLine = { bg = 'foam', blend = 10 },
+                    StatusLine = { fg = 'love', bg = 'love', blend = 10 },
+                }
+            })
+        end
+    })
+    use "Mofiqul/dracula.nvim"
+    use "NLKNguyen/papercolor-theme"
 
     -- cmp plugins
-    use "hrsh7th/nvim-cmp" -- The completion plugin
-    use "hrsh7th/cmp-buffer" -- buffer completions
-    use "hrsh7th/cmp-path" -- path completions
-    use "hrsh7th/cmp-cmdline" -- cmdline completions
+    use "hrsh7th/nvim-cmp"         -- The completion plugin
+    use "hrsh7th/cmp-buffer"       -- buffer completions
+    use "hrsh7th/cmp-path"         -- path completions
+    use "hrsh7th/cmp-cmdline"      -- cmdline completions
     use "saadparwaiz1/cmp_luasnip" -- snippet completions
     use "hrsh7th/cmp-nvim-lsp"
     use "kdheepak/cmp-latex-symbols"
 
     -- snippets
-    use "L3MON4D3/LuaSnip" --snippet engine
+    use "L3MON4D3/LuaSnip"             --snippet engine
     use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
     -- LSP
-    use "neovim/nvim-lspconfig" -- enable LSP
+    use "neovim/nvim-lspconfig"           -- enable LSP
     use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-    use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+    use "tamago324/nlsp-settings.nvim"    -- language server settings defined in json for
     use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
     -- Telescope
@@ -99,8 +156,7 @@ return packer.startup(function(use)
     -- Git
     use "lewis6991/gitsigns.nvim"
 
-    -- Shane's plugins
-    -- use "junegunn/goyo.vim"
+    -- Misc plugins
     use "folke/zen-mode.nvim"
     use "folke/twilight.nvim"
     -- use {
@@ -111,11 +167,6 @@ return packer.startup(function(use)
     -- } <== BUG: error accessing firefox database
     use "tyru/open-browser.vim"
     use "metakirby5/codi.vim"
-    use { "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } }
-    use "Mofiqul/dracula.nvim"
-    use "NLKNguyen/papercolor-theme"
-    use "mcchrish/zenbones.nvim"
-    use "lunarvim/synthwave84.nvim"
     use "luizribeiro/vim-cooklang"
     use { 'ggandor/leap.nvim',
         config = function()
@@ -139,7 +190,7 @@ return packer.startup(function(use)
         config = function()
             require('neorg').setup {
                 load = {
-                    ["core.defaults"] = {}, -- Loads default behaviour
+                    ["core.defaults"] = {},       -- Loads default behaviour
                     ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
                     ["core.norg.completion"] = {
                         config = {
