@@ -171,7 +171,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   neorg = {
-    config = { "\27LJ\2\n¸\3\0\0\a\0\20\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\18\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\a\0005\5\6\0=\5\b\4=\4\t\0035\4\v\0005\5\n\0=\5\b\4=\4\f\0035\4\16\0005\5\14\0005\6\r\0=\6\15\5=\5\b\4=\4\17\3=\3\19\2B\0\2\1K\0\1\0\tload\1\0\0\21core.norg.dirman\1\0\0\15workspaces\1\0\0\1\0\3\ttest\17~/notes/test\ttodo8~/home/edibotopic/Dropbox/Notes_vault/organise/todo\nnotes9~/home/edibotopic/Dropbox/Notes_vault/organise/notes\19core.presenter\1\0\0\1\0\1\rzen_mode\rzen-mode\25core.norg.completion\vconfig\1\0\0\1\0\1\vengine\rnvim-cmp\24core.norg.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
+    config = { "\27LJ\2\n¸\3\0\0\a\0\20\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\18\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\a\0005\5\6\0=\5\b\4=\4\t\0035\4\v\0005\5\n\0=\5\b\4=\4\f\0035\4\16\0005\5\14\0005\6\r\0=\6\15\5=\5\b\4=\4\17\3=\3\19\2B\0\2\1K\0\1\0\tload\1\0\0\21core.norg.dirman\1\0\0\15workspaces\1\0\0\1\0\3\nnotes9~/home/edibotopic/Dropbox/Notes_vault/organise/notes\ttodo8~/home/edibotopic/Dropbox/Notes_vault/organise/todo\ttest\17~/notes/test\19core.presenter\1\0\0\1\0\1\rzen_mode\rzen-mode\25core.norg.completion\vconfig\1\0\0\1\0\1\vengine\rnvim-cmp\24core.norg.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/neorg",
     url = "https://github.com/nvim-neorg/neorg"
@@ -269,7 +269,6 @@ _G.packer_plugins = {
     url = "https://github.com/quarto-dev/quarto-vim"
   },
   ["rose-pine"] = {
-    config = { "\27LJ\2\nÙ\4\0\0\5\0\16\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0005\4\5\0=\4\6\3=\3\a\0025\3\t\0005\4\b\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\21highlight_groups\15StatusLine\1\0\3\afg\tlove\nblend\3\n\abg\tlove\15CursorLine\1\0\2\abg\tfoam\nblend\3\n\16ColorColumn\1\0\0\1\0\1\abg\trose\vgroups\rheadings\1\0\6\ah6\tfoam\ah5\tpine\ah4\tgold\ah3\trose\ah2\tfoam\ah1\tiris\1\0\f\18background_nc\21_experimental_nc\nerror\tlove\15background\tbase\tinfo\tfoam\twarn\tgold\thint\tiris\tlink\tiris\16punctuation\vsubtle\vborder\18highlight_med\fcomment\nmuted\rpanel_nc\tbase\npanel\fsurface\1\0\a\20disable_italics\1\29disable_float_background\1\23disable_background\1\22dim_nc_background\1\20bold_vert_split\1\17dark_variant\tmain\fvariant\tauto\nsetup\14rose-pine\frequire\0" },
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
@@ -343,22 +342,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: leap.nvim
-time([[Config for leap.nvim]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\24set_default_keymaps\tleap\frequire\0", "config", "leap.nvim")
-time([[Config for leap.nvim]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
 -- Config for: neorg
 time([[Config for neorg]], true)
-try_loadstring("\27LJ\2\n¸\3\0\0\a\0\20\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\18\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\a\0005\5\6\0=\5\b\4=\4\t\0035\4\v\0005\5\n\0=\5\b\4=\4\f\0035\4\16\0005\5\14\0005\6\r\0=\6\15\5=\5\b\4=\4\17\3=\3\19\2B\0\2\1K\0\1\0\tload\1\0\0\21core.norg.dirman\1\0\0\15workspaces\1\0\0\1\0\3\ttest\17~/notes/test\ttodo8~/home/edibotopic/Dropbox/Notes_vault/organise/todo\nnotes9~/home/edibotopic/Dropbox/Notes_vault/organise/notes\19core.presenter\1\0\0\1\0\1\rzen_mode\rzen-mode\25core.norg.completion\vconfig\1\0\0\1\0\1\vengine\rnvim-cmp\24core.norg.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
+try_loadstring("\27LJ\2\n¸\3\0\0\a\0\20\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\18\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\a\0005\5\6\0=\5\b\4=\4\t\0035\4\v\0005\5\n\0=\5\b\4=\4\f\0035\4\16\0005\5\14\0005\6\r\0=\6\15\5=\5\b\4=\4\17\3=\3\19\2B\0\2\1K\0\1\0\tload\1\0\0\21core.norg.dirman\1\0\0\15workspaces\1\0\0\1\0\3\nnotes9~/home/edibotopic/Dropbox/Notes_vault/organise/notes\ttodo8~/home/edibotopic/Dropbox/Notes_vault/organise/todo\ttest\17~/notes/test\19core.presenter\1\0\0\1\0\1\rzen_mode\rzen-mode\25core.norg.completion\vconfig\1\0\0\1\0\1\vengine\rnvim-cmp\24core.norg.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
 time([[Config for neorg]], false)
--- Config for: rose-pine
-time([[Config for rose-pine]], true)
-try_loadstring("\27LJ\2\nÙ\4\0\0\5\0\16\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0005\4\5\0=\4\6\3=\3\a\0025\3\t\0005\4\b\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\21highlight_groups\15StatusLine\1\0\3\afg\tlove\nblend\3\n\abg\tlove\15CursorLine\1\0\2\abg\tfoam\nblend\3\n\16ColorColumn\1\0\0\1\0\1\abg\trose\vgroups\rheadings\1\0\6\ah6\tfoam\ah5\tpine\ah4\tgold\ah3\trose\ah2\tfoam\ah1\tiris\1\0\f\18background_nc\21_experimental_nc\nerror\tlove\15background\tbase\tinfo\tfoam\twarn\tgold\thint\tiris\tlink\tiris\16punctuation\vsubtle\vborder\18highlight_med\fcomment\nmuted\rpanel_nc\tbase\npanel\fsurface\1\0\a\20disable_italics\1\29disable_float_background\1\23disable_background\1\22dim_nc_background\1\20bold_vert_split\1\17dark_variant\tmain\fvariant\tauto\nsetup\14rose-pine\frequire\0", "config", "rose-pine")
-time([[Config for rose-pine]], false)
+-- Config for: leap.nvim
+time([[Config for leap.nvim]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\24set_default_keymaps\tleap\frequire\0", "config", "leap.nvim")
+time([[Config for leap.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
