@@ -1,4 +1,4 @@
-local status_ok, rose_pine = pcall(require, "rose-pine")
+local status_ok, rose_pine = pcall(require, 'rose-pine')
 if not status_ok then
   return
 end
@@ -45,9 +45,12 @@ rose_pine.setup {
     highlight_groups = {
         ColorColumn = { bg = 'rose' },
 
-        -- Blend colours against the "base" background
+        -- Blend colours against the 'base' background
         CursorLine = { bg = 'foam', blend = 10 },
         StatusLine = { fg = 'love', bg = 'love', blend = 10 },
+
+        markdownBold = { fg = 'gold', bold = true },
+        markdownItalic = { fg = 'love', italic = true }
 
 }
 }
