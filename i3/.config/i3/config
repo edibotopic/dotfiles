@@ -12,7 +12,7 @@
 set $mod Mod4
 
 # Needed for window gaps (no border width set)
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 3
 gaps inner 20
 gaps outer 10
 
@@ -223,10 +223,10 @@ bar {
         # status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
         colors {
 		 background #00000050
-		 statusline #ffffff
+		 statusline #e0def4
 		 separator #eff0f1
-		 focused_workspace $black #04397d #ffffff
-		 inactive_workspace $black $black $lightgray
+		 focused_workspace $black #1f1d2e #eb6f92
+		 inactive_workspace $black #26233a #ebbcba 
 		 urgent_workspace $black $black $darkred
 	}
 }
@@ -234,7 +234,7 @@ bar {
 # Colors
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #ff69b4   #ff69b4
+client.focused          #4c7899 #285577 #ffffff #ff69b4   #eb6f92 
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
