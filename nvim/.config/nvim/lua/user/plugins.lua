@@ -117,7 +117,8 @@ return packer.startup(function(use)
     --     }
     -- } <== BUG: error accessing firefox database
     use "tyru/open-browser.vim"
-    use "metakirby5/codi.vim"
+    --[[ use "metakirby5/codi.vim" ]]
+    use { 'michaelb/sniprun', run = 'bash ./install.sh'}
     use "luizribeiro/vim-cooklang"
     use { 'ggandor/leap.nvim',
         config = function()
