@@ -133,6 +133,10 @@ return packer.startup(function(use)
         },
         ft = { "quarto" },
     })
+    use({
+        "kaarmu/typst.vim",
+        ft = { "typst" },
+    })
     use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
     use 'lepture/vim-jinja'
     use 'https://github.com/PolyCement/vim-tweego'
