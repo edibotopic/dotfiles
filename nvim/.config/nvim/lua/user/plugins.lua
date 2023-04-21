@@ -146,9 +146,9 @@ return packer.startup(function(use)
         config = function()
             require('neorg').setup {
                 load = {
-                    ["core.defaults"] = {},       -- Loads default behaviour
-                    ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
-                    ["core.norg.completion"] = {
+                    ["core.defaults"] = {}, -- Loads default behaviour
+                    ["core.concealer"] = {}, -- Adds pretty icons to your documents
+                    ["core.completion"] = {
                         config = {
                             engine = "nvim-cmp"
                         },
@@ -161,7 +161,7 @@ return packer.startup(function(use)
                             zen_mode = "zen-mode",
                         },
                     },
-                    ["core.norg.dirman"] = { -- Manages Neorg workspaces
+                    ["core.dirman"] = { -- Manages Neorg workspaces
                         config = {
                             workspaces = {
                                 test = "~/notes/test",
