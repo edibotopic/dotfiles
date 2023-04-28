@@ -331,6 +331,11 @@ _G.packer_plugins = {
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-pandoc-syntax",
     url = "https://github.com/vim-pandoc/vim-pandoc-syntax"
   },
+  ["vim-tidal"] = {
+    loaded = true,
+    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-tidal",
+    url = "https://github.com/tidalcycles/vim-tidal"
+  },
   ["vim-tweego"] = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-tweego",
@@ -349,14 +354,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
-time([[Config for trouble.nvim]], false)
 -- Config for: leap.nvim
 time([[Config for leap.nvim]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\24set_default_keymaps\tleap\frequire\0", "config", "leap.nvim")
 time([[Config for leap.nvim]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
 -- Config for: neorg
 time([[Config for neorg]], true)
 try_loadstring("\27LJ\2\n©\3\0\0\a\0\20\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\18\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\a\0005\5\6\0=\5\b\4=\4\t\0035\4\v\0005\5\n\0=\5\b\4=\4\f\0035\4\16\0005\5\14\0005\6\r\0=\6\15\5=\5\b\4=\4\17\3=\3\19\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\1\0\0\15workspaces\1\0\0\1\0\3\ttest\17~/notes/test\ttodo8~/home/edibotopic/Dropbox/Notes_vault/organise/todo\nnotes9~/home/edibotopic/Dropbox/Notes_vault/organise/notes\19core.presenter\1\0\0\1\0\1\rzen_mode\rzen-mode\20core.completion\vconfig\1\0\0\1\0\1\vengine\rnvim-cmp\19core.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")

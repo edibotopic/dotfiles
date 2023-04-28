@@ -108,6 +108,7 @@ return packer.startup(function(use)
     use "lewis6991/gitsigns.nvim"
 
     -- Misc plugins
+    use "tidalcycles/vim-tidal"
     use "folke/zen-mode.nvim"
     use "folke/twilight.nvim"
     -- use {
