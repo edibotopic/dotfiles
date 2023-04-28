@@ -40,6 +40,7 @@ export PATH="$HOME/Software/reaper/REAPER:$PATH"
 export PATH="$HOME/Software/blender/:$PATH"
 export PATH="$HOME/Software/Graph-Easy-0.76/bin/:$PATH"
 export PATH="$HOME/Software/tweego-2.1.1-linux-x64/:$PATH"
+export PATH="$HOME/Software/julia-1.8.5/bin:$PATH"
 export PATH="$HOME/.local/kitty.app/bin/:$PATH"
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 export PATH="/usr/local/texlive/2022/bin/x86_64-linux":$PATH
