@@ -94,6 +94,9 @@ return packer.startup(function(use)
     use "tamago324/nlsp-settings.nvim"    -- language server settings defined in json for
     use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
+    -- Rust
+    -- use 'simrat39/rust-tools.nvim' TODO
+
     -- Telescope
     use "nvim-telescope/telescope.nvim"
 
@@ -111,15 +114,9 @@ return packer.startup(function(use)
     use "tidalcycles/vim-tidal"
     use "folke/zen-mode.nvim"
     use "folke/twilight.nvim"
-    -- use {
-    --   "dhruvmanila/telescope-bookmarks.nvim",
-    --
-    --     requires = {"tami5/sqlite.lua",
-    --     }
-    -- } <== BUG: error accessing firefox database
     use "tyru/open-browser.vim"
     --[[ use "metakirby5/codi.vim" ]]
-    use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+    use { 'michaelb/sniprun', run = 'bash ./install.sh' }
     use "luizribeiro/vim-cooklang"
     use { 'ggandor/leap.nvim',
         config = function()
@@ -148,7 +145,31 @@ return packer.startup(function(use)
             require('neorg').setup {
                 load = {
                     ["core.defaults"] = {}, -- Loads default behaviour
-                    ["core.concealer"] = {}, -- Adds pretty icons to your documents
+                    ["core.concealer"] = {
+                        config = {
+                            icons = {
+                                heading = {
+                                    enabled = true,
+                                    level_1 = {
+                                        enabled = true,
+                                        icon = "❖",
+                                    },
+                                    level_2 = {
+                                        enabled = true,
+                                        icon = " ◉",
+                                    },
+                                    level_3 = {
+                                        enabled = true,
+                                        icon = "  ○",
+                                    },
+                                    level_4 = {
+                                        enabled = true,
+                                        icon = "   ●",
+                                    },
+                                },
+                            },
+                        },
+                    },
                     ["core.completion"] = {
                         config = {
                             engine = "nvim-cmp"
@@ -179,21 +200,8 @@ return packer.startup(function(use)
     }
     use {
         "folke/trouble.nvim",
-        requires = "kyazdani42/nvim-web-devicons",
-        config = function()
-            require("trouble").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-        end
+        requires = "kyazdani42/nvim-web-devicons"
     }
-    -- use {
-    --     'glacambre/firenvim',
-    --     run = function() vim.fn['firenvim#install'](0) end
-    -- }pl
-    -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()
