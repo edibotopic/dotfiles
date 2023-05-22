@@ -166,7 +166,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   neorg = {
-    config = { "\27LJ\2\n�\3\0\0\a\0\20\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\18\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\a\0005\5\6\0=\5\b\4=\4\t\0035\4\v\0005\5\n\0=\5\b\4=\4\f\0035\4\16\0005\5\14\0005\6\r\0=\6\15\5=\5\b\4=\4\17\3=\3\19\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\1\0\0\15workspaces\1\0\0\1\0\3\ttest\17~/notes/test\ttodo8~/home/edibotopic/Dropbox/Notes_vault/organise/todo\nnotes9~/home/edibotopic/Dropbox/Notes_vault/organise/notes\19core.presenter\1\0\0\1\0\1\rzen_mode\rzen-mode\20core.completion\vconfig\1\0\0\1\0\1\vengine\rnvim-cmp\19core.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
+    config = { "\27LJ\2\n�\4\0\0\t\0\"\0)6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2 \0005\3\3\0004\4\0\0=\4\4\0035\4\18\0005\5\16\0005\6\14\0005\a\5\0005\b\6\0=\b\a\a5\b\b\0=\b\t\a5\b\n\0=\b\v\a5\b\f\0=\b\r\a=\a\15\6=\6\17\5=\5\19\4=\4\20\0035\4\22\0005\5\21\0=\5\19\4=\4\23\0035\4\25\0005\5\24\0=\5\19\4=\4\26\0035\4\30\0005\5\28\0005\6\27\0=\6\29\5=\5\19\4=\4\31\3=\3!\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\1\0\0\15workspaces\1\0\0\1\0\3\ttodo8~/home/edibotopic/Dropbox/Notes_vault/organise/todo\nnotes9~/home/edibotopic/Dropbox/Notes_vault/organise/notes\ttest\17~/notes/test\19core.presenter\1\0\0\1\0\1\rzen_mode\rzen-mode\20core.completion\1\0\0\1\0\1\vengine\rnvim-cmp\19core.concealer\vconfig\1\0\0\nicons\1\0\0\fheading\1\0\0\flevel_4\1\0\2\ticon\v   ●\fenabled\2\flevel_3\1\0\2\ticon\n  ○\fenabled\2\flevel_2\1\0\2\ticon\t ◉\fenabled\2\flevel_1\1\0\2\ticon\b❖\fenabled\2\1\0\1\fenabled\2\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/neorg",
     url = "https://github.com/nvim-neorg/neorg"
@@ -284,7 +284,6 @@ _G.packer_plugins = {
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["trouble.nvim"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
@@ -354,18 +353,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: neorg
+time([[Config for neorg]], true)
+try_loadstring("\27LJ\2\n�\4\0\0\t\0\"\0)6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2 \0005\3\3\0004\4\0\0=\4\4\0035\4\18\0005\5\16\0005\6\14\0005\a\5\0005\b\6\0=\b\a\a5\b\b\0=\b\t\a5\b\n\0=\b\v\a5\b\f\0=\b\r\a=\a\15\6=\6\17\5=\5\19\4=\4\20\0035\4\22\0005\5\21\0=\5\19\4=\4\23\0035\4\25\0005\5\24\0=\5\19\4=\4\26\0035\4\30\0005\5\28\0005\6\27\0=\6\29\5=\5\19\4=\4\31\3=\3!\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\1\0\0\15workspaces\1\0\0\1\0\3\ttodo8~/home/edibotopic/Dropbox/Notes_vault/organise/todo\nnotes9~/home/edibotopic/Dropbox/Notes_vault/organise/notes\ttest\17~/notes/test\19core.presenter\1\0\0\1\0\1\rzen_mode\rzen-mode\20core.completion\1\0\0\1\0\1\vengine\rnvim-cmp\19core.concealer\vconfig\1\0\0\nicons\1\0\0\fheading\1\0\0\flevel_4\1\0\2\ticon\v   ●\fenabled\2\flevel_3\1\0\2\ticon\n  ○\fenabled\2\flevel_2\1\0\2\ticon\t ◉\fenabled\2\flevel_1\1\0\2\ticon\b❖\fenabled\2\1\0\1\fenabled\2\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
+time([[Config for neorg]], false)
 -- Config for: leap.nvim
 time([[Config for leap.nvim]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\24set_default_keymaps\tleap\frequire\0", "config", "leap.nvim")
 time([[Config for leap.nvim]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
-time([[Config for trouble.nvim]], false)
--- Config for: neorg
-time([[Config for neorg]], true)
-try_loadstring("\27LJ\2\n�\3\0\0\a\0\20\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\18\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\a\0005\5\6\0=\5\b\4=\4\t\0035\4\v\0005\5\n\0=\5\b\4=\4\f\0035\4\16\0005\5\14\0005\6\r\0=\6\15\5=\5\b\4=\4\17\3=\3\19\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\1\0\0\15workspaces\1\0\0\1\0\3\ttest\17~/notes/test\ttodo8~/home/edibotopic/Dropbox/Notes_vault/organise/todo\nnotes9~/home/edibotopic/Dropbox/Notes_vault/organise/notes\19core.presenter\1\0\0\1\0\1\rzen_mode\rzen-mode\20core.completion\vconfig\1\0\0\1\0\1\vengine\rnvim-cmp\19core.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
-time([[Config for neorg]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
@@ -375,12 +370,12 @@ vim.cmd [[au FileType typst ++once lua require("packer.load")({'typst.vim'}, { f
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
-time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]], true)
-vim.cmd [[source /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]]
-time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]], false)
 time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], true)
 vim.cmd [[source /home/edibotopic/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]]
 time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], false)
+time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]], true)
+vim.cmd [[source /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]]
+time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]], false)
 vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
