@@ -72,8 +72,8 @@ return packer.startup(function(use)
         'rose-pine/neovim',
         as = 'rose-pine',
     })
-    use "Mofiqul/dracula.nvim"
-    use "NLKNguyen/papercolor-theme"
+    --[[ use "Mofiqul/dracula.nvim" ]]
+    --[[ use "NLKNguyen/papercolor-theme" ]]
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp"         -- The completion plugin
@@ -94,8 +94,14 @@ return packer.startup(function(use)
     use "tamago324/nlsp-settings.nvim"    -- language server settings defined in json for
     use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
+    -- Zig
+    use "ziglang/zig.vim"
+
     -- Rust
     -- use 'simrat39/rust-tools.nvim' TODO
+
+    -- Java
+    use { "mfussenegger/nvim-jdtls", ft = { "java" } }
 
     -- Telescope
     use "nvim-telescope/telescope.nvim"
@@ -114,8 +120,7 @@ return packer.startup(function(use)
     use "tidalcycles/vim-tidal"
     use "folke/zen-mode.nvim"
     use "folke/twilight.nvim"
-    use "tyru/open-browser.vim"
-    --[[ use "metakirby5/codi.vim" ]]
+    --[[ use "tyru/open-browser.vim" ]]
     use { 'michaelb/sniprun', run = 'bash ./install.sh' }
     use "luizribeiro/vim-cooklang"
     use { 'ggandor/leap.nvim',
@@ -137,8 +142,8 @@ return packer.startup(function(use)
     })
     use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
     use 'lepture/vim-jinja'
-    use 'https://github.com/PolyCement/vim-tweego'
-    use 'jbyuki/venn.nvim'
+    --[[ use 'https://github.com/PolyCement/vim-tweego' ]]
+    --[[ use 'jbyuki/venn.nvim' ]]
     use {
         "nvim-neorg/neorg",
         config = function()
