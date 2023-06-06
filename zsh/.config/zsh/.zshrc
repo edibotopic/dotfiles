@@ -41,6 +41,9 @@ export PATH="$HOME/Software/blender/:$PATH"
 export PATH="$HOME/Software/Graph-Easy-0.76/bin/:$PATH"
 export PATH="$HOME/Software/tweego-2.1.1-linux-x64/:$PATH"
 export PATH="$HOME/Software/julia-1.8.5/bin:$PATH"
+export PATH="$HOME/Software/Odin:$PATH"
+export PATH="$HOME/Software/zig:$PATH"
+export PATH="$HOME/Software/w4-linux/:$PATH"
 export PATH="$HOME/Software/idea-IC-231.9011.34/bin:$PATH"
 export PATH="$HOME/.local/kitty.app/bin/:$PATH"
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
@@ -60,3 +63,5 @@ export RANGER_LOAD_DEFAULT_RC=false
  
 alias luamake=/home/edibotopic/.config/lsp/lua-language-server/3rd/luamake/luamake
 export PATH="$HOME/.config/lsp/lua-language-server/bin/:$PATH"
+export PATH="$HOME/.config/lsp/zls/zig-out/bin:$PATH"
+export PATH="$HOME/.config/lsp/ols/:$PATH"
