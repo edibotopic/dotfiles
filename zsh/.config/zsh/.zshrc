@@ -35,6 +35,7 @@ alias nvde="neovide --neovim-bin /usr/bin/nvim.appimage"
 export PATH="$HOME/scripts/:$PATH"
 
 # Software to path
+export PATH="$HOME/go/bin/:$PATH"
 export PATH="$HOME/Software/pico-8:$PATH"
 export PATH="$HOME/Software/reaper/REAPER:$PATH"
 export PATH="$HOME/Software/blender/:$PATH"
