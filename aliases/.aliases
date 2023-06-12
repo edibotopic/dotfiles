@@ -32,13 +32,8 @@ alias gd3="$HOME/Software/Godot/Godot_v3.4.4-stable_x11.64"
 alias gd4="$HOME/Software/Godot/Godot_v4.0-alpha6_linux.64"
 
 # Text rendering
-alias slides="~/go/bin/slides"
-alias vhs="~/go/bin/vhs"
 alias glow="~/Software/glow/glow"
 alias cook="~/Software/CookCLI_0.1.4_linux_amd64/cook"
-
-# Social 
-alias tut="~/go/bin/tut"
 
 # Documents
 alias doc2pdf="libreoffice --headless --convert-to pdf *.doc" # convert all Word doc files to pdf
@@ -84,6 +79,3 @@ alias rss="newsboat"
 alias trippy="kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/double150.gif"
 alias trippies="kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/ | sort -R | head -1"
 # alias trippy="kitty +kitten icat --align left ls ~/Dropbox/Notes_vault/Loops/ | shuf -n1"
-
-# Crypto
-alias coin="~/go/bin/cointop"
