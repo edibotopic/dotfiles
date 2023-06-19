@@ -24,6 +24,7 @@ require "user.venn"
 require "user.zenmode"
 require "user.neovide"
 require "user.trouble"
+require "user.oil"
 
 --detect tweego filetype
 vim.cmd[[autocmd BufRead,BufNew,BufNewFile *.tw, *twee setlocal ft=tweego]]
