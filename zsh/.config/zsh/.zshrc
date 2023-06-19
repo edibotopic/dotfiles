@@ -2,7 +2,8 @@ export PATH=$HOME/edibotopic/.local/bin/:$PATH
 export ZDOTDIR=$HOME/.config/zsh
 export ZSH=$HOME/.oh-my-zsh
 export TERM=xterm-kitty
-export EDITOR=$HOME/edibotopic/.local/kitty.app/bin
+# export EDITOR=$HOME/.local/kitty.app/bin
+export EDITOR=/usr/bin/nvim.appimage
 source "$ZDOTDIR/zsh-functions"
 
 zsh_add_file "zsh-prompt"
