@@ -128,6 +128,9 @@ return packer.startup(function(use)
             require("leap").set_default_keymaps()
         end
     }
+    use {
+      'stevearc/oil.nvim',
+    }
     use 'davidgranstrom/nvim-markdown-preview'
     use({
         "quarto-dev/quarto-vim",
