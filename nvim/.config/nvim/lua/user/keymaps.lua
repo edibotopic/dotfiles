@@ -61,10 +61,10 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Toggle Light --
-keymap("n", "t", ":set bg=light<CR>", opts)
+keymap("n", "t", ":colorscheme base16-moon-jai<CR>", opts)
 
 -- Toggle Dark --
-keymap("n", "T", ":set background=dark<CR>", opts)
+keymap("n", "T", ":colorscheme base16-rose-pine<CR>", opts)
 
 -- Terminal --
 -- Better terminal navigation
