@@ -181,6 +181,11 @@ _G.packer_plugins = {
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
+  ["nvim-base16"] = {
+    loaded = true,
+    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/nvim-base16",
+    url = "https://github.com/edibotopic/nvim-base16"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -259,11 +264,6 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim",
     url = "https://github.com/quarto-dev/quarto-vim"
-  },
-  ["rose-pine"] = {
-    loaded = true,
-    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
   },
   sniprun = {
     loaded = true,
@@ -345,21 +345,21 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: neorg
-time([[Config for neorg]], true)
-try_loadstring("\27LJ\2\n�\4\0\0\t\0\"\0)6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2 \0005\3\3\0004\4\0\0=\4\4\0035\4\18\0005\5\16\0005\6\14\0005\a\5\0005\b\6\0=\b\a\a5\b\b\0=\b\t\a5\b\n\0=\b\v\a5\b\f\0=\b\r\a=\a\15\6=\6\17\5=\5\19\4=\4\20\0035\4\22\0005\5\21\0=\5\19\4=\4\23\0035\4\25\0005\5\24\0=\5\19\4=\4\26\0035\4\30\0005\5\28\0005\6\27\0=\6\29\5=\5\19\4=\4\31\3=\3!\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\1\0\0\15workspaces\1\0\0\1\0\3\ttodo8~/home/edibotopic/Dropbox/Notes_vault/organise/todo\nnotes9~/home/edibotopic/Dropbox/Notes_vault/organise/notes\ttest\17~/notes/test\19core.presenter\1\0\0\1\0\1\rzen_mode\rzen-mode\20core.completion\1\0\0\1\0\1\vengine\rnvim-cmp\19core.concealer\vconfig\1\0\0\nicons\1\0\0\fheading\1\0\0\flevel_4\1\0\2\ticon\v   ●\fenabled\2\flevel_3\1\0\2\ticon\n  ○\fenabled\2\flevel_2\1\0\2\ticon\t ◉\fenabled\2\flevel_1\1\0\2\ticon\b❖\fenabled\2\1\0\1\fenabled\2\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
-time([[Config for neorg]], false)
 -- Config for: leap.nvim
 time([[Config for leap.nvim]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\24set_default_keymaps\tleap\frequire\0", "config", "leap.nvim")
 time([[Config for leap.nvim]], false)
+-- Config for: neorg
+time([[Config for neorg]], true)
+try_loadstring("\27LJ\2\n�\4\0\0\t\0\"\0)6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2 \0005\3\3\0004\4\0\0=\4\4\0035\4\18\0005\5\16\0005\6\14\0005\a\5\0005\b\6\0=\b\a\a5\b\b\0=\b\t\a5\b\n\0=\b\v\a5\b\f\0=\b\r\a=\a\15\6=\6\17\5=\5\19\4=\4\20\0035\4\22\0005\5\21\0=\5\19\4=\4\23\0035\4\25\0005\5\24\0=\5\19\4=\4\26\0035\4\30\0005\5\28\0005\6\27\0=\6\29\5=\5\19\4=\4\31\3=\3!\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\1\0\0\15workspaces\1\0\0\1\0\3\ttodo8~/home/edibotopic/Dropbox/Notes_vault/organise/todo\nnotes9~/home/edibotopic/Dropbox/Notes_vault/organise/notes\ttest\17~/notes/test\19core.presenter\1\0\0\1\0\1\rzen_mode\rzen-mode\20core.completion\1\0\0\1\0\1\vengine\rnvim-cmp\19core.concealer\vconfig\1\0\0\nicons\1\0\0\fheading\1\0\0\flevel_4\1\0\2\ticon\v   ●\fenabled\2\flevel_3\1\0\2\ticon\n  ○\fenabled\2\flevel_2\1\0\2\ticon\t ◉\fenabled\2\flevel_1\1\0\2\ticon\b❖\fenabled\2\1\0\1\fenabled\2\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
+time([[Config for neorg]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
 vim.cmd [[au FileType typst ++once lua require("packer.load")({'typst.vim'}, { ft = "typst" }, _G.packer_plugins)]]
-vim.cmd [[au FileType java ++once lua require("packer.load")({'nvim-jdtls'}, { ft = "java" }, _G.packer_plugins)]]
 vim.cmd [[au FileType quarto ++once lua require("packer.load")({'quarto-vim'}, { ft = "quarto" }, _G.packer_plugins)]]
+vim.cmd [[au FileType java ++once lua require("packer.load")({'nvim-jdtls'}, { ft = "java" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
