@@ -1,7 +1,6 @@
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
-require "user.rose-pine"
 require "user.colorscheme"
 require "user.cmp"
 require "user.luasnip"
