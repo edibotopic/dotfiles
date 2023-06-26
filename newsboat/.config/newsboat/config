@@ -24,7 +24,7 @@ bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
-browser linkhandler
+browser "xdg-open %u"
 macro , open-in-browser
 macro a set browser "tsp yt-dlp --embed-metadata -xic -f bestaudio/best" ; open-in-browser ; set browser linkhandler
 macro v set browser "setsid -f mpv" ; open-in-browser ; set browser linkhandler
