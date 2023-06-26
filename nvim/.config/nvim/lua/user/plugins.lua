@@ -64,16 +64,7 @@ return packer.startup(function(use)
     use "folke/which-key.nvim"
 
     -- Colorschemes
-    --[[ use "lunarvim/darkplus.nvim" ]]
-    --[[ use { "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } } ]]
-    --[[ use "mcchrish/zenbones.nvim" ]]
-    --[[ use "lunarvim/synthwave84.nvim" ]]
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-    })
-    --[[ use "Mofiqul/dracula.nvim" ]]
-    --[[ use "NLKNguyen/papercolor-theme" ]]
+    use "edibotopic/nvim-base16"
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp"         -- The completion plugin
