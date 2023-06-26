@@ -15,8 +15,16 @@ vim.cmd [[
 
   augroup _markdown
     autocmd!
+    autocmd FileType markdown setlocal tw=70
     autocmd FileType markdown setlocal wrap linebreak
     autocmd FileType markdown setlocal nospell
+  augroup end
+
+  augroup _text
+    autocmd!
+    autocmd FileType text setlocal tw=70
+    autocmd FileType text setlocal wrap linebreak
+    autocmd FileType text setlocal nospell
   augroup end
 
   augroup _auto_resize
