@@ -48,7 +48,6 @@ return packer.startup(function(use)
     use "numToStr/Comment.nvim"  -- Easily comment stuff
     use "kyazdani42/nvim-web-devicons"
     use "kyazdani42/nvim-tree.lua"
-    --[[ use {"akinsho/bufferline.nvim", tag = 'v1.*'} ]]
     use {
         'romgrk/barbar.nvim',
         requires = { 'kyazdani42/nvim-web-devicons' }
@@ -65,6 +64,7 @@ return packer.startup(function(use)
 
     -- Colorschemes
     use "edibotopic/nvim-base16"
+    use ({ "typicode/bg.nvim" }) -- Adapt terminal background on colorscheme change
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp"         -- The completion plugin
@@ -111,7 +111,6 @@ return packer.startup(function(use)
     use "tidalcycles/vim-tidal"
     use "folke/zen-mode.nvim"
     use "folke/twilight.nvim"
-    --[[ use "tyru/open-browser.vim" ]]
     use { 'michaelb/sniprun', run = 'bash ./install.sh' }
     use "luizribeiro/vim-cooklang"
     use { 'ggandor/leap.nvim',
@@ -138,65 +137,6 @@ return packer.startup(function(use)
     use 'lepture/vim-jinja'
     --[[ use 'https://github.com/PolyCement/vim-tweego' ]]
     --[[ use 'jbyuki/venn.nvim' ]]
-    use {
-        "nvim-neorg/neorg",
-        config = function()
-            require('neorg').setup {
-                load = {
-                    ["core.defaults"] = {}, -- Loads default behaviour
-                    ["core.concealer"] = {
-                        config = {
-                            icons = {
-                                heading = {
-                                    enabled = true,
-                                    level_1 = {
-                                        enabled = true,
-                                        icon = "❖",
-                                    },
-                                    level_2 = {
-                                        enabled = true,
-                                        icon = " ◉",
-                                    },
-                                    level_3 = {
-                                        enabled = true,
-                                        icon = "  ○",
-                                    },
-                                    level_4 = {
-                                        enabled = true,
-                                        icon = "   ●",
-                                    },
-                                },
-                            },
-                        },
-                    },
-                    ["core.completion"] = {
-                        config = {
-                            engine = "nvim-cmp"
-                        },
-                    },
-                    --[[ ["core.norg.manoeuvre"] = {}, ]]
-                    --[[ ["core.integration.telescope"] = {}, ]]
-                    --[[ ["core.norg.looking-glass"] = {}, ]]
-                    ["core.presenter"] = {
-                        config = {
-                            zen_mode = "zen-mode",
-                        },
-                    },
-                    ["core.dirman"] = { -- Manages Neorg workspaces
-                        config = {
-                            workspaces = {
-                                test = "~/notes/test",
-                                notes = "~/home/edibotopic/Dropbox/Notes_vault/organise/notes",
-                                todo = "~/home/edibotopic/Dropbox/Notes_vault/organise/todo",
-                            },
-                        },
-                    },
-                },
-            }
-        end,
-        run = ":Neorg sync-parsers",
-        requires = "nvim-lua/plenary.nvim",
-    }
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons"
