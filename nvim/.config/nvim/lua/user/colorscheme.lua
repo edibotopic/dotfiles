@@ -1,6 +1,6 @@
 vim.cmd [[
 try
-  colorscheme rose-pine 
+  colorscheme base16-rose-pine 
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
