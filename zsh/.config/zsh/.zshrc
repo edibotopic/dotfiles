@@ -12,6 +12,8 @@ zsh_add_file "zsh-prompt"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(git z vi-mode)
 
+VI_MODE_SET_CURSOR=false
+
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
