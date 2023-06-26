@@ -1,4 +1,5 @@
-https://edibotopic.com/feed/feed.xml edibotopic
+#personal
+https://edibotopic.com/blog/feed.xml edibotopic
 
 #food
 https://based.cooking/index.xml food
@@ -16,10 +17,6 @@ http://feeds.feedburner.com/SidebarFeed design
 #science
 http://www.quantamagazine.org/feed/ science
 
-#code
-http://jeremykun.com/feed/ code
-https://www.johndcook.com/blog/feed/ code
-
 #art
 https://www.aldaily.com/feed/ art
 https://lithub.com/feed/ art
@@ -35,3 +32,18 @@ http://newsfeed.zeit.de/index news
 #applications
 http://www.blender.org/feed/ apps
 https://thisweekingodot.com/rss.xml apps
+
+#music
+https://buck65.substack.com/feed.xml
+
+#blogs
+http://jeremykun.com/feed/ code
+https://www.johndcook.com/blog/feed/ code
+https://www.interfluidity.com/rss.xml blog
+https://drafts.interfluidity.com/feed/index.rss blog
+https://www.philipzucker.com/feed.xml code
+https://100r.co/links/rss.xml blog
+https://brooker.co.za/blog/rss.xml code
+https://jobtalle.com/rss.xml code
+https://samwho.dev/rss.xml code
+http://www.aaronsw.com/2002/feeds/pgessays.rss code
