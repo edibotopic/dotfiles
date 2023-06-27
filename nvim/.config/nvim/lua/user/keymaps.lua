@@ -61,7 +61,7 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Toggle Light --
-keymap("n", "t", ":colorscheme base16-moon-jai<CR>", opts)
+keymap("n", "t", ":colorscheme base16-green-moon-jai<CR>", opts)
 
 -- Toggle Dark --
 keymap("n", "T", ":colorscheme base16-rose-pine<CR>", opts)
