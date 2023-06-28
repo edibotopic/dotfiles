@@ -106,12 +106,18 @@ return packer.startup(function(use)
 
     -- Git
     use "lewis6991/gitsigns.nvim"
+    
+    -- Interactive
+    use { 'michaelb/sniprun', run = 'bash ./install.sh' }
+    use 'Olical/conjure'
+    use 'tpope/vim-dispatch'
+    use 'radenling/vim-dispatch-neovim'
+    use 'clojure-vim/vim-jack-in'
 
     -- Misc plugins
     use "tidalcycles/vim-tidal"
     use "folke/zen-mode.nvim"
     use "folke/twilight.nvim"
-    use { 'michaelb/sniprun', run = 'bash ./install.sh' }
     use "luizribeiro/vim-cooklang"
     use { 'ggandor/leap.nvim',
         config = function()
