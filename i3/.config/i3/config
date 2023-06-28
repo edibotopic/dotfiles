@@ -12,7 +12,7 @@
 set $mod Mod4
 
 # Needed for window gaps (no border width set)
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 0
 gaps inner 20
 gaps outer 10
 
