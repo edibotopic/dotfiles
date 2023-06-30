@@ -7,6 +7,8 @@ source "$ZDOTDIR/zsh-functions"
 
 zsh_add_file "zsh-prompt"
 
+ZSH_THEME=jbergantine
+
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(git z vi-mode)
