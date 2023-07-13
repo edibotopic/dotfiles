@@ -24,7 +24,7 @@ bold_italic_font auto
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
 
-font_size 14.0
+font_size 16.0
 
 #: Font size (in pts)
 
@@ -666,7 +666,7 @@ enable_audio_bell no
 #: values set top, horizontal and bottom. Four values set top, right,
 #: bottom and left.
 
-# window_padding_width 0
+window_padding_width 20
 
 #: The window padding (in pts) (blank area between the text and the
 #: window border). A single value sets all four sides. Two values set
@@ -918,11 +918,11 @@ enable_audio_bell no
 #: Color scheme {{{
 
 # foreground #dddddd
-# background #000000
+background #000000
 
 #: The foreground and background colors
 
-background_opacity 0.7
+background_opacity 1.0
 
 #: The opacity of the background. A number between 0 and 1, where 1 is
 #: opaque and 0 is fully transparent.  This will only work if
@@ -957,7 +957,7 @@ background_opacity 0.7
 #: When background image is scaled, whether linear interpolation
 #: should be used.
 
-# dynamic_background_opacity no
+dynamic_background_opacity yes
 
 #: Allow changing of the background_opacity dynamically, using either
 #: keyboard shortcuts (increase_background_opacity and
@@ -2024,5 +2024,5 @@ background_opacity 0.7
 
 # BEGIN_KITTY_THEME
 # Spacemacs
-include current-theme.conf
+include ./themes/rose-pine.conf
 # END_KITTY_THEME
