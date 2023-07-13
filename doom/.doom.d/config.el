@@ -32,7 +32,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-laserwave)
+(setq doom-theme 'doom-vibrant)
 
 (setq fancy-splash-image "~/Pictures/tree.png")
 
@@ -42,10 +42,10 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Dropbox/Notes_vault/org/")
+(setq org-directory "~/Dropbox/Notes_vault/00-09-Meta/06-Org/")
 
 ;; Define the location of the file to hold tasks
-(setq org-default-notes-file "~/Dropbox/Notes_vault/notes.org")
+(setq org-default-notes-file "~/Dropbox/Notes_vault/00-09-Meta/06-Org/tasks.org")
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -80,5 +80,5 @@
 ;; they are implemented.
 
 ;; global beacon minor-mode
- (use-package! beacon)
- (after! beacon (beacon-mode 1))
+;; (use-package! beacon)
+;; (after! beacon (beacon-mode 1))
