@@ -82,3 +82,5 @@
 ;; global beacon minor-mode
 ;; (use-package! beacon)
 ;; (after! beacon (beacon-mode 1))
+
+(add-to-list 'default-frame-alist '(alpha . 95))
