@@ -50,8 +50,9 @@ exec_always --no-startup-id feh --randomize --bg-fill '/home/edibotopic/Pictures
 # Compositor
 exec_always --no-startup-id picom --config /home/edibotopic/.config/picom/picom.conf
 
-# Keyboard layout
-exec "setxkbmap -layout us"
+# Keyboard
+exec_always "setxkbmap -layout us"
+exec_always "xset r rate 150 30"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
