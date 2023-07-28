@@ -86,7 +86,7 @@ return packer.startup(function(use)
     use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
     -- Zig
-    use "ziglang/zig.vim"
+    -- use "ziglang/zig.vim"
 
     -- Rust
     -- use 'simrat39/rust-tools.nvim' TODO
@@ -109,8 +109,8 @@ return packer.startup(function(use)
     
     -- Interactive
     use { 'michaelb/sniprun', run = 'bash ./install.sh' }
-    use 'tpope/vim-dispatch'
-    use 'radenling/vim-dispatch-neovim'
+    -- use 'tpope/vim-dispatch'
+    -- use 'radenling/vim-dispatch-neovim'
 
     -- Misc plugins
     use "tidalcycles/vim-tidal"
