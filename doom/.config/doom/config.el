@@ -35,8 +35,10 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;; (setq doom-theme 'doom-vibrant)
-(load-theme 'creamsody-darker t)
+(setq doom-theme 'doom-vibrant) ;; default
+;; (load-theme 'creamsody-darker t) ;; nice dark
+;; (load-theme 'naysayer t) ;; nice mid
+;; (load-theme 'spacemacs-light t) ;; nice light
 
 ;; (setq fancy-splash-image "~/Pictures/tree.png")
 
@@ -48,8 +50,8 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Dropbox/Notes_vault/00-09-Meta/06-Org/")
 
-;; Define the location of the file to hold tasks
-(setq org-default-notes-file "~/Dropbox/Notes_vault/00-09-Meta/06-Org/_tasks.org")
+;; Define the location of the file to hold tasks and notes
+(setq org-default-notes-file "~/Dropbox/Notes_vault/00-09-Meta/06-Org/06.04-notes.org")
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -91,9 +93,9 @@
 
 ;; Org-mode
 
-(org-indent
-    (:inherit org-hide)
-    (:inherit (org-hide fixed-pitch)))
+;; (org-indent
+;;    (:inherit org-hide)
+;;    (:inherit (org-hide fixed-pitch)))
 
 (setq org-startup-indented t
       org-bullets-bullet-list '(" ")
@@ -105,4 +107,29 @@
       org-fontify-done-headline t
       org-fontify-quote-and-verse-blocks t)
 
-`(doom-modeline-project-dir ((t (:weight bold))))
+(org-babel-do-load-languages 'org-babel-load-languages '((python . t) (jupyter . t) (ipython . t) (julia . t)))
+
+(setq python-shell-interpreter "ipython"
+    python-shell-interpreter-args "-i --simple-prompt")
+
+(after! (org org-capture)
+  (add-to-list 'org-capture-templates
+        '("c" "Checklist"  entry
+        (file+headline "~/Dropbox/Notes_vault/00-09-Meta/06-Org/06.00-checklist.org" "Checklist")
+        "* [ ] %? %T" :empty-lines 1)
+
+  (add-to-list 'org-capture-templates
+        '("f" "Fragment"  entry
+        (file+headline "~/Dropbox/Notes_vault/00-09-Meta/06-Org/06.01-fragments.org" "Fragments")
+        "* %? %T" :empty-lines 1)
+
+  (add-to-list 'org-capture-templates
+        '("d" "Diary"  entry
+        (file+headline "~/Dropbox/Notes_vault/00-09-Meta/06-Org/06.02-diary.org" "Diary")
+        "* %? %T" :empty-lines 1)
+
+  (add-to-list 'org-capture-templates
+        '("i" "Idea"  entry
+        (file+headline "~/Dropbox/Notes_vault/00-09-Meta/06-Org/06.03-ideas.org" "Ideas")
+        "* %? %T" :empty-lines 1))))))
+
