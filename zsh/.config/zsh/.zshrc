@@ -70,6 +70,7 @@ alias luamake=/home/edibotopic/.config/lsp/lua-language-server/3rd/luamake/luama
 export PATH="$HOME/.config/lsp/lua-language-server/bin/:$PATH"
 export PATH="$HOME/.config/lsp/zls/zig-out/bin:$PATH"
 export PATH="$HOME/.config/lsp/ols/:$PATH"
+export PATH="$HOME/.config/emacs/bin/:$PATH"
 
 # Opam configuration
 [[ ! -r /home/edibotopic/.opam/opam-init/init.zsh ]] || source /home/edibotopic/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
