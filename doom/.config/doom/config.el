@@ -133,3 +133,4 @@
         (file+headline "~/Dropbox/Notes_vault/00-09-Meta/06-Org/06.03-ideas.org" "Ideas")
         "* %? %T" :empty-lines 1))))))
 
+(setq geiser-chicken-binary "/usr/bin/csi")
