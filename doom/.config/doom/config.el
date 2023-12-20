@@ -133,4 +133,22 @@
         (file+headline "~/Dropbox/Notes_vault/00-09-Meta/06-Org/06.03-ideas.org" "Ideas")
         "* %? %T" :empty-lines 1))))))
 
+;; Config org-agenda calendar for integrations
+(setq org-icalendar-timezone "Europe/Dublin")
+
+(defun export-org-to-ics ()
+  "Export Org agenda file to ICS format."
+  (let ((org-file (buffer-file-name)))
+    (when (and org-file
+               (string-suffix-p ".org" org-file)
+               (string-prefix-p "/home/edibotopic/Dropbox/Notes_vault/00-09-Meta/06-Org/agenda/" org-file))
+      (let* ((base-dir (file-name-directory org-file))
+             (export-dir (concat base-dir "export/"))
+             (file-name-no-ext (file-name-sans-extension (file-name-nondirectory org-file)))
+             (ics-file (concat export-dir file-name-no-ext ".ics")))
+        (make-directory export-dir t) ; Create export directory if it doesn't exist
+        (org-export-to-file 'icalendar ics-file)))))
+
+(add-hook 'after-save-hook 'export-org-to-ics)
+
 (setq geiser-chicken-binary "/usr/bin/csi")
