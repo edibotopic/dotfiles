@@ -8,9 +8,7 @@ alias mic=arecord
 alias lls=logo-ls
 alias sc=sc-im
 alias kbd="setxkbmap -layout us" # (re)set keyboard layout to us
-alias nv="/usr/bin/nvim.appimage"
 alias em="emacs -nw" # terminal emacs
-alias nvf='nv $(fzf)'
 alias td="nv $HOME/Dropbox/Notes_vault/00-09-Meta/03-Todo/todo.md"
 alias org="nv $HOME/Dropbox/Notes_vault/organise/notes.norg"
 alias articles="cd $HOME/Dropbox/Notes_vault/act/Articles/Research/ && lls"
@@ -20,6 +18,13 @@ alias t="cd $HOME/social/twitter/edibo/ && envac && rainbowstream"
 alias wallg="$HOME/scripts/wallpapers.sh" # gnome only
 alias slp="sudo pm-suspend"
 alias pk="pkill picom || picom -b --experimental-backends &"
+
+# NeoVim
+
+alias v="nv -u NONE" # vanilla nvim config
+alias nv="/usr/bin/nvim.appimage" # bloated nvim config
+alias nvf='nv $(fzf)' # fuzzy find and open in nvim
+alias nw="$HOME/scripts/nvk.sh" # minimal nvim config
 
 # Development
 alias srv="live-server"
@@ -80,3 +85,5 @@ alias rss="newsboat"
 alias trippy="kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/double150.gif"
 alias trippies="kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/ | sort -R | head -1"
 # alias trippy="kitty +kitten icat --align left ls ~/Dropbox/Notes_vault/Loops/ | shuf -n1"
+
+alias durdraw="cd ~/Software/durdraw/ && envac && py durdraw/main.py"
