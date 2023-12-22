@@ -378,3 +378,7 @@ config.bind(',dr', 'config-cycle content.user_stylesheets ~/Software/solarized-e
 config.bind(',gr', 'config-cycle content.user_stylesheets ~/Software/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css ""')
 config.bind(',sd', 'config-cycle content.user_stylesheets ~/Software/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""')
 config.bind(',sl', 'config-cycle content.user_stylesheets ~/Software/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""')
+
+# Smooth scrolling
+# Type: Bool
+config.set('scrolling.smooth', True)
