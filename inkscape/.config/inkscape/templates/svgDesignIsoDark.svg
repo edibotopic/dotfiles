@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800"
+   height="800"
+   viewBox="0 0 211.667 211.667"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#000000"
+     bordercolor="#8b148e"
+     borderopacity="1"
+     inkscape:showpageshadow="false"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#000000"
+     inkscape:document-units="px"
+     borderlayer="true"
+     showguides="false"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="10.58335"
+       spacingy="10.58335"
+       empcolor="#8b148e"
+       empopacity="0.22745098"
+       color="#8b148e"
+       opacity="0.18039216"
+       empspacing="5"
+       dotted="true"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true"
+       enabled="false" />
+    <inkscape:grid
+       id="grid2"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="0.26458375"
+       spacingy="0.26458375"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true"
+       enabled="false" />
+    <inkscape:grid
+       type="axonomgrid"
+       id="grid3"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0"
+       spacingy="5.291675"
+       empcolor="#8b148e"
+       empopacity="0.25882353"
+       color="#8b148e"
+       opacity="0.18039216"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1" />
+  <inkscape:templateinfo>
+    <inkscape:name>svgDesignIsoDark</inkscape:name>
+    <inkscape:author>svc</inkscape:author>
+    <inkscape:shortdesc>Dark isometric design.</inkscape:shortdesc>
+    <inkscape:date>2023-12-19</inkscape:date>
+    <inkscape:keywords>Isometric, grid, dark</inkscape:keywords>
+  </inkscape:templateinfo>
+</svg>
