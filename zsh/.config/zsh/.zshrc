@@ -1,5 +1,5 @@
 # Theming
-zsh_add_file "zsh-prompt"
+# zsh_add_file "zsh-prompt"
 ZSH_THEME=jbergantine
 
 # Standard plugins can be found in $ZSH/plugins/
