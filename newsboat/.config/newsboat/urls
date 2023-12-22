@@ -1,41 +1,6 @@
 #personal
 https://edibotopic.com/blog/feed.xml edibotopic
 
-#food
-https://based.cooking/index.xml food
-
-#philosophy
-https://philosophicaldisquisitions.blogspot.com/feeds/posts/default philosophy
-https://www.microphilosophy.net/feed/ philosophy
-
-#tech
-https://www.technologyreview.com/stream/rss tech
-
-#design
-http://feeds.feedburner.com/SidebarFeed design
-
-#science
-http://www.quantamagazine.org/feed/ science
-
-#art
-https://www.aldaily.com/feed/ art
-https://lithub.com/feed/ art
-
-#culture
-http://quillette.com/feed/ culture
-https://www.thisiscolossal.com/feed/ culture
-
-#news
-https://www.spiegel.de/international/index.rss news
-http://newsfeed.zeit.de/index news
-
-#applications
-http://www.blender.org/feed/ apps
-https://thisweekingodot.com/rss.xml apps
-
-#music
-https://buck65.substack.com/feed.xml
-
 #blogs
 http://jeremykun.com/feed/ code
 https://www.johndcook.com/blog/feed/ code
@@ -47,3 +12,24 @@ https://brooker.co.za/blog/rss.xml code
 https://jobtalle.com/rss.xml code
 https://samwho.dev/rss.xml code
 http://www.aaronsw.com/2002/feeds/pgessays.rss code
+https://www.todepond.com/feed/index.xml code
+https://interconnected.org/home/feed code
+https://taylor.town/feed.xml code
+
+#philosophy
+https://philosophicaldisquisitions.blogspot.com/feeds/posts/default philosophy
+https://www.microphilosophy.net/feed/ philosophy
+
+#design
+http://feeds.feedburner.com/SidebarFeed design
+
+#science
+http://www.quantamagazine.org/feed/ science
+
+#art
+https://www.aldaily.com/feed/ art
+https://lithub.com/feed/ art
+
+#music
+https://buck65.substack.com/feed.xml
+
