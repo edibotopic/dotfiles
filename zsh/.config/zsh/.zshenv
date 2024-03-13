@@ -1,5 +1,5 @@
-export PATH=$HOME/edibotopic/.local/bin/:$PATH
-export ZDOTDIR=$HOME/.config/zsh
+export PATH=$HOME/.local/bin/:$PATH
+# export ZDOTDIR=$HOME/.config/zsh
 export ZSH=$HOME/.oh-my-zsh
 export TERM=xterm-kitty
 export EDITOR=/usr/bin/nvim.appimage
