@@ -246,3 +246,4 @@ client.background       #ffffff
 # Float by default
 
 for_window [class="PureRef"] floating enable 
+for_window [class="Audio Recorder"] floating enable 
