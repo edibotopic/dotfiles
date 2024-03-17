@@ -36,6 +36,7 @@ alias gd3='$HOME/Software/Godot/Godot_v3.4.4-stable_x11.64'
 alias gd4='$HOME/Software/Godot/Godot_v4.0-alpha6_linux.64'
 alias blnd='$HOME/Software/BlenderLauncher'
 alias xe='/home/edibotopic/Software/xmlmind/bin/xxe'
+alias process='$HOME/scripts/process.sh'
 alias love='/usr/bin/love.AppImage'
 alias defold='$HOME/Software/Defold/Defold'
 
