@@ -35,6 +35,7 @@ alias vx='$HOME/Software/voxatron_0.3.6_amd64/voxatron/vox'
 alias gd3='$HOME/Software/Godot/Godot_v3.4.4-stable_x11.64'
 alias gd4='$HOME/Software/Godot/Godot_v4.0-alpha6_linux.64'
 alias blnd='$HOME/Software/BlenderLauncher'
+alias xe='/home/edibotopic/Software/xmlmind/bin/xxe'
 alias love='/usr/bin/love.AppImage'
 alias defold='$HOME/Software/Defold/Defold'
 
@@ -48,6 +49,7 @@ alias docx2pdf='libreoffice --headless --convert-to pdf *.docx' # convert all Wo
 alias odt2pdf='libreoffice --headless --convert-to pdf *.odt' # convert all .odt docs to pdf
 alias ppt2pdf='libreoffice --headless --convert-to pdf *.pptx' # convert all .odt docs to pdf
 alias foxit='/home/edibotopic/opt/foxitsoftware/foxitreader/FoxitReader'
+alias xr='/home/edibotopic/Software/dita-ot/bin/dita' # tool to convert xml source to docs
 
 # Python
 alias py=python3
