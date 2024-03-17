@@ -107,7 +107,7 @@
       org-fontify-done-headline t
       org-fontify-quote-and-verse-blocks t)
 
-(org-babel-do-load-languages 'org-babel-load-languages '((python . t) (jupyter . t) (ipython . t) (julia . t)))
+(org-babel-do-load-languages 'org-babel-load-languages '((python . t) (jupyter . t) (ipython . t) (julia . t) (java . t)))
 
 (setq python-shell-interpreter "ipython"
     python-shell-interpreter-args "-i --simple-prompt")
