@@ -1,0 +1,19 @@
+local green_moon_jai = {
+  base00 = '#052329',
+  base01 = '#07323a',
+  base02 = '#565c64',
+  base03 = '#3fdf1f',
+  base04 = '#565c64',
+  base05 = '#f5f5dc',
+  base06 = '#115e5e',
+  base07 = '#115e5e',
+  base08 = '#D0C0A0',
+  base09 = '#79ffcf',
+  base0A = '#aaf0b2',
+  base0B = '#0fdfaf',
+  base0C = '#3fdf1f',
+  base0D = '#D0C0A0',
+  base0E = '#ffffff',
+  base0F = '#eba2eb',
+}
+require('mini.base16').setup { palette = green_moon_jai }
