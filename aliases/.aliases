@@ -7,85 +7,81 @@ alias open=xdg-open
 alias mic=arecord
 alias lls=logo-ls
 alias sc=sc-im
-alias kbd="setxkbmap -layout us" # (re)set keyboard layout to us
-alias em="emacs -nw" # terminal emacs
-alias td="nv $HOME/Dropbox/Notes_vault/00-09-Meta/03-Todo/todo.md"
-alias org="nv $HOME/Dropbox/Notes_vault/organise/notes.norg"
-alias articles="cd $HOME/Dropbox/Notes_vault/act/Articles/Research/ && lls"
-alias blogs="cd $HOME/Dropbox/Notes_vault/act/Articles/Blogs/ && lls"
-alias org="cd $HOME/Dropbox/Notes_vault/organise/ && lls"
-alias t="cd $HOME/social/twitter/edibo/ && envac && rainbowstream"
-alias wallg="$HOME/scripts/wallpapers.sh" # gnome only
-alias slp="sudo pm-suspend"
-alias pk="pkill picom || picom -b --experimental-backends &"
+alias kbd='setxkbmap -layout us' # (re)set keyboard layout to us
+alias em='emacs -nw' # terminal emacs
+alias td='vim $HOME/Dropbox/Notes_vault/00_daily/Todo/todo.md'
+alias wallg='$HOME/scripts/wallpapers.sh' # gnome only
+alias slp='sudo pm-suspend'
+alias pk='pkill picom || picom -b --experimental-backends &' # xorg only
 
 # NeoVim
-
-alias v="nv -u NONE" # vanilla nvim config
-alias nv="/usr/bin/nvim.appimage" # bloated nvim config
+alias v='nv -u NONE' # vanilla nvim config
+alias nv='/usr/bin/nvim.appimage' # bloated nvim config
 alias nvf='nv $(fzf)' # fuzzy find and open in nvim
-alias nw="$HOME/scripts/nvk.sh" # minimal nvim config
+alias nw='$HOME/scripts/nvk.sh' # minimal nvim config
+
 # Git
 alias lg='lazygit'
 
 # Development
-alias srv="live-server"
-alias bitsy="$HOME/Software/bitsy-savior-linux-64/bitsy-savior"
-alias bitsyn="cd /home/edibotopic/Dev/bitsy-savior/ && npm start && cd ~"
-alias tw="$HOME/Software/tweego-2.1.1-linux-x64/tweego"
-alias p8="$HOME/Software/pico-8_0.2.4c_amd64/pico-8/pico8"
-alias vx="$HOME/Software/voxatron_0.3.6_amd64/voxatron/vox"
-alias gd3="$HOME/Software/Godot/Godot_v3.4.4-stable_x11.64"
-alias gd4="$HOME/Software/Godot/Godot_v4.0-alpha6_linux.64"
-alias blnd="$HOME/Software/BlenderLauncher"
+alias dev='cd $HOME/Dev && lls'
+alias srv='live-server'
+alias bitsy='$HOME/Software/bitsy-savior-linux-64/bitsy-savior'
+alias bitsyn='cd /home/edibotopic/Dev/bitsy-savior/ && npm start && cd ~'
+alias tw='$HOME/Software/tweego-2.1.1-linux-x64/tweego'
+alias p8='$HOME/Software/pico-8_0.2.4c_amd64/pico-8/pico8'
+alias vx='$HOME/Software/voxatron_0.3.6_amd64/voxatron/vox'
+alias gd3='$HOME/Software/Godot/Godot_v3.4.4-stable_x11.64'
+alias gd4='$HOME/Software/Godot/Godot_v4.0-alpha6_linux.64'
+alias blnd='$HOME/Software/BlenderLauncher'
 
 # Text rendering
-alias glow="~/Software/glow/glow"
-alias cook="~/Software/CookCLI_0.1.4_linux_amd64/cook"
+alias glow='~/Software/glow/glow'
+alias cook='~/Software/CookCLI_0.1.4_linux_amd64/cook'
 
 # Documents
-alias doc2pdf="libreoffice --headless --convert-to pdf *.doc" # convert all Word doc files to pdf
-alias docx2pdf="libreoffice --headless --convert-to pdf *.docx" # convert all Word docs to pdf
-alias odt2pdf="libreoffice --headless --convert-to pdf *.odt" # convert all .odt docs to pdf
-alias ppt2pdf="libreoffice --headless --convert-to pdf *.pptx" # convert all .odt docs to pdf
-alias foxit="/home/edibotopic/opt/foxitsoftware/foxitreader/FoxitReader"
+alias doc2pdf='libreoffice --headless --convert-to pdf *.doc' # convert all Word doc files to pdf
+alias docx2pdf='libreoffice --headless --convert-to pdf *.docx' # convert all Word docs to pdf
+alias odt2pdf='libreoffice --headless --convert-to pdf *.odt' # convert all .odt docs to pdf
+alias ppt2pdf='libreoffice --headless --convert-to pdf *.pptx' # convert all .odt docs to pdf
+alias foxit='/home/edibotopic/opt/foxitsoftware/foxitreader/FoxitReader'
 
 # Python
 alias py=python3
 alias python=python3
-alias envmk="py -m venv env"
-alias envac="source ./env/bin/activate"
+alias envmk='py -m venv env'
+alias envac='source ./env/bin/activate'
 alias deac=deactivate
 
 # Quarto books
-alias qp="quarto preview"
-alias qr="quarto render"
+alias qp='quarto preview'
+alias qr='quarto render'
 
 # Orca env 
-alias orca="cd /home/edibotopic/Software/100rabbits/Orca/desktop/ && npm start && cd ~"
-alias orca-c="/home/edibotopic/Software/100rabbits/Orca-c/build/orca"
-alias cst="/home/edibotopic/Software/100rabbits/cassetter-0.1.1.AppImage"
-alias pilot="cd /home/edibotopic/Software/100rabbits/Pilot/desktop/ && npm start"
+alias orca='cd /home/edibotopic/Software/100rabbits/Orca/desktop/ && npm start && cd ~'
+alias orca-c='/home/edibotopic/Software/100rabbits/Orca-c/build/orca'
+alias cst='/home/edibotopic/Software/100rabbits/cassetter-0.1.1.AppImage'
+alias pilot='cd /home/edibotopic/Software/100rabbits/Pilot/desktop/ && npm start'
 
 # Wacom
-alias sx="source $HOME/.xinitrc" # sets buttons for Wacom pen
-alias wacompc="source $HOME/scripts/wacom-multimon.sh" # restricts to 180p screen for dual monitor setup
+alias sx='source $HOME/.xinitrc' # sets buttons for Wacom pen
+alias wacompc='source $HOME/scripts/wacom-multimon.sh' # restricts to 180p screen for dual monitor setup
 
 # Video
-alias davinci="/opt/resolve/bin/resolve"
+alias davinci='/opt/resolve/bin/resolve'
 
 # Games
 alias u7=exult
 
 # Data
-alias weather="curl wttr.in/Cork"
+alias weather='curl wttr.in/Cork'
 
 # Reading
-alias rss="newsboat"
+alias rss='newsboat'
 
 # Fun
-alias trippy="kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/double150.gif"
-alias trippies="kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/ | sort -R | head -1"
-# alias trippy="kitty +kitten icat --align left ls ~/Dropbox/Notes_vault/Loops/ | shuf -n1"
+# alias trippy='kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/double150.gif'
+# alias trippies='kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/ | sort -R | head -1'
+# alias trippy='kitty +kitten icat --align left ls ~/Dropbox/Notes_vault/Loops/ | shuf -n1'
 
-alias durdraw="cd ~/Software/durdraw/ && envac && py durdraw/main.py"
+alias durdraw='cd ~/Software/durdraw/ && envac && py durdraw/main.py'
