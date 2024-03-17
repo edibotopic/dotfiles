@@ -19,9 +19,9 @@ require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
 require "user.zenmode"
-require "user.neovide"
+--require "user.neovide"
 require "user.trouble"
 require "user.oil"
 
 --detect tweego filetype
-vim.cmd[[autocmd BufRead,BufNew,BufNewFile *.tw, *twee setlocal ft=tweego]]
+--vim.cmd[[autocmd BufRead,BufNew,BufNewFile *.tw, *twee setlocal ft=tweego]]

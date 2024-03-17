@@ -108,15 +108,15 @@ return packer.startup(function(use)
     use "lewis6991/gitsigns.nvim"
     
     -- Interactive
-    use { 'michaelb/sniprun', run = 'bash ./install.sh' }
+    -- use { 'michaelb/sniprun', run = 'bash ./install.sh' }
     -- use 'tpope/vim-dispatch'
     -- use 'radenling/vim-dispatch-neovim'
 
     -- Misc plugins
-    use "tidalcycles/vim-tidal"
+    -- use "tidalcycles/vim-tidal"
     use "folke/zen-mode.nvim"
     use "folke/twilight.nvim"
-    use "luizribeiro/vim-cooklang"
+    -- use "luizribeiro/vim-cooklang"
     use { 'ggandor/leap.nvim',
         config = function()
             require("leap").set_default_keymaps()
@@ -125,7 +125,7 @@ return packer.startup(function(use)
     use {
       'stevearc/oil.nvim',
     }
-    use 'davidgranstrom/nvim-markdown-preview'
+    -- use 'davidgranstrom/nvim-markdown-preview'
     use({
         "quarto-dev/quarto-vim",
         requires = {
@@ -139,8 +139,8 @@ return packer.startup(function(use)
     })
     use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
     use 'lepture/vim-jinja'
-    --[[ use 'https://github.com/PolyCement/vim-tweego' ]]
-    --[[ use 'jbyuki/venn.nvim' ]]
+    -- use 'https://github.com/PolyCement/vim-tweego'
+    -- use 'jbyuki/venn.nvim'
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons"

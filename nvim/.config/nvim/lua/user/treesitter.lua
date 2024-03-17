@@ -3,6 +3,9 @@ if not status_ok then
   return
 end
 
+require('nvim-treesitter.configs').setup {}
+-- nvim-ts-context-commentstring is set up automatically
+
 configs.setup {
   ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
@@ -15,9 +18,5 @@ configs.setup {
     disable = { }, -- list of language that will be disabled
     additional_vim_regex_highlighting = true,
   },
-  indent = { enable = true, disable = { "yaml" } },
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-  },
+  indent = { enable = true, disable = { "yaml", "html", "md" } },
 }

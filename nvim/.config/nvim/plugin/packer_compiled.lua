@@ -207,11 +207,6 @@ _G.packer_plugins = {
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-markdown-preview"] = {
-    loaded = true,
-    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/nvim-markdown-preview",
-    url = "https://github.com/davidgranstrom/nvim-markdown-preview"
-  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -264,11 +259,6 @@ _G.packer_plugins = {
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim",
     url = "https://github.com/quarto-dev/quarto-vim"
   },
-  sniprun = {
-    loaded = true,
-    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/sniprun",
-    url = "https://github.com/michaelb/sniprun"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -301,11 +291,6 @@ _G.packer_plugins = {
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
-  ["vim-cooklang"] = {
-    loaded = true,
-    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-cooklang",
-    url = "https://github.com/luizribeiro/vim-cooklang"
-  },
   ["vim-hexokinase"] = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-hexokinase",
@@ -320,11 +305,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-pandoc-syntax",
     url = "https://github.com/vim-pandoc/vim-pandoc-syntax"
-  },
-  ["vim-tidal"] = {
-    loaded = true,
-    path = "/home/edibotopic/.local/share/nvim/site/pack/packer/start/vim-tidal",
-    url = "https://github.com/tidalcycles/vim-tidal"
   },
   ["which-key.nvim"] = {
     loaded = true,
@@ -353,12 +333,12 @@ vim.cmd [[au FileType java ++once lua require("packer.load")({'nvim-jdtls'}, { f
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
-time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]], true)
-vim.cmd [[source /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]]
-time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]], false)
 time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], true)
 vim.cmd [[source /home/edibotopic/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]]
 time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], false)
+time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]], true)
+vim.cmd [[source /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]]
+time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]], false)
 vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
