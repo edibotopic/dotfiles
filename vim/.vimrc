@@ -3,6 +3,9 @@
 " Don't be vi compatible
 set nocompatible
 
+" No swap file
+set noswapfile
+
 " Helps force plugins to load correctly when turned back on below
 filetype off
 
@@ -22,6 +25,11 @@ set modelines=0
 
 " Show line numbers
 set relativenumber
+
+" Set tab spaces
+set expandtab
+set tabstop=4
+set shiftwidth=4
 
 " Show file stats
 set ruler
