@@ -25,6 +25,8 @@ alias v="nv -u NONE" # vanilla nvim config
 alias nv="/usr/bin/nvim.appimage" # bloated nvim config
 alias nvf='nv $(fzf)' # fuzzy find and open in nvim
 alias nw="$HOME/scripts/nvk.sh" # minimal nvim config
+# Git
+alias lg='lazygit'
 
 # Development
 alias srv="live-server"
