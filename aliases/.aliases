@@ -13,6 +13,7 @@ alias td='vim $HOME/Dropbox/Notes_vault/00_daily/Todo/todo.md'
 alias wallg='$HOME/scripts/wallpapers.sh' # gnome only
 alias slp='sudo pm-suspend'
 alias pk='pkill picom || picom -b --experimental-backends &' # xorg only
+alias br='brightness-controller'
 
 # NeoVim
 alias v='nv -u NONE' # vanilla nvim config
