@@ -48,10 +48,10 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Dropbox/Notes_vault/00-09-Meta/06-Org/")
+(setq org-directory "~/Dropbox/Notes_vault/00_daily/Org/")
 
 ;; Define the location of the file to hold tasks and notes
-(setq org-default-notes-file "~/Dropbox/Notes_vault/00-09-Meta/06-Org/06.04-notes.org")
+(setq org-default-notes-file "~/Dropbox/Notes_vault/00_daily/Org/00.04-notes.org")
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -115,22 +115,22 @@
 (after! (org org-capture)
   (add-to-list 'org-capture-templates
         '("c" "Checklist"  entry
-        (file+headline "~/Dropbox/Notes_vault/00-09-Meta/06-Org/06.00-checklist.org" "Checklist")
+        (file+headline "~/Dropbox/Notes_vault/00_daily/Org/00.00-checklist.org" "Checklist")
         "* [ ] %? %T" :empty-lines 1)
 
   (add-to-list 'org-capture-templates
         '("f" "Fragment"  entry
-        (file+headline "~/Dropbox/Notes_vault/00-09-Meta/06-Org/06.01-fragments.org" "Fragments")
+        (file+headline "~/Dropbox/Notes_vault/00_daily/Org/00.01-fragments.org" "Fragments")
         "* %? %T" :empty-lines 1)
 
   (add-to-list 'org-capture-templates
         '("d" "Diary"  entry
-        (file+headline "~/Dropbox/Notes_vault/00-09-Meta/06-Org/06.02-diary.org" "Diary")
+        (file+headline "~/Dropbox/Notes_vault/00_daily/Org/00.02-diary.org" "Diary")
         "* %? %T" :empty-lines 1)
 
   (add-to-list 'org-capture-templates
         '("i" "Idea"  entry
-        (file+headline "~/Dropbox/Notes_vault/00-09-Meta/06-Org/06.03-ideas.org" "Ideas")
+        (file+headline "~/Dropbox/Notes_vault/00_daily/Org/00.03-ideas.org" "Ideas")
         "* %? %T" :empty-lines 1))))))
 
 ;; Config org-agenda calendar for integrations
@@ -141,7 +141,7 @@
   (let ((org-file (buffer-file-name)))
     (when (and org-file
                (string-suffix-p ".org" org-file)
-               (string-prefix-p "/home/edibotopic/Dropbox/Notes_vault/00-09-Meta/06-Org/agenda/" org-file))
+               (string-prefix-p "/home/edibotopic/Dropbox/Notes_vault/00_daily/Org/agenda/" org-file))
       (let* ((base-dir (file-name-directory org-file))
              (export-dir (concat base-dir "export/"))
              (file-name-no-ext (file-name-sans-extension (file-name-nondirectory org-file)))
