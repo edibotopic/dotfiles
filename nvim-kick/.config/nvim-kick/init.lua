@@ -126,6 +126,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+-- Detect Defold .script files as lua files
+vim.cmd([[autocmd BufRead,BufNew,BufNewFile *.script, setlocal ft=lua]])
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -485,7 +488,7 @@ require("lazy").setup({
 
 				lua_ls = {
 					-- cmd = {...},
-					-- filetypes = {'lua', 'script'}, -- BUG: `.script` files not recognised?
+					-- filetypes = { "lua", "script" }, -- BUG: `.script` files not recognised?
 					-- capabilities = {},
 					settings = {
 						Lua = {
