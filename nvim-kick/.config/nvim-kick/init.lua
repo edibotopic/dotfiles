@@ -5,7 +5,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -763,6 +763,27 @@ require('lazy').setup({
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   { import = 'custom.plugins' },
+				sources = {
+					{ name = "nvim_lsp" },
+					{ name = "luasnip" },
+					{ name = "path" },
+					{ name = "buffer" },
+					{ name = "latex_symbols" },
+				},
+				formatting = {
+					fields = { "kind", "abbr", "menu" },
+
+					format = function(entry, vim_item)
+						vim_item.kind = string.format("%s", icons[vim_item.kind]) or ""
+						vim_item.menu = ({
+							nvim_lsp = "[LSP]",
+							luasnip = "[Snippet]",
+							buffer = "[Buffer]",
+							path = "[Path]",
+						})[entry.source.name]
+						return vim_item
+					end,
+				},
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
