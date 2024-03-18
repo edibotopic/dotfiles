@@ -45,6 +45,9 @@ vim.opt.smartcase = true
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
 
+-- Don't highlight current line
+vim.opt.cursorline = false
+
 -- Decrease update time
 vim.opt.updatetime = 250
 
