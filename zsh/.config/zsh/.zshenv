@@ -22,6 +22,7 @@ export PATH="$HOME/Software/idea-IC-231.9011.34/bin:$PATH"
 export PATH="$HOME/.local/kitty.app/bin/:$PATH"
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 export PATH="/usr/local/texlive/2022/bin/x86_64-linux":$PATH
+. "$HOME/.cargo/env"
 
 # Load custom Ranger config
 export RANGER_LOAD_DEFAULT_RC=false
