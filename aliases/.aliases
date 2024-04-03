@@ -14,6 +14,7 @@ alias wallg='$HOME/scripts/wallpapers.sh' # gnome only
 alias slp='sudo pm-suspend'
 alias pk='pkill picom || picom -b --experimental-backends &' # xorg only
 alias br='brightness-controller'
+alias cl='journalctl --vacuum-time=10d' # clear recent logs
 
 # NeoVim
 alias nv='$HOME/scripts/nvk.sh' # kickstart nvim config
