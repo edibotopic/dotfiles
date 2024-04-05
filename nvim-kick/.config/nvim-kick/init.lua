@@ -155,6 +155,13 @@ require("lazy").setup({
 
 	"typicode/bg.nvim", -- Adapt terminal background on colorscheme change
 
+	{
+		"danymat/neogen", -- Auto-generate (some) annotations
+		config = true,
+		-- Uncomment next line if you want to follow only stable versions
+		-- version = "*"
+	},
+
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
 	-- keys can be used to configure plugin behavior/loading/etc.
@@ -732,7 +739,14 @@ require("lazy").setup({
 		"folke/todo-comments.nvim",
 		event = "VimEnter",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = { signs = false },
+		opts = {
+			signs = true,
+			-- add custom keywords below
+			keywords = {
+				QUERY = { icon = " ", color = "#8F00FF", alt = { "QUESTION", "Q", "CHECK", "DODGY" } },
+			},
+		},
+		merge_keywords = true, -- merge custom keywords with defaults
 	},
 
 	{ -- Collection of various small independent plugins/modules
