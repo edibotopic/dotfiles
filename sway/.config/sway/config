@@ -251,6 +251,8 @@ default_border none
 
 input type:keyboard {
     xkb_options caps:swapescape
+    repeat_delay 150
+    repeat_rate 30
 }
 
 
