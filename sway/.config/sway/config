@@ -255,7 +255,6 @@ input type:keyboard {
     repeat_rate 30
 }
 
-
 # TODO Keyboard
 
 # exec_always "setxkbmap -layout us"
