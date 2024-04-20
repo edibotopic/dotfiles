@@ -8,6 +8,7 @@ source "$ZDOTDIR/zsh-functions"
 source $HOME/.aliases
 
 # Software to path
+export PATH="/usr/local/go/bin/:$PATH"
 export PATH="$HOME/go/bin/:$PATH"
 export PATH="$HOME/Software/pico-8:$PATH"
 export PATH="$HOME/Software/reaper/REAPER:$PATH"
