@@ -77,6 +77,7 @@ vim.opt.scrolloff = 8
 -- Disable swap file
 vim.cmd("set noswapfile")
 
+-- Cursor is always a block
 vim.cmd("set guicursor=n-v-c-i:block")
 
 -- [[ Basic Keymaps ]]
