@@ -74,6 +74,9 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 8
 
+-- Disable swap file
+vim.cmd("set noswapfile")
+
 vim.cmd("set guicursor=n-v-c-i:block")
 
 -- [[ Basic Keymaps ]]
