@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Shane Crowley"
-      user-mail-address "edibotopic@gmail.com")
+      user-mail-address "shanevcrowley@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -48,10 +48,10 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Dropbox/Notes_vault/00_daily/Org/")
+(setq org-directory "~/.local/share/Cryptomator/mnt/vault/")
 
 ;; Define the location of the file to hold tasks and notes
-(setq org-default-notes-file "~/Dropbox/Notes_vault/00_daily/Org/00.04-notes.org")
+(setq org-default-notes-file "~/.local/share/Cryptomator/mnt/vault/notes.org")
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -112,43 +112,45 @@
 (setq python-shell-interpreter "ipython"
     python-shell-interpreter-args "-i --simple-prompt")
 
-(after! (org org-capture)
-  (add-to-list 'org-capture-templates
-        '("c" "Checklist"  entry
-        (file+headline "~/Dropbox/Notes_vault/00_daily/Org/00.00-checklist.org" "Checklist")
-        "* [ ] %? %T" :empty-lines 1)
+;; Q: org-capture
 
-  (add-to-list 'org-capture-templates
-        '("f" "Fragment"  entry
-        (file+headline "~/Dropbox/Notes_vault/00_daily/Org/00.01-fragments.org" "Fragments")
-        "* %? %T" :empty-lines 1)
+;; (after! (org org-capture)
+;;   (add-to-list 'org-capture-templates
+;;         '("c" "Checklist"  entry
+;;         (file+headline "~/Dropbox/Notes_vault/00_daily/Org/00.00-checklist.org" "Checklist")
+;;         "* [ ] %? %T" :empty-lines 1)
 
-  (add-to-list 'org-capture-templates
-        '("d" "Diary"  entry
-        (file+headline "~/Dropbox/Notes_vault/00_daily/Org/00.02-diary.org" "Diary")
-        "* %? %T" :empty-lines 1)
+;; (add-to-list 'org-capture-templates
+;;       '("f" "Fragment"  entry
+;;       (file+headline "~/Dropbox/Notes_vault/00_daily/Org/00.01-fragments.org" "Fragments")
+;;       "* %? %T" :empty-lines 1)
 
-  (add-to-list 'org-capture-templates
-        '("i" "Idea"  entry
-        (file+headline "~/Dropbox/Notes_vault/00_daily/Org/00.03-ideas.org" "Ideas")
-        "* %? %T" :empty-lines 1))))))
+;; (add-to-list 'org-capture-templates
+;;       '("d" "Diary"  entry
+;;       (file+headline "~/Dropbox/Notes_vault/00_daily/Org/00.02-diary.org" "Diary")
+;;       "* %? %T" :empty-lines 1)
 
-;; Config org-agenda calendar for integrations
-(setq org-icalendar-timezone "Europe/Dublin")
+;; (add-to-list 'org-capture-templates
+;;       '("i" "Idea"  entry
+;;       (file+headline "~/Dropbox/Notes_vault/00_daily/Org/00.03-ideas.org" "Ideas")
+;;       "* %? %T" :empty-lines 1))))))
 
-(defun export-org-to-ics ()
-  "Export Org agenda file to ICS format."
-  (let ((org-file (buffer-file-name)))
-    (when (and org-file
-               (string-suffix-p ".org" org-file)
-               (string-prefix-p "/home/edibotopic/Dropbox/Notes_vault/00_daily/Org/agenda/" org-file))
-      (let* ((base-dir (file-name-directory org-file))
-             (export-dir (concat base-dir "export/"))
-             (file-name-no-ext (file-name-sans-extension (file-name-nondirectory org-file)))
-             (ics-file (concat export-dir file-name-no-ext ".ics")))
-        (make-directory export-dir t) ; Create export directory if it doesn't exist
-        (org-export-to-file 'icalendar ics-file)))))
+;; Q: Config org-agenda calendar for integrations
 
-(add-hook 'after-save-hook 'export-org-to-ics)
+;; (setq org-icalendar-timezone "Europe/Dublin")
 
-(setq geiser-chicken-binary "/usr/bin/csi")
+;; (defun export-org-to-ics ()
+;;   "Export Org agenda file to ICS format."
+;;   (let ((org-file (buffer-file-name)))
+;;     (when (and org-file
+;;                (string-suffix-p ".org" org-file)
+;;                (string-prefix-p "/home/edibotopic/Dropbox/Notes_vault/00_daily/Org/agenda/" org-file))
+;;       (let* ((base-dir (file-name-directory org-file))
+;;              (export-dir (concat base-dir "export/"))
+;;              (file-name-no-ext (file-name-sans-extension (file-name-nondirectory org-file)))
+;;              (ics-file (concat export-dir file-name-no-ext ".ics")))
+;;         (make-directory export-dir t) ; Create export directory if it doesn't exist
+;;         (org-export-to-file 'icalendar ics-file)))))
+;; (add-hook 'after-save-hook 'export-org-to-ics)
+
+;; (setq geiser-chicken-binary "/usr/bin/csi")
