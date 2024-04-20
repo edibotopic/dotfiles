@@ -24,6 +24,7 @@ export PATH="$HOME/.local/kitty.app/bin/:$PATH"
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 export PATH="/usr/local/texlive/2022/bin/x86_64-linux":$PATH
 . "$HOME/.cargo/env"
+export PATH="$HOME/Software/openjdk-21.0.2_linux-x64_bin/jdk-21.0.2/bin:$PATH"
 
 # Load custom Ranger config
 export RANGER_LOAD_DEFAULT_RC=false
