@@ -9,7 +9,7 @@ plugins=(git z vi-mode)
 VI_MODE_SET_CURSOR=false
 
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 # Manually set language environment
