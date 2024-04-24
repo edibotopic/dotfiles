@@ -7,8 +7,8 @@
 #: characters.
 
 font_family      Fira Code
-bold_font        auto
-italic_font      auto
+bold_font        Fira Code Bold
+italic_font      auto 
 bold_italic_font auto
 
 #: You can specify different fonts for the bold/italic/bold-italic
@@ -24,7 +24,7 @@ bold_italic_font auto
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
 
-font_size 14.0
+font_size 13.0
 
 #: Font size (in pts)
 
@@ -67,9 +67,7 @@ font_size 14.0
 #: them down. The underline and strikethrough positions are adjusted
 #: accordingly.
 
-# symbol_map
-
-symbol_map U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0-U+E0C8,U+E0CA,U+E0CC-U+E0D2,U+E0D4,U+E200-U+E2A9,U+E300-U+E3E3,U+E5FA-U+E62F,U+E700-U+E7C5,U+F000-U+F2E0,U+F300-U+F31C,U+F400-U+F4A9,U+F500-U+F8FF Symbols Nerd Font
+# symbol_map U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0-U+E0C8,U+E0CA,U+E0CC-U+E0D2,U+E0D4,U+E200-U+E2A9,U+E300-U+E3E3,U+E5FA-U+E634,U+E700-U+E7C5,U+EA60-U+EBEB,U+F000-U+F2E0,U+F300-U+F32F,U+F400-U+F4A9,U+F500-U+F8FF Symbols Nerd Font Mono
 
 #: Map the specified unicode codepoints to a particular font. Useful
 #: if you need special rendering for some symbols, such as for
@@ -2023,6 +2021,6 @@ map kitty_mod+a>d set_background_opacity default
 
 
 # BEGIN_KITTY_THEME
-# IC Orange PPL
+# Sea Shells
 include current-theme.conf
 # END_KITTY_THEME
