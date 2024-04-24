@@ -5,7 +5,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Set to true if you have a Nerd Font installed
-vim.g.have_nerd_font = true
+vim.g.have_nerd_font = false
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -257,7 +257,7 @@ require("lazy").setup({
 			{ "nvim-telescope/telescope-ui-select.nvim" },
 
 			-- Useful for getting pretty icons, but requires a Nerd Font.
-			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
+			-- { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 		},
 		config = function()
 			-- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -613,31 +613,31 @@ require("lazy").setup({
 			luasnip.config.setup({})
 
 			icons = {
-				Text = "",
-				Method = "m",
-				Function = "",
+				Text = "󰊄",
+				Method = "󱖲",
+				Function = "󰊕",
 				Constructor = "",
 				Field = "",
-				Variable = "",
-				Class = "",
+				Variable = "󰫧",
+				Class = "",
 				Interface = "",
 				Module = "",
 				Property = "",
 				Unit = "",
-				Value = "",
+				Value = "",
 				Enum = "",
-				Keyword = "",
+				Keyword = "",
 				Snippet = "",
-				Color = "",
-				File = "",
+				Color = "",
+				File = "",
 				Reference = "",
-				Folder = "",
+				Folder = "",
 				EnumMember = "",
-				Constant = "",
+				Constant = "󰩪",
 				Struct = "",
 				Event = "",
-				Operator = "",
-				TypeParameter = "",
+				Operator = "",
+				TypeParameter = "",
 			}
 
 			cmp.setup({
@@ -847,21 +847,7 @@ require("lazy").setup({
 	ui = {
 		-- If you have a Nerd Font, set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons otherwise define a unicode icons table
-		icons = vim.g.have_nerd_font and {} or {
-			cmd = "⌘",
-			config = "🛠",
-			event = "📅",
-			ft = "📂",
-			init = "⚙",
-			keys = "🗝",
-			plugin = "🔌",
-			runtime = "💻",
-			require = "🌙",
-			source = "📄",
-			start = "🚀",
-			task = "📌",
-			lazy = "💤 ",
-		},
+		icons = {},
 	},
 })
 
