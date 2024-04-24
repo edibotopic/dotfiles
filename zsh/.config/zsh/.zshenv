@@ -39,3 +39,6 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Opam configuration
 [[ ! -r /home/edibotopic/.opam/opam-init/init.zsh ]] || source /home/edibotopic/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
