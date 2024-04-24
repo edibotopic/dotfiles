@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/edibotopic/.cache/nvim/packer_hererocks/2.1.1693268511/share/lua/5.1/?.lua;/home/edibotopic/.cache/nvim/packer_hererocks/2.1.1693268511/share/lua/5.1/?/init.lua;/home/edibotopic/.cache/nvim/packer_hererocks/2.1.1693268511/lib/luarocks/rocks-5.1/?.lua;/home/edibotopic/.cache/nvim/packer_hererocks/2.1.1693268511/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/edibotopic/.cache/nvim/packer_hererocks/2.1.1693268511/lib/lua/5.1/?.so"
+local package_path_str = "/home/edibotopic/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?.lua;/home/edibotopic/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?/init.lua;/home/edibotopic/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?.lua;/home/edibotopic/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/edibotopic/.cache/nvim/packer_hererocks/2.1.1710088188/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -333,12 +333,12 @@ vim.cmd [[au FileType java ++once lua require("packer.load")({'nvim-jdtls'}, { f
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
-time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], true)
-vim.cmd [[source /home/edibotopic/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]]
-time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], false)
 time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]], true)
 vim.cmd [[source /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]]
 time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/quarto-vim/ftdetect/quarto.vim]], false)
+time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], true)
+vim.cmd [[source /home/edibotopic/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]]
+time([[Sourcing ftdetect script at: /home/edibotopic/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], false)
 vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
