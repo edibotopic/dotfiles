@@ -26,24 +26,24 @@ alias nvo='/usr/bin/nvim.appimage' # old nvim config
 alias lg='lazygit'
 
 # Development
-alias dev='cd $HOME/Dev && lls'
+alias dev='cd $HOME/dev/gh && lls'
 alias srv='live-server'
-alias bitsy='$HOME/Software/bitsy-savior-linux-64/bitsy-savior'
+alias bitsy='$HOME/software/bitsy-savior-linux-64/bitsy-savior'
 alias bitsyn='cd /home/edibotopic/Dev/bitsy-savior/ && npm start && cd ~'
-alias tw='$HOME/Software/tweego-2.1.1-linux-x64/tweego'
-alias p8='$HOME/Software/pico-8_0.2.4c_amd64/pico-8/pico8'
-alias vx='$HOME/Software/voxatron_0.3.6_amd64/voxatron/vox'
-alias gd3='$HOME/Software/Godot/Godot_v3.4.4-stable_x11.64'
-alias gd4='$HOME/Software/Godot/Godot_v4.0-alpha6_linux.64'
-alias blnd='$HOME/Software/BlenderLauncher'
-alias xe='/home/edibotopic/Software/xmlmind/bin/xxe'
+alias tw='$HOME/software/tweego-2.1.1-linux-x64/tweego'
+alias p8='$HOME/software/pico-8_0.2.4c_amd64/pico-8/pico8'
+alias vx='$HOME/software/voxatron_0.3.6_amd64/voxatron/vox'
+alias gd3='$HOME/software/Godot/Godot_v3.4.4-stable_x11.64'
+alias gd4='$HOME/software/Godot/Godot_v4.0-alpha6_linux.64'
+alias blnd='$HOME/software/BlenderLauncher'
+alias xe='/home/edibotopic/software/xmlmind/bin/xxe'
 alias process='$HOME/scripts/process.sh'
 alias love='/usr/bin/love.AppImage'
-alias defold='$HOME/Software/Defold/Defold'
+alias defold='$HOME/software/Defold/Defold'
 
 # Text rendering
-alias glow='~/Software/glow/glow'
-alias cook='~/Software/CookCLI_0.1.4_linux_amd64/cook'
+alias glow='~/software/glow/glow'
+alias cook='~/software/CookCLI_0.1.4_linux_amd64/cook'
 
 # Documents
 alias doc2pdf='libreoffice --headless --convert-to pdf *.doc' # convert all Word doc files to pdf
@@ -51,7 +51,7 @@ alias docx2pdf='libreoffice --headless --convert-to pdf *.docx' # convert all Wo
 alias odt2pdf='libreoffice --headless --convert-to pdf *.odt' # convert all .odt docs to pdf
 alias ppt2pdf='libreoffice --headless --convert-to pdf *.pptx' # convert all .odt docs to pdf
 alias foxit='/home/edibotopic/opt/foxitsoftware/foxitreader/FoxitReader'
-alias xr='/home/edibotopic/Software/dita-ot/bin/dita' # tool to convert xml source to docs
+alias xr='/home/edibotopic/software/dita-ot/bin/dita' # tool to convert xml source to docs
 
 # Python
 alias py=python3
@@ -65,10 +65,10 @@ alias qp='quarto preview'
 alias qr='quarto render'
 
 # Orca env 
-alias orca='cd /home/edibotopic/Software/100rabbits/Orca/desktop/ && npm start && cd ~'
-alias orca-c='/home/edibotopic/Software/100rabbits/Orca-c/build/orca'
-alias cst='/home/edibotopic/Software/100rabbits/cassetter-0.1.1.AppImage'
-alias pilot='cd /home/edibotopic/Software/100rabbits/Pilot/desktop/ && npm start'
+alias orca='cd /home/edibotopic/software/100rabbits/Orca/desktop/ && npm start && cd ~'
+alias orca-c='/home/edibotopic/software/100rabbits/Orca-c/build/orca'
+alias cst='/home/edibotopic/software/100rabbits/cassetter-0.1.1.AppImage'
+alias pilot='cd /home/edibotopic/software/100rabbits/Pilot/desktop/ && npm start'
 
 # Wacom
 alias sx='source $HOME/.xinitrc' # sets buttons for Wacom pen
@@ -91,4 +91,4 @@ alias rss='newsboat'
 # alias trippies='kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/ | sort -R | head -1'
 # alias trippy='kitty +kitten icat --align left ls ~/Dropbox/Notes_vault/Loops/ | shuf -n1'
 
-alias durdraw='cd ~/Software/durdraw/ && envac && py durdraw/main.py'
+alias durdraw='cd ~/software/durdraw/ && envac && py durdraw/main.py'
