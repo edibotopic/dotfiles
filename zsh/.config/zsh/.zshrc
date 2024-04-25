@@ -4,7 +4,7 @@ ZSH_THEME=jbergantine
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git z vi-mode)
+plugins=(git z vi-mode zsh-autosuggestions)
 
 VI_MODE_SET_CURSOR=false
 
