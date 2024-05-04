@@ -21,6 +21,8 @@ alias v='$HOME/scripts/nvk.sh' # kickstart nvim config
 alias nvf='nv $(fzf)' # fuzzy find and open in nvim
 alias v0='nv -u NONE' # vanilla nvim config
 alias nvo='/usr/bin/nvim.appimage' # old nvim config
+alias td='nv $HOME/Dropbox/quick_share/td.md' # quick todo
+alias til='nv $HOME/Dropbox/quick_share/til/index.md' # today-i-learned
 
 # Git
 alias lg='lazygit'
