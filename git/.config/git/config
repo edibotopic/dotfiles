@@ -1,0 +1,12 @@
+[includeif "gitdir:~/dev/gh-me/"]
+	path = config-ghm # personal github
+[includeif "gitdir:~/dotfiles/"]
+	path = config-ghm # personal github
+[includeif "gitdir:~/dev/gh-work/"]
+	path = config-ghw # work github
+[includeif "gitdir:~/dev/lp-work/"]
+	path = config-lp # launchpad
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
