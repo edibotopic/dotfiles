@@ -166,6 +166,26 @@ require("lazy").setup({
 		-- version = "*"
 	},
 
+  {
+  'nvim-orgmode/orgmode',
+  event = 'VeryLazy',
+  ft = { 'org' },
+  config = function()
+    -- Setup orgmode
+    require('orgmode').setup({
+      org_agenda_files = '~/orgfiles/**/*',
+      org_default_notes_file = '~/orgfiles/refile.org',
+    })
+
+    -- NOTE: If you are using nvim-treesitter with `ensure_installed = "all"` option
+    -- add `org` to ignore_install
+    -- require('nvim-treesitter.configs').setup({
+    --   ensure_installed = 'all',
+    --   ignore_install = { 'org' },
+    -- })
+  end,
+  },
+
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
 	-- keys can be used to configure plugin behavior/loading/etc.
