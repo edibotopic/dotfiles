@@ -2021,6 +2021,6 @@ map kitty_mod+a>d set_background_opacity default
 
 
 # BEGIN_KITTY_THEME
-# Sea Shells
+# Tokyo Night
 include current-theme.conf
 # END_KITTY_THEME
