@@ -59,3 +59,4 @@
 (package! org-bullets)
 (package! racket-mode)
 (package! centered-cursor-mode)
+(package! ob-ipython)
