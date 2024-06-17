@@ -133,6 +133,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- Detect Defold .script files as lua files
 vim.cmd([[autocmd BufRead,BufNew,BufNewFile *.script, setlocal ft=lua]])
 
+-- Detect Handelbars files as html files
+vim.cmd("autocmd BufRead,BufNewFile *.hbs set filetype=html")
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -166,25 +169,25 @@ require("lazy").setup({
 		-- version = "*"
 	},
 
-  {
-  'nvim-orgmode/orgmode',
-  event = 'VeryLazy',
-  ft = { 'org' },
-  config = function()
-    -- Setup orgmode
-    require('orgmode').setup({
-      org_agenda_files = '~/orgfiles/**/*',
-      org_default_notes_file = '~/orgfiles/refile.org',
-    })
+	{
+		"nvim-orgmode/orgmode",
+		event = "VeryLazy",
+		ft = { "org" },
+		config = function()
+			-- Setup orgmode
+			require("orgmode").setup({
+				org_agenda_files = "~/orgfiles/**/*",
+				org_default_notes_file = "~/orgfiles/refile.org",
+			})
 
-    -- NOTE: If you are using nvim-treesitter with `ensure_installed = "all"` option
-    -- add `org` to ignore_install
-    -- require('nvim-treesitter.configs').setup({
-    --   ensure_installed = 'all',
-    --   ignore_install = { 'org' },
-    -- })
-  end,
-  },
+			-- NOTE: If you are using nvim-treesitter with `ensure_installed = "all"` option
+			-- add `org` to ignore_install
+			-- require('nvim-treesitter.configs').setup({
+			--   ensure_installed = 'all',
+			--   ignore_install = { 'org' },
+			-- })
+		end,
+	},
 
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
@@ -566,6 +569,18 @@ require("lazy").setup({
 
 	{ -- Autoformat
 		"stevearc/conform.nvim",
+		event = { "BufWritePre" },
+		cmd = { "ConformInfo" },
+		keys = {
+			{
+				"<leader>f",
+				function()
+					require("conform").format({ async = true, lsp_fallback = true })
+				end,
+				mode = "",
+				desc = "[F]ormat buffer",
+			},
+		},
 		opts = {
 			notify_on_error = false,
 			format_on_save = function(bufnr)
@@ -580,6 +595,10 @@ require("lazy").setup({
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
+				html = { "prettier" },
+				js = { "prettier" },
+				python = { "black" },
+
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--
@@ -745,7 +764,7 @@ require("lazy").setup({
 		--
 		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`
 		-- "folke/tokyonight.nvim",
-    "kdheepak/monochrome.nvim",
+		"kdheepak/monochrome.nvim",
 		priority = 1000, -- make sure to load this before all the other start plugins
 		init = function()
 			-- Load the colorscheme here.
@@ -800,7 +819,7 @@ require("lazy").setup({
 			--  and try some other statusline plugin
 			local statusline = require("mini.statusline")
 			-- set use_icons to true if you have a Nerd Font
-			statusline.setup({ use_icons = vim.g.have_nerd_font })
+			statusline.setup({ use_icons = true })
 
 			-- You can configure sections in the statusline by overriding their
 			-- default behavior. For example, here we set the section for
@@ -824,6 +843,7 @@ require("lazy").setup({
 			auto_install = true,
 			highlight = {
 				enable = true,
+				--disable = { "markdown" },
 				-- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
 				--  If you are experiencing weird indenting issues, add the language to
 				--  the list of additional_vim_regex_highlighting and disabled languages for indent.
