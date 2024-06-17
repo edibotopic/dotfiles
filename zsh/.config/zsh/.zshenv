@@ -2,7 +2,8 @@ export PATH=$HOME/.local/bin/:$PATH
 # export ZDOTDIR=$HOME/.config/zsh
 export ZSH=$HOME/.oh-my-zsh
 export TERM=xterm-kitty
-export EDITOR=/usr/bin/nvim.appimage
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
 export PATH="$HOME/scripts/:$PATH"
 source "$ZDOTDIR/zsh-functions"
 source $HOME/.aliases
