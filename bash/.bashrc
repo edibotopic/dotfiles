@@ -137,6 +137,9 @@ bind 'TAB:menu-complete'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+export EDITOR=vim
+set -o vi
+
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 
