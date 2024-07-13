@@ -134,14 +134,11 @@ require("lazy").setup({
 	},
 
 	-- "gc" to comment visual regions/lines
-	{ "numToStr/Comment.nvim", 
-    event={"InsertEnter", "VeryLazy"},
-    opts = {} 
-  },
+	{ "numToStr/Comment.nvim", event = { "InsertEnter", "VeryLazy" }, opts = {} },
 
 	{
 		"lewis6991/gitsigns.nvim",
-    event={"InsertEnter", "VeryLazy"},
+		event = { "InsertEnter", "VeryLazy" },
 		opts = {
 			signs = {
 				add = { text = "+" },
@@ -153,33 +150,33 @@ require("lazy").setup({
 		},
 	},
 
-  {
-    'folke/which-key.nvim',
-    event = 'VimEnter', -- Sets the loading event to 'VimEnter'
-    config = function() -- This is the function that runs, AFTER loading
-      require('which-key').setup()
+	{
+		"folke/which-key.nvim",
+		event = "VimEnter", -- Sets the loading event to 'VimEnter'
+		config = function() -- This is the function that runs, AFTER loading
+			require("which-key").setup()
 
-      require('which-key').add {
-        {
-          { '<leader>c', group = '[C]ode' },
-          { '<leader>d', group = '[D]ocument' },
-          { '<leader>r', group = '[R]ename' },
-          { '<leader>s', group = '[S]earch' },
-          { '<leader>w', group = '[W]orkspace' },
-          { '<leader>t', group = '[T]oggle' },
-          { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
-        },
-      }
-    end,
-  },
+			require("which-key").add({
+				{
+					{ "<leader>c", group = "[C]ode" },
+					{ "<leader>d", group = "[D]ocument" },
+					{ "<leader>r", group = "[R]ename" },
+					{ "<leader>s", group = "[S]earch" },
+					{ "<leader>w", group = "[W]orkspace" },
+					{ "<leader>t", group = "[T]oggle" },
+					{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
+				},
+			})
+		end,
+	},
 
-	{ 
+	{
 		"nvim-telescope/telescope.nvim",
-		event = {"InsertEnter", "VeryLazy"},
+		event = { "InsertEnter", "VeryLazy" },
 		branch = "0.1.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			{ 
+			{
 				"nvim-telescope/telescope-fzf-native.nvim",
 
 				build = "make",
@@ -247,7 +244,7 @@ require("lazy").setup({
 
 	{
 		"neovim/nvim-lspconfig",
-    event={"InsertEnter", "VeryLazy"},
+		event = { "InsertEnter", "VeryLazy" },
 		dependencies = {
 			-- Automatically install LSPs and related tools to stdpath for neovim
 			"williamboman/mason.nvim",
@@ -265,7 +262,6 @@ require("lazy").setup({
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 				callback = function(event)
-
 					local map = function(keys, func, desc)
 						vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 					end
@@ -314,7 +310,10 @@ require("lazy").setup({
 
 			local servers = {
 				clangd = {},
-				-- TODO gopls = {},
+				-- gopls = {
+				-- 	cmd = { "gopls" },
+				-- 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
+				-- },
 				pyright = {},
 				jdtls = {},
 				ols = {},
@@ -357,6 +356,21 @@ require("lazy").setup({
 		end,
 	},
 
+  {
+    "ray-x/go.nvim",
+    dependencies = {  -- optional packages
+      "ray-x/guihua.lua",
+      "neovim/nvim-lspconfig",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("go").setup()
+    end,
+    event = {"CmdlineEnter"},
+    ft = {"go", 'gomod'},
+    build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+  },
+
 	{
 		"stevearc/conform.nvim",
 		event = { "BufWritePre" },
@@ -385,7 +399,6 @@ require("lazy").setup({
 				html = { "prettier" },
 				js = { "prettier" },
 				python = { "black" },
-
 			},
 		},
 	},
@@ -478,7 +491,6 @@ require("lazy").setup({
 							luasnip.jump(-1)
 						end
 					end, { "i", "s" }),
-
 				}),
 				sources = {
 					{ name = "nvim_lsp" },
@@ -507,7 +519,7 @@ require("lazy").setup({
 
 	{
 		"folke/todo-comments.nvim",
-    event={"InsertCharPre", "VeryLazy"},
+		event = { "InsertCharPre", "VeryLazy" },
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {
 			signs = true,
@@ -520,7 +532,7 @@ require("lazy").setup({
 
 	{
 		"echasnovski/mini.nvim",
-    event={"InsertEnter", "VeryLazy"},
+		event = { "InsertEnter", "VeryLazy" },
 		config = function()
 			-- Better Around/Inside textobjects
 			--
@@ -559,7 +571,7 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		opts = {
-			ensure_installed = { },
+			ensure_installed = {},
 			-- Autoinstall languages that are not installed
 			auto_install = false,
 			highlight = {
