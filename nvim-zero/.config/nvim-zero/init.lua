@@ -296,7 +296,7 @@ require("lazy").setup({
 		build = ":TSUpdate",
 		opts = {
 			ensure_installed = { },
-			auto_install = true,
+			auto_install = false,
 			highlight = {
 				enable = true,
 				additional_vim_regex_highlighting = { "ruby" },
