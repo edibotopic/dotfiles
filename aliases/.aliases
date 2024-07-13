@@ -19,8 +19,8 @@ alias cl='journalctl --vacuum-time=10d' # clear recent logs
 alias nv='$HOME/scripts/nvk.sh' # default kickstart nvim config
 alias n0='$HOME/scripts/nv0.sh' # minimal kickstart nvim config
 alias nf='nv $(fzf)' # fuzzy find and open in nvim
-alias td='vim $HOME/Dropbox/quick_share/td.md' # quick todo
-alias til='vim $HOME/Dropbox/quick_share/til/index.md' # today-i-learned
+alias scratch='n0 $HOME/Dropbox/quick_share/scratch.md' # scratch notes
+alias til='n0 $HOME/Dropbox/quick_share/til/index.md' # today-i-learned
 
 # Git
 alias lg='lazygit'
