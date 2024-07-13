@@ -1,0 +1,19 @@
+local dark_art_deco = {
+	base00 = "#14282f",
+	base01 = "#14282f",
+	base02 = "#64676d",
+	base03 = "#8d868c",
+	base04 = "#b5a6ab",
+	base05 = "#ddc5ca",
+	base06 = "#e2ced2",
+	base07 = "#e7d6da",
+	base08 = "#d97386",
+	base09 = "#d16440",
+	base0A = "#ac999e",
+	base0B = "#ad6928",
+	base0C = "#46ac8e",
+	base0D = "#d43f77",
+	base0E = "#c54f7c",
+	base0F = "#e9956a",
+}
+require("mini.base16").setup({ palette = dark_art_deco })
