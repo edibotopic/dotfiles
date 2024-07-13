@@ -197,6 +197,8 @@ disable_ligatures never
 
 # cursor_beam_thickness 1.5
 
+shell_integration no-cursor
+
 #: Defines the thickness of the beam cursor (in pts)
 
 # cursor_underline_thickness 2.0
@@ -699,7 +701,7 @@ window_padding_width 20
 #: Fade the text in inactive windows by the specified amount (a number
 #: between zero and one, with zero being fully faded).
 
-# hide_window_decorations no
+hide_window_decorations true
 
 #: Hide the window decorations (title-bar and window borders) with
 #: yes. On macOS, titlebar-only can be used to only hide the titlebar.
@@ -2021,6 +2023,6 @@ map kitty_mod+a>d set_background_opacity default
 
 
 # BEGIN_KITTY_THEME
-# Tokyo Night
+# Vibrant Ink
 include current-theme.conf
 # END_KITTY_THEME
