@@ -136,6 +136,10 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>sn", function()
 				builtin.find_files({ cwd = vim.fn.stdpath("config") })
 			end, { desc = "[S]earch [N]eovim files" })
+			vim.keymap.set("n", "<leader>sp", function()
+        local root = string.gsub(vim.fn.system("git rev-parse --show-toplevel"), "\n", "")
+				builtin.find_files({ cwd = root })
+			end, { desc = "[S]earch [P]roject repo" })
 		end,
 	},
 
