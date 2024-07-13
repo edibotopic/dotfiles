@@ -25,6 +25,7 @@ alias til='n0 $HOME/Dropbox/quick_share/til/index.md' # today-i-learned
 
 # Git
 alias lg='lazygit'
+alias gr='cd $(git rev-parse --show-toplevel)'
 
 # Development
 alias dev='cd $HOME/dev/gh && lls'
