@@ -77,6 +77,10 @@ vim.opt.scrolloff = 8
 -- Disable swap file
 vim.cmd("set noswapfile")
 
+vim.cmd(" colorscheme quiet")
+vim.cmd("hi Comment gui=none")
+vim.cmd("hi clear SignColumn")
+
 -- Cursor is always a block
 vim.cmd("set guicursor=n-v-c-i:block")
 
