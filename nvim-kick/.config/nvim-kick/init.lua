@@ -64,11 +64,6 @@ vim.opt.scrolloff = 8
 -- Disable swap file
 vim.cmd("set noswapfile")
 
--- Simple native colorscheme
-vim.cmd(" colorscheme quiet")
-vim.cmd("hi Comment gui=none")
-vim.cmd("hi clear SignColumn")
-
 -- Cursor is always a block
 vim.cmd("set guicursor=n-v-c-i:block")
 
@@ -356,20 +351,20 @@ require("lazy").setup({
 		end,
 	},
 
-  {
-    "ray-x/go.nvim",
-    dependencies = {  -- optional packages
-      "ray-x/guihua.lua",
-      "neovim/nvim-lspconfig",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    config = function()
-      require("go").setup()
-    end,
-    event = {"CmdlineEnter"},
-    ft = {"go", 'gomod'},
-    build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
-  },
+	{
+		"ray-x/go.nvim",
+		dependencies = { -- optional packages
+			"ray-x/guihua.lua",
+			"neovim/nvim-lspconfig",
+			"nvim-treesitter/nvim-treesitter",
+		},
+		config = function()
+			require("go").setup()
+		end,
+		event = { "CmdlineEnter" },
+		ft = { "go", "gomod" },
+		build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
+	},
 
 	{
 		"stevearc/conform.nvim",
@@ -607,3 +602,8 @@ require("lazy").setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Simple base16 colorscheme
+vim.cmd("colorscheme darkArtDeco ")
+vim.cmd("hi Comment gui=none")
+vim.cmd("hi clear SignColumn")
