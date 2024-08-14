@@ -89,6 +89,7 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
+# TODO: move these to aliase file
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -119,18 +120,8 @@ if ! shopt -oq posix; then
 fi
 . "$HOME/.cargo/env"
 
-# >>> juliaup initialize >>>
 
-# !! Contents within this block are managed by juliaup !!
-
-case ":$PATH:" in
-    *:/home/edibotopic/.juliaup/bin:*)
-        ;;
-
-    *)
-        export PATH=/home/edibotopic/.juliaup/bin${PATH:+:${PATH}}
-        ;;
-esac
+bind -s 'set completion-ignore-case on'
 
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
@@ -143,4 +134,4 @@ set -o vi
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 
-# <<< juliaup initialize <<<
+LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
