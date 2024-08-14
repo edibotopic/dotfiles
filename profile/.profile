@@ -57,7 +57,7 @@ export PATH="$HOME/.local/bin/zed:$PATH"
 # Load custom Ranger config
 export RANGER_LOAD_DEFAULT_RC=false
 
-export PATH="$HOME/.config/lsp/ols/:$PATH"
+export PATH="$HOME/opt/ols/:$PATH"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Opam configuration
