@@ -67,6 +67,8 @@ vim.cmd("set noswapfile")
 -- Cursor is always a block
 vim.cmd("set guicursor=n-v-c-i:block")
 
+vim.o.tags = "./tags;,tags;"
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
