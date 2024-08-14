@@ -20,9 +20,10 @@ alias cl='journalctl --vacuum-time=10d' # clear recent logs
 alias nv='$HOME/scripts/nvk.sh' # default kickstart nvim config
 alias n0='$HOME/scripts/nv0.sh' # minimal kickstart nvim config
 alias nf='nv $(fzf)' # fuzzy find and open in nvim
-alias scratch='n0 $HOME/Dropbox/quick_share/scratch.md' # scratch notes
-alias til='n0 $HOME/Dropbox/quick_share/til/index.md' # today-i-learned
-
+alias scratch='nv $HOME/Dropbox/notes/scratch.md' # scratch notes
+alias n='nv $HOME/Dropbox/notes/index.md' # notes index
+alias wrk='nv $HOME/Dropbox/notes/work/index.md' # work notes (non-confidential)
+alias til='nv $HOME/Dropbox/notes/til/index.md' # today-i-learned
 # Git
 alias lg='lazygit'
 alias gr='cd $(git rev-parse --show-toplevel)'
@@ -87,6 +88,9 @@ alias weather='curl wttr.in/Cork'
 
 # Reading
 alias rss='newsboat'
+
+# jellyfin start
+alias jelly='cd /media/edibotopic/HDD1/jellyfin/ && docker compose up'
 
 # Fun
 # alias trippy='kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/double150.gif'
