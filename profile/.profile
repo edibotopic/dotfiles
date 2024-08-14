@@ -31,7 +31,14 @@ export NVM_DIR="$HOME/.config/nvm"
 
 export PATH=$PATH:/usr/local/go/bin
 
-export TERM=xterm-kitty
+if [ -n "$WSL_DISTRO_NAME" ]; then
+    TERM=default
+else
+    TERM=xterm-kitty
+fi
+
+export TERM
+
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 
@@ -60,18 +67,3 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 . "$HOME/.cargo/env"
-
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-case ":$PATH:" in
-    *:/home/edibotopic/.juliaup/bin:*)
-        ;;
-
-    *)
-        export PATH=/home/edibotopic/.juliaup/bin${PATH:+:${PATH}}
-        ;;
-esac
-
-# <<< juliaup initialize <<<
