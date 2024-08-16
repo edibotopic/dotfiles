@@ -67,6 +67,10 @@ vim.cmd("set noswapfile")
 -- Cursor is always a block
 vim.cmd("set guicursor=n-v-c-i:block")
 
+-- Enable markdown folding
+vim.cmd("let g:markdown_folding = 1")
+vim.cmd("au Filetype markdown setlocal foldlevel=99")
+
 vim.o.tags = "./tags;,tags;"
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
@@ -241,7 +245,6 @@ require("lazy").setup({
 
 	{
 		"neovim/nvim-lspconfig",
-		event = { "InsertEnter", "VeryLazy" },
 		dependencies = {
 			-- Automatically install LSPs and related tools to stdpath for neovim
 			"williamboman/mason.nvim",
