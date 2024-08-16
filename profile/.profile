@@ -26,9 +26,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 export PATH=$PATH:/usr/local/go/bin
 
 if [ -n "$WSL_DISTRO_NAME" ]; then
@@ -42,6 +39,7 @@ export TERM
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 
+# TODO: clean this up
 export PATH=$HOME/.local/bin/:$PATH
 export PATH="$HOME/scripts/:$PATH"
 export PATH="$HOME/.go/bin/:$PATH"
@@ -59,9 +57,6 @@ export RANGER_LOAD_DEFAULT_RC=false
 
 export PATH="$HOME/opt/ols/:$PATH"
 export PATH="$DENO_INSTALL/bin:$PATH"
-
-# Opam configuration
-# [[ ! -r /home/edibotopic/.opam/opam-init/init.zsh ]] || source /home/edibotopic/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
