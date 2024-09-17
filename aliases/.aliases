@@ -6,7 +6,6 @@ alias nt=xournalpp
 alias radio=tera
 alias open=xdg-open
 alias mic=arecord
-alias lls=logo-ls
 alias sc=sc-im
 alias kbd='setxkbmap -layout us' # (re)set keyboard layout to us
 alias em='emacs -nw' # terminal emacs
@@ -25,6 +24,7 @@ alias n='nv $HOME/Dropbox/notes/index.md' # notes index
 alias wrk='nv $HOME/Dropbox/notes/work/index.md' # work notes (non-confidential)
 alias til='nv $HOME/Dropbox/notes/til/index.md' # today-i-learned
 # Git
+alias qi='nv $HOME/Dropbox/quick/ideas/index.md' # quick ideas
 alias lg='lazygit'
 alias gr='cd $(git rev-parse --show-toplevel)'
 
@@ -77,9 +77,6 @@ alias pilot='cd /home/edibotopic/software/100rabbits/Pilot/desktop/ && npm start
 alias sx='source $HOME/.xinitrc' # sets buttons for Wacom pen
 alias wacompc='source $HOME/scripts/wacom-multimon.sh' # restricts to 180p screen for dual monitor setup
 
-# Video
-alias davinci='/opt/resolve/bin/resolve'
-
 # Games
 alias u7=exult
 
@@ -88,9 +85,6 @@ alias weather='curl wttr.in/Cork'
 
 # Reading
 alias rss='newsboat'
-
-# jellyfin start
-alias jelly='cd /media/edibotopic/HDD1/jellyfin/ && docker compose up'
 
 # Fun
 # alias trippy='kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/double150.gif'

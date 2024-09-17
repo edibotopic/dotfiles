@@ -135,3 +135,5 @@ eval "$(starship init bash)"
 eval "$(fzf --bash)"
 
 LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
+
+[ -f "/home/edibotopic/.ghcup/env" ] && . "/home/edibotopic/.ghcup/env" # ghcup-env
