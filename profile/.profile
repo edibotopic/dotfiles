@@ -44,21 +44,22 @@ export PATH=$HOME/.local/bin/:$PATH
 export PATH="$HOME/scripts/:$PATH"
 export PATH="$HOME/.go/bin/:$PATH"
 export GOPATH=$HOME/.go
-export PATH="$HOME/software/BlenderLauncher:$PATH"
-export PATH="$HOME/software/Odin:$PATH"
-export PATH="$HOME/software/zig:$PATH"
-export PATH="$HOME/software/idea-IC-231.9011.34/bin:$PATH"
-export PATH="$HOME/software/openjdk-21.0.2_linux-x64_bin/jdk-21.0.2/bin:$PATH"
-export PATH="$HOME/software/flutter:$PATH"
+export PATH="$HOME/opt/BlenderLauncher:$PATH"
+export PATH="$HOME/opt/Odin:$PATH"
+export PATH="$HOME/opt/zig:$PATH"
+export PATH="$HOME/opt/idea-IC-231.9011.34/bin:$PATH"
+export PATH="$HOME/opt/openjdk-21.0.2_linux-x64_bin/jdk-21.0.2/bin:$PATH"
+export PATH="$HOME/opt/flutter:$PATH"
 export PATH="$HOME/.local/bin/zed:$PATH"
+export PATH="$HOME/opt/ols/:$PATH"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Load custom Ranger config
 export RANGER_LOAD_DEFAULT_RC=false
-
-export PATH="$HOME/opt/ols/:$PATH"
-export PATH="$DENO_INSTALL/bin:$PATH"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 . "$HOME/.cargo/env"
+
+[ -f "/home/edibotopic/.ghcup/env" ] && . "/home/edibotopic/.ghcup/env" # ghcup-env
