@@ -131,8 +131,27 @@ bind 'TAB:menu-complete'
 export EDITOR=vim
 set -o vi
 
-eval "$(starship init bash)"
 eval "$(fzf --bash)"
+
+# Define prompt colors
+BOLD_MAUVE="\[\033[1;38;5;140m\]"  # Mauve (Catppuccin Frappe)
+BOLD_FLAMINGO="\[\033[1;38;5;210m\]"  # Flamingo (Catppuccin Frappe)
+BOLD_TEAL="\[\033[1;38;5;110m\]"  # Teal (Catppuccin Frappe)
+BOLD_YELLOW="\[\033[1;38;5;220m\]"  # Yellow for Git status
+RESET="\[\033[00m\]"
+
+# Function to check if the git repository is dirty
+function parse_git_dirty {
+  [[ $(git status --porcelain 2> /dev/null) ]] && echo "*"
+}
+
+# Function to get the current git branch
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
+}
+
+# Set the prompt
+export PS1="${BOLD_FLAMINGO}\w${BOLD_TEAL}\$(parse_git_branch)${BOLD_MAUVE} ❯ ${RESET}"
 
 LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
 
