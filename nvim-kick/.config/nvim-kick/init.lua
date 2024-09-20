@@ -1,6 +1,6 @@
 -- Set <space> as the leader key
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.maplocalleader = ","
 
 -- Set to true if Nerd Font is installed
 vim.g.have_nerd_font = true
@@ -131,7 +131,7 @@ require("lazy").setup({
 
 	{
 		"Olical/conjure",
-		ft = { "clojure", "fennel", "racket", "janet" }, -- etc
+		ft = { "clojure", "fennel", "racket" }, -- etc
 		lazy = true,
 		init = function()
 			-- Set configuration options here
@@ -596,7 +596,7 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		opts = {
-			ensure_installed = {},
+			ensure_installed = { "fennel" },
 			-- Autoinstall languages that are not installed
 			auto_install = false,
 			highlight = {
