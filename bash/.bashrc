@@ -141,11 +141,11 @@ BOLD_GREEN="\[\033[1;38;5;620m\]"
 RESET="\[\033[00m\]"
 
 # Git symbols
-GIT_BRANCH_SYMBOL=""  # You can change this to your desired symbol
-GIT_CLEAN_SYMBOL="✔"    # Tick mark for a clean branch
-GIT_DIRTY_SYMBOL="✚"    # Unstaged changes
-GIT_STAGED_SYMBOL="●"    # Staged changes
-GIT_PULL_SYMBOL="⇣"     # Changes to pull
+GIT_BRANCH_SYMBOL=""
+GIT_CLEAN_SYMBOL="$✔"
+GIT_DIRTY_SYMBOL="✚"
+GIT_STAGED_SYMBOL="●"
+GIT_PULL_SYMBOL="⇣"
 
 function parse_git_dirty {
     if [[ $(git status --porcelain 2> /dev/null) ]]; then 
@@ -158,7 +158,15 @@ function parse_git_dirty {
 function parse_git_branch {
   local branch=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* //')
   if [[ -n "$branch" ]]; then
-    echo " $GIT_BRANCH_SYMBOL [$branch$(parse_git_staged)$(parse_git_dirty)$(parse_git_pull)]"
+    local staged=$(parse_git_staged)
+    local dirty=$(parse_git_dirty)
+    if [[ -n "$staged" ]]; then
+      echo " $GIT_BRANCH_SYMBOL [$branch$staged]"
+    elif [[ -n "$dirty" ]]; then
+      echo " $GIT_BRANCH_SYMBOL [$branch$dirty]"
+    else
+      echo " $GIT_BRANCH_SYMBOL [$branch$(parse_git_clean)]"
+    fi
   fi
 }
 
