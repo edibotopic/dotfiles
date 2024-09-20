@@ -134,24 +134,52 @@ set -o vi
 eval "$(fzf --bash)"
 
 # Define prompt colors
-BOLD_MAUVE="\[\033[1;38;5;140m\]"  # Mauve (Catppuccin Frappe)
-BOLD_FLAMINGO="\[\033[1;38;5;210m\]"  # Flamingo (Catppuccin Frappe)
-BOLD_TEAL="\[\033[1;38;5;110m\]"  # Teal (Catppuccin Frappe)
-BOLD_YELLOW="\[\033[1;38;5;220m\]"  # Yellow for Git status
+BOLD_MAUVE="\[\033[1;38;5;140m\]"
+BOLD_FLAMINGO="\[\033[1;38;5;210m\]"
+BOLD_YELLOW="\[\033[1;38;5;180m\]"
+BOLD_GREEN="\[\033[1;38;5;620m\]"
 RESET="\[\033[00m\]"
 
-# Function to check if the git repository is dirty
+# Git symbols
+GIT_BRANCH_SYMBOL=""  # You can change this to your desired symbol
+GIT_CLEAN_SYMBOL="✔"    # Tick mark for a clean branch
+GIT_DIRTY_SYMBOL="✚"    # Unstaged changes
+GIT_STAGED_SYMBOL="●"    # Staged changes
+GIT_PULL_SYMBOL="⇣"     # Changes to pull
+
 function parse_git_dirty {
-  [[ $(git status --porcelain 2> /dev/null) ]] && echo "*"
+    if [[ $(git status --porcelain 2> /dev/null) ]]; then 
+	echo "$GIT_DIRTY_SYMBOL"
+    else
+	echo "$GIT_CLEAN_SYMBOL"
+    fi
 }
 
-# Function to get the current git branch
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
+  local branch=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* //')
+  if [[ -n "$branch" ]]; then
+    echo " $GIT_BRANCH_SYMBOL [$branch$(parse_git_staged)$(parse_git_dirty)$(parse_git_pull)]"
+  fi
 }
 
+function parse_git_staged {
+  if [[ $(git diff --cached --quiet; echo $?) -ne 0 ]]; then
+    echo "$GIT_STAGED_SYMBOL"
+  fi
+}
+
+function parse_git_pull {
+  local UPSTREAM=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null)
+  if [[ -n "$UPSTREAM" ]]; then
+    local LOCAL=$(git rev-parse @)
+    local REMOTE=$(git rev-parse @{u} 2> /dev/null)
+    if [[ "$LOCAL" != "$REMOTE" ]]; then
+      echo "$GIT_PULL_SYMBOL"
+    fi
+  fi
+}
 # Set the prompt
-export PS1="${BOLD_FLAMINGO}\w${BOLD_TEAL}\$(parse_git_branch)${BOLD_MAUVE} ❯ ${RESET}"
+export PS1="${BOLD_MAUVE}\w${BOLD_GREEN}\$(parse_git_branch)${BOLD_YELLOW} ❯ ${RESET}"
 
 LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
 
