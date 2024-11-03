@@ -17,29 +17,17 @@ alias cl='journalctl --vacuum-time=10d' # clear recent logs
 
 # (Neo)Vim
 alias nv='$HOME/scripts/nvk.sh' # default kickstart nvim config
-alias n0='$HOME/scripts/nv0.sh' # minimal kickstart nvim config
+alias nw='nv -c VimwikiIndex' # open vimwiki index
 alias nf='nv $(fzf)' # fuzzy find and open in nvim
-alias scratch='nv $HOME/Dropbox/notes/scratch.md' # scratch notes
-alias n='nv $HOME/Dropbox/notes/index.md' # notes index
-alias wrk='nv $HOME/Dropbox/notes/work/index.md' # work notes (non-confidential)
-alias til='nv $HOME/Dropbox/notes/til/index.md' # today-i-learned
+alias n0='$HOME/scripts/nv0.sh' # minimal kickstart nvim config
+
 # Git
-alias qi='nv $HOME/Dropbox/quick/ideas/index.md' # quick ideas
 alias lg='lazygit'
 alias gr='cd $(git rev-parse --show-toplevel)'
 
 # Development
 alias dev='cd $HOME/dev/gh && lls'
 alias srv='live-server'
-alias bitsy='$HOME/software/bitsy-savior-linux-64/bitsy-savior'
-alias bitsyn='cd /home/edibotopic/Dev/bitsy-savior/ && npm start && cd ~'
-alias tw='$HOME/software/tweego-2.1.1-linux-x64/tweego'
-alias p8='$HOME/software/pico-8_0.2.4c_amd64/pico-8/pico8'
-alias vx='$HOME/software/voxatron_0.3.6_amd64/voxatron/vox'
-alias gd3='$HOME/software/Godot/Godot_v3.4.4-stable_x11.64'
-alias gd4='$HOME/software/Godot/Godot_v4.0-alpha6_linux.64'
-alias blnd='$HOME/software/BlenderLauncher'
-alias xe='/home/edibotopic/software/xmlmind/bin/xxe'
 alias process='$HOME/scripts/process.sh'
 alias love='/usr/bin/love.AppImage'
 alias defold='$HOME/software/Defold/Defold'
@@ -66,12 +54,6 @@ alias deac=deactivate
 # Quarto
 alias qp='quarto preview'
 alias qr='quarto render'
-
-# Orca env 
-alias orca='cd /home/edibotopic/software/100rabbits/Orca/desktop/ && npm start && cd ~'
-alias orca-c='/home/edibotopic/software/100rabbits/Orca-c/build/orca'
-alias cst='/home/edibotopic/software/100rabbits/cassetter-0.1.1.AppImage'
-alias pilot='cd /home/edibotopic/software/100rabbits/Pilot/desktop/ && npm start'
 
 # Wacom
 alias sx='source $HOME/.xinitrc' # sets buttons for Wacom pen
