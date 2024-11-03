@@ -91,4 +91,3 @@ alias rss='newsboat'
 # alias trippies='kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/ | sort -R | head -1'
 # alias trippy='kitty +kitten icat --align left ls ~/Dropbox/Notes_vault/Loops/ | shuf -n1'
 
-alias durdraw='cd ~/software/durdraw/ && envac && py durdraw/main.py'
