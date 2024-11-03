@@ -453,9 +453,13 @@ require("lazy").setup({
 				end)(),
 				dependencies = {
 					{
+						-- TODO: add custom snippets for markdown (too noisy)
 						"rafamadriz/friendly-snippets",
 						config = function()
-							require("luasnip.loaders.from_vscode").lazy_load()
+							require("luasnip.loaders.from_vscode").lazy_load({
+								exclude = { "markdown" },
+								-- paths = { "/home/edibotopic/.config/nvim-kick/snippets" },
+							})
 						end,
 					},
 				},
