@@ -192,3 +192,5 @@ export PS1="${BOLD_MAUVE}\w${BOLD_GREEN}\$(parse_git_branch)${BOLD_YELLOW} ❯ $
 LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
 
 [ -f "/home/edibotopic/.ghcup/env" ] && . "/home/edibotopic/.ghcup/env" # ghcup-env
+
+PATH="$PATH:$HOME/opt/flutter/bin/"
