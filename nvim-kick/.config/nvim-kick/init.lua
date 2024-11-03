@@ -70,12 +70,18 @@ vim.cmd("set guicursor=n-v-c-i:block")
 -- Enable markdown folding
 vim.cmd("let g:markdown_folding = 1")
 vim.cmd("au Filetype markdown setlocal foldlevel=99")
+vim.cmd("let g:vimwiki_folding = 'custom'")
 
 vim.o.tags = "./tags;,tags;"
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- For vimwiki
+vim.cmd("set nocompatible")
+vim.cmd("filetype plugin on")
+vim.cmd("syntax on")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
@@ -128,6 +134,19 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 	"tpope/vim-sleuth",
+
+	{
+		"vimwiki/vimwiki",
+		init = function()
+			vim.g.vimwiki_list = {
+				{
+					path = "~/Dropbox/notes/vimwiki",
+					syntax = "markdown",
+					ext = "md",
+				},
+			}
+		end,
+	},
 
 	{
 		"Olical/conjure",
