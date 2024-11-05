@@ -187,7 +187,9 @@ function parse_git_pull {
   fi
 }
 # Set the prompt
-export PS1="${BOLD_MAUVE}\w${BOLD_GREEN}\$(parse_git_branch)${BOLD_YELLOW} ❯ ${RESET}"
+# export PS1="${BOLD_MAUVE}\w${BOLD_GREEN}\$(parse_git_branch)${BOLD_YELLOW} ❯ ${RESET}"
+
+export PS1="${BOLD_MAUVE}\u@\h:\w${BOLD_GREEN}\$(parse_git_branch)${BOLD_YELLOW} ❯ ${RESET}"
 
 LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
 
