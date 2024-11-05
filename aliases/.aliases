@@ -16,7 +16,7 @@ alias br='brightness-controller'
 alias cl='journalctl --vacuum-time=10d' # clear recent logs
 
 # (Neo)Vim
-alias nv='$HOME/scripts/nvk.sh' # default kickstart nvim config
+alias nv='nvim.appimage' # default kickstart nvim config
 alias nw='nv -c VimwikiIndex' # open vimwiki index
 alias nf='nv $(fzf)' # fuzzy find and open in nvim
 alias n0='$HOME/scripts/nv0.sh' # minimal kickstart nvim config
