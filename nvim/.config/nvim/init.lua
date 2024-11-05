@@ -364,15 +364,15 @@ require("lazy").setup({
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 			local servers = {
-				clangd = {},
+				pyright = {},
+				-- clangd = {},
 				-- gopls = {
 				-- 	cmd = { "gopls" },
 				-- 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
 				-- },
-				pyright = {},
-				jdtls = {},
-				ols = {},
-				tsserver = {},
+				-- jdtls = {},
+				-- ols = {},
+				-- tsserver = {},
 				-- rust_analyzer = {},
 
 				lua_ls = {
