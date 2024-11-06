@@ -70,8 +70,6 @@ vim.cmd("set guicursor=n-v-c-i:block")
 -- Enable markdown folding
 vim.cmd("let g:markdown_folding = 1")
 vim.cmd("au Filetype markdown setlocal foldlevel=99")
-vim.cmd("let g:vimwiki_folding = 'custom'")
-
 vim.o.tags = "./tags;,tags;"
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
@@ -82,6 +80,8 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.cmd("set nocompatible")
 vim.cmd("filetype plugin on")
 vim.cmd("syntax on")
+vim.cmd("let g:vimwiki_folding = 'custom'")
+vim.cmd("let g:vimwiki_global_ext = 0")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
