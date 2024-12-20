@@ -31,13 +31,10 @@ export PATH=$PATH:/usr/local/go/bin
 if [ -n "$WSL_DISTRO_NAME" ]; then
     TERM=default
 else
-    TERM=xterm-kitty
+    TERM=wezterm
 fi
 
 export TERM
-
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
 
 # TODO: clean this up
 export PATH=$HOME/.local/bin/:$PATH
