@@ -1,40 +1,42 @@
 # Basics
 alias ~='cd ~'
 alias cls=clear
-alias rng=ranger
-alias nt=xournalpp
-alias radio=tera
-alias open=xdg-open
-alias mic=arecord
-alias sc=sc-im
 alias kbd='setxkbmap -layout us' # (re)set keyboard layout to us
-alias em='emacs -nw' # terminal emacs
-alias wallg='$HOME/scripts/wallpapers.sh' # gnome only
+alias wallg='$HOME/scripts/sh/wallpapers.sh' # gnome only
 alias slp='sudo pm-suspend'
 alias pk='pkill picom || picom -b --experimental-backends &' # xorg only
 alias br='brightness-controller'
 alias cl='journalctl --vacuum-time=10d' # clear recent logs
 
 # (Neo)Vim
-alias nv='nvim' # default kickstart nvim config
+alias n=nvim # default kickstart nvim config
+alias nv=nvim
 alias nw='nv -c VimwikiIndex' # open vimwiki index
 alias nf='nv $(fzf)' # fuzzy find and open in nvim
-alias n0='$HOME/scripts/nv0.sh' # minimal kickstart nvim config
+alias n0='$HOME/scripts/sh/nv0.sh' # minimal kickstart nvim config
 
 # Git
+alias g='lazygit'
 alias lg='lazygit'
 alias gr='cd $(git rev-parse --show-toplevel)'
+
+# Multiplex
+alias z=zellij
+alias zj=zellij
+alias zw='zellij --layout welcome'
+
+# Files
+alias y=yazi
+alias yz=yazi
+alias rng=ranger
+alias open=xdg-open
 
 # Development
 alias dev='cd $HOME/dev/gh && lls'
 alias srv='live-server'
-alias process='$HOME/scripts/process.sh'
+alias process='$HOME/scripts/sh/process.sh'
 alias love='/usr/bin/love.AppImage'
 alias defold='$HOME/software/Defold/Defold'
-
-# Text rendering
-alias glow='~/software/glow/glow'
-alias cook='~/software/CookCLI_0.1.4_linux_amd64/cook'
 
 # Documents
 alias doc2pdf='libreoffice --headless --convert-to pdf *.doc' # convert all Word doc files to pdf
@@ -57,10 +59,7 @@ alias qr='quarto render'
 
 # Wacom
 alias sx='source $HOME/.xinitrc' # sets buttons for Wacom pen
-alias wacompc='source $HOME/scripts/wacom-multimon.sh' # restricts to 180p screen for dual monitor setup
-
-# Games
-alias u7=exult
+alias wacompc='source $HOME/scripts/sh/wacom-multimon.sh' # restricts to 180p screen for dual monitor setup
 
 # Data
 alias weather='curl wttr.in/Cork'
@@ -68,8 +67,5 @@ alias weather='curl wttr.in/Cork'
 # Reading
 alias rss='newsboat'
 
-# Fun
-# alias trippy='kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/double150.gif'
-# alias trippies='kitty +kitten icat --align left ~/Dropbox/Notes_vault/Loops/ | sort -R | head -1'
-# alias trippy='kitty +kitten icat --align left ls ~/Dropbox/Notes_vault/Loops/ | shuf -n1'
-
+# Terminal
+alias wezterm='flatpak run org.wezfurlong.wezterm'
