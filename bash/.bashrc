@@ -128,7 +128,9 @@ bind 'TAB:menu-complete'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export EDITOR=vim
+
+export EDITOR=nvim
+export VISUAL=nvim
 set -o vi
 
 eval "$(fzf --bash)"
