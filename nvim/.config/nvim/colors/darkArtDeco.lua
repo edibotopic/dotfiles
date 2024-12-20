@@ -1,6 +1,6 @@
 local dark_art_deco = {
-	base00 = "#000000",
-	base01 = "#000000",
+	base00 = "#100C08",
+	base01 = "#16161D",
 	base02 = "#ca9ee6",
 	base03 = "#2c434e",
 	base04 = "#303446",
@@ -17,3 +17,16 @@ local dark_art_deco = {
 	base0F = "#99d1db",
 }
 require("mini.base16").setup({ palette = dark_art_deco })
+vim.cmd("set cursorlineopt=number ")
+vim.cmd("hi! Normal ctermbg=NONE guibg=NONE")
+vim.cmd("hi! LineNRBelow ctermbg=NONE guibg=NONE")
+vim.cmd("hi! LineNRAbove ctermbg=NONE guibg=NONE")
+vim.cmd("hi! SignColumn ctermbg=NONE guibg=NONE")
+vim.cmd("hi! GitSignsAdd ctermbg=NONE guibg=NONE")
+vim.cmd("hi! GitSignsChange ctermbg=NONE guibg=NONE")
+vim.cmd("hi! GitSignsDelete ctermbg=NONE guibg=NONE")
+vim.cmd("hi! DiagnosticSignError ctermbg=NONE guibg=NONE")
+vim.cmd("hi! DiagnosticSignWarn ctermbg=NONE guibg=NONE")
+vim.cmd("hi! DiagnosticSignHint ctermbg=NONE guibg=NONE")
+vim.cmd("hi! DiagnosticSignInfo ctermbg=NONE guibg=NONE")
+vim.cmd("hi! MsgArea ctermbg=NONE guibg=NONE")

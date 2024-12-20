@@ -183,11 +183,6 @@ require("lazy").setup({
 		config = true,
 	},
 
-	{
-		"typicode/bg.nvim",
-		event = { "ColorSchemePre", "VeryLazy" },
-	},
-
 	-- "gc" to comment visual regions/lines
 	{ "numToStr/Comment.nvim", event = { "InsertEnter", "VeryLazy" }, opts = {} },
 
