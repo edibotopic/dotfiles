@@ -30,6 +30,8 @@ export PATH=$PATH:/usr/local/go/bin
 
 if [ -n "$WSL_DISTRO_NAME" ]; then
     TERM=default
+elif cat /proc/cpuinfo | grep "raspberry"; then
+    TERM=xterm-256color
 else
     TERM=wezterm
 fi
