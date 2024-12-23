@@ -1,7 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
+#
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -188,8 +188,6 @@ function parse_git_pull {
     fi
   fi
 }
-# Set the prompt
-# export PS1="${BOLD_MAUVE}\w${BOLD_GREEN}\$(parse_git_branch)${BOLD_YELLOW} ❯ ${RESET}"
 
 export PS1="${BOLD_MAUVE}\u@\h:\w${BOLD_GREEN}\$(parse_git_branch)${BOLD_YELLOW} ❯ ${RESET}"
 
@@ -198,3 +196,5 @@ LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
 [ -f "/home/edibotopic/.ghcup/env" ] && . "/home/edibotopic/.ghcup/env" # ghcup-env
 
 PATH="$PATH:$HOME/opt/flutter/bin/"
+
+export PROMPT_DIRTRIM=1
