@@ -56,8 +56,14 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec /home/edibotopic/.local/kitty.app/bin//kitty
+# start a ghostty terminal
+bindsym $mod+Return exec /home/edibotopic/opt/ghostty/zig-out/bin/ghostty
+
+# start a kitty terminal
+bindsym $mod+Return+k exec /home/edibotopic/.local/kitty.app/bin/kitty
+
+# start a wezterm terminal
+bindsym $mod+Return+w exec flatpak run org.wezfurlong.wezterm
 
 # kill focused window
 bindsym $mod+Shift+q kill

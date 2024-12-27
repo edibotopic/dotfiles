@@ -33,7 +33,7 @@ if [ -n "$WSL_DISTRO_NAME" ]; then
 elif cat /proc/cpuinfo | grep "raspberry"; then
     TERM=xterm-256color
 else
-    TERM=wezterm
+    TERM=xterm-ghostty
 fi
 
 export TERM

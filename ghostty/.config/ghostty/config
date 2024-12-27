@@ -1,0 +1,15 @@
+font-family=Fira Code
+font-thicken = true
+theme=Dark Pastel
+
+background-opacity=0.9
+window-decoration=false
+window-padding-x=10
+window-padding-y=10
+
+cursor-style=block
+cursor-style-blink=false
+cursor-color = #ff0078
+
+shell-integration = bash
+shell-integration-features = no-cursor

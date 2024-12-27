@@ -68,4 +68,5 @@ alias weather='curl wttr.in/Cork'
 alias rss='newsboat'
 
 # Terminal
+alias ghostty='/home/edibotopic/opt/ghostty/zig-out/bin/ghostty'
 alias wezterm='flatpak run org.wezfurlong.wezterm'
