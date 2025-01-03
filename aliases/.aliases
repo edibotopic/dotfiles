@@ -26,7 +26,6 @@ alias zj=zellij
 alias zw='zellij --layout welcome'
 
 # Files
-alias y=yazi
 alias yz=yazi
 alias rng=ranger
 alias open=xdg-open

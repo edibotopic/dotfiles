@@ -74,6 +74,8 @@ esac
 
 if [ -f ~/.aliases ]; then source ~/.aliases; fi
 
+if [ -f ~/.bash_functions ]; then source ~/.bash_functions; fi
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
