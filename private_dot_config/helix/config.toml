@@ -1,0 +1,48 @@
+theme = "base16_terminal"
+
+[editor]
+line-number = "relative"
+scroll-lines = 1
+auto-pairs = false
+mouse = false
+
+# Sync clipboard with system clipboard
+default-yank-register = "+"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.file-picker]
+hidden = true
+
+[editor.lsp]
+display-messages = true
+
+[keys.normal]
+# Basics
+X = "extend_line_above"
+D = "delete_char_backward"
+"=" = ":reflow 80"
+ret = "goto_word"
+# Vimisms
+"0" = "goto_first_nonwhitespace"
+"$" = "goto_line_end"
+# Move lines up/down
+"A-j" = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]
+"A-k" = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]
+"A-J" = [ "extend_to_line_bounds", "yank", "paste_after" ]
+"A-K" = [ "extend_to_line_bounds", "yank", "paste_before" ]
+# Cycle buffers
+H = "goto_previous_buffer"
+J = "goto_next_buffer"
+
+[keys.select]
+# Basics
+X = "extend_line_above"
+D = "delete_char_backward"
+"=" = ":reflow 80"
+# Vimisms
+"0" = "goto_first_nonwhitespace"
+"$" = "goto_line_end"
