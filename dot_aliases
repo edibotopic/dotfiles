@@ -1,0 +1,25 @@
+# Basics
+alias ~='cd ~'
+alias cls=clear
+alias cl='journalctl --vacuum-time=10d' # clear recent logs
+
+# Git
+alias lg='lazygit'
+alias gr='cd $(git rev-parse --show-toplevel)'
+
+# Files
+alias y=yazi
+alias yz=yazi
+
+# Editing
+alias hf='hx $(fzf)'
+alias nv='hx'
+
+# Utils
+alias ls='eza --icons'
+
+# Dev
+alias z='zellij'
+alias zj=zellij
+alias zw='zellij --layout welcome'
+alias nrepl='bb nrepl-server 41123'
