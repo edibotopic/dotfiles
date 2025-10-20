@@ -26,6 +26,6 @@ alias zw='zellij --layout welcome'
 alias nrepl='bb nrepl-server 41123'
 
 # Notes
-alias nw='$HOME/Dropbox/notes/work/notes.md'
-alias np='$HOME/Dropbox/notes/personal/notes.md'
-alias td='$HOME/Dropbox/notes/todo.md'
+alias nw='$EDITOR $HOME/Dropbox/notes/work/notes.md'
+alias np='$EDITOR $HOME/Dropbox/notes/personal/notes.md'
+alias td='$EDITOR $HOME/Dropbox/notes/todo.md'
