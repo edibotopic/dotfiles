@@ -2,6 +2,7 @@
 alias ~='cd ~'
 alias cls=clear
 alias cl='journalctl --vacuum-time=10d' # clear recent logs
+alias cat='batcat'
 
 # Git
 alias lg='lazygit'
@@ -23,3 +24,8 @@ alias z='zellij'
 alias zj=zellij
 alias zw='zellij --layout welcome'
 alias nrepl='bb nrepl-server 41123'
+
+# Notes
+alias nw='$HOME/Dropbox/notes/work/notes.md
+alias np='$HOME/Dropbox/notes/personal/notes.md
+alias td='$HOME/Dropbox/notes/todo.md
