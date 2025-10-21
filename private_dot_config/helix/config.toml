@@ -10,7 +10,7 @@ mouse = false
 default-yank-register = "+"
 
 [editor.cursor-shape]
-insert = "bar"
+insert = "block"
 normal = "block"
 select = "block"
 
