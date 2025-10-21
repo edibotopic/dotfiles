@@ -1,0 +1,46 @@
+[Palette]
+Name=Artdeco
+Primary=true
+UseSystemAccent=true
+
+[Light]
+Background= #f1f1f1ff
+Foreground= #333333
+Cursor= #ca9ee6
+Color0= #ecf2f2
+Color1= #d2e1e1
+Color2= #bbbbbb
+Color3= #333333
+Color4= #333333
+Color5= #000000
+Color6= #ffffff
+Color7= #3fc4bdff
+Color8= #d2e1e1
+Color9= #000000
+Color10= #728a85
+Color11= #3e8281
+Color12= #3e8281
+Color13= #000000
+Color14= #777777
+Color15= #000000
+
+[Dark]
+Background= #100C08
+Foreground= #ffffff
+Cursor= #ca9ee6
+Color0= #100C08
+Color1= #babbf1
+Color2= #e5c890
+Color3= #85c1dc
+Color4= #99d1db
+Color5= #ca9ee6
+Color6= #81c8be
+Color7= #c6d0f5
+Color8= #698d8a
+Color9= #eebebe
+Color10= #e5c890
+Color11= #85c1dc
+Color12= #99d1db
+Color13= #ca9ee6
+Color14= #81c8be
+Color15= #ffffff

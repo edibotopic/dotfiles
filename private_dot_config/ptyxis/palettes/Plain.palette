@@ -1,0 +1,46 @@
+[Palette]
+Name=Plain
+Primary=true
+UseSystemAccent=true
+
+[Light]
+Background= #f1f1f1ff
+Foreground= #333333
+Cursor= #dadadaff
+Color0= #ecf2f2
+Color1= #cfcfcfff
+Color2= #bbbbbb
+Color3= #333333
+Color4= #333333
+Color5= #000000
+Color6= #ffffff
+Color7= #919191ff
+Color8= #c9c9c9ff
+Color9= #000000
+Color10= #7c7c7cff
+Color11= #636363ff
+Color12= #6e6e6eff
+Color13= #000000
+Color14= #777777
+Color15= #000000
+
+[Dark]
+Background= #100C08
+Foreground= #ffffff
+Cursor= #ca9ee6
+Color0= #100C08
+Color1= #f1f1f1ff
+Color2= #e0e0e0ff
+Color3= #cececeff
+Color4= #dadadaff
+Color5= #979797ff
+Color6= #505050ff
+Color7= #7c7c7cff
+Color8= #c5c5c5ff
+Color9= #6b6b6bff
+Color10= #adadadff
+Color11= #aaaaaaff
+Color12= #bbbbbbff
+Color13= #d3d3d3ff
+Color14= #ffffffff
+Color15= #ffffff
