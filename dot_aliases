@@ -9,7 +9,6 @@ alias lg='lazygit'
 alias gr='cd $(git rev-parse --show-toplevel)'
 
 # Files
-alias y=yazi
 alias yz=yazi
 
 # Editing
@@ -24,6 +23,13 @@ alias z='zellij'
 alias zj=zellij
 alias zw='zellij --layout welcome'
 alias nrepl='bb nrepl-server 41123'
+
+# Python
+alias py=python3
+alias python=python3
+alias envmk='py -m venv env'
+alias envac='source ./env/bin/activate'
+alias deac=deactivate
 
 # Notes
 alias nw='$EDITOR $HOME/Dropbox/notes/work/notes.md'
