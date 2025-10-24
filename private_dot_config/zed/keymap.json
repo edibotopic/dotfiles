@@ -1,0 +1,13 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-r": [
+        "task::Spawn",
+        {
+          "task_name": "run file"
+        }
+      ]
+    }
+  }
+]
