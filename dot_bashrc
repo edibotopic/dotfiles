@@ -127,6 +127,10 @@ set -o vi
 # env vars
 [ -f "$HOME/.odin" ] && source "$HOME/.odin"
 
+export GOPATH=$HOME/.go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+
 # utils
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 eval "$(fzf --bash)"
