@@ -3,8 +3,9 @@ theme = "base16_terminal"
 [editor]
 line-number = "relative"
 scroll-lines = 1
-auto-pairs = false
+auto-pairs = true
 mouse = false
+popup-border = "all"
 
 # Sync clipboard with system clipboard
 default-yank-register = "+"
