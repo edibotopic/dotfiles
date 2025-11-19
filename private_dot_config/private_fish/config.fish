@@ -18,7 +18,8 @@ end
 # go
 set -x GOPATH $HOME/.go
 set -x GOBIN $GOPATH/bin
-set -x PATH $PATH $GOBIN
+set -x LOCALBIN $HOME/.local/bin
+set -x PATH $PATH $LOCALBIN $GOBIN
 
 # starship
 # starship init fish | source
