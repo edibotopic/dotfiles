@@ -14,6 +14,8 @@ echo "[running $filename_ext]"
 
 if [[ "$extension" == "cpp" ]]; then
     g++ "$full_path" -o "$filename" && ./"$filename";
+elif [[ "$filename" == "CMakeLists" ]]; then
+    cd build && make && ../build/bin;
 elif [[ "$extension" == "py" ]]; then
     source ../py/bin/activate
     python3 "$full_path";
