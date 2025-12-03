@@ -1,7 +1,7 @@
 # Basics
 alias cls="clear"
 # alias cl="journalctl --vacuum-time=10d"
-alias cat="batcat"
+# alias cat="batcat"
 alias fd="fdfind"
 
 # Git
