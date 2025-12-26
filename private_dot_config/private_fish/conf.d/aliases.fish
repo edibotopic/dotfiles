@@ -36,11 +36,12 @@ alias envac="source ./env/bin/activate.fish"
 alias deac="deactivate"
 
 # Notes
-alias nw="$EDITOR $HOME/Dropbox/notes/work/notes.md"
-alias np="$EDITOR $HOME/Dropbox/notes/personal/notes.md"
-alias td="$EDITOR $HOME/Dropbox/notes/todo.md"
-alias notes="$EDITOR $HOME/Dropbox/notes/todo.md $HOME/Dropbox/notes/work/notes.md $HOME/Dropbox/notes/personal/notes.md"
+alias work="$EDITOR $HOME/Dropbox/vaults/work/"
+alias write="$EDITOR $HOME/Dropbox/vaults/write/"
 
 # Terminal
 alias opaque='gsettings set org.gnome.Ptyxis.Profile:/org/gnome/Ptyxis/Profiles/$PTYXIS_PROFILE/ opacity 1'
 alias nopaque='gsettings set org.gnome.Ptyxis.Profile:/org/gnome/Ptyxis/Profiles/$PTYXIS_PROFILE/ opacity .94'
+
+# Apps
+alias zen="$HOME/opt/zen.linux-x86_64/zen/zen"

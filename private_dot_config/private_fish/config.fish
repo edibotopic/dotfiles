@@ -19,7 +19,12 @@ end
 set -x GOPATH $HOME/.go
 set -x GOBIN $GOPATH/bin
 set -x LOCALBIN $HOME/.local/bin
-set -x PATH $PATH $LOCALBIN $GOBIN
+
+# emacs
+set -x EMACSPATH $HOME/.config/emacs/bin
+
+# path
+set -x PATH $PATH $LOCALBIN $GOBIN $EMACSPATH
 
 # starship
 # starship init fish | source
