@@ -3,8 +3,8 @@ if status is-interactive
 end
 
 # text editing
-set -x EDITOR hx
-set -x VISUAL hx
+set -x EDITOR /usr/local/bin/nvim
+set -x VISUAL /usr/local/bin/nvim
 fish_vi_key_bindings
 # don't show vim mode indicators
 function fish_mode_prompt

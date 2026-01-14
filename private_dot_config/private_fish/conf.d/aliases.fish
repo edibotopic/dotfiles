@@ -17,7 +17,12 @@ alias yz="yazi"
 function hf
     hx (fzf)
 end
-alias nv="hx"
+
+alias nv="/usr/local/bin/nvim"
+
+function nf
+    nv (fzf)
+end
 
 # Utils
 alias ls="eza --icons"
@@ -38,6 +43,9 @@ alias deac="deactivate"
 # Notes
 alias work="$EDITOR $HOME/Dropbox/vaults/work/"
 alias write="$EDITOR $HOME/Dropbox/vaults/write/"
+
+# Journal
+alias daily="$EDITOR $HOME/Dropbox/vaults/write/habits/journal/$(date +%Y-%m-%d).md"
 
 # Terminal
 alias opaque='gsettings set org.gnome.Ptyxis.Profile:/org/gnome/Ptyxis/Profiles/$PTYXIS_PROFILE/ opacity 1'
