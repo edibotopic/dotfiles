@@ -2,6 +2,11 @@
 alias cls="clear"
 # alias cl="journalctl --vacuum-time=10d"
 # alias cat="batcat"
+
+function d
+    sdcv "$1" | less
+end
+
 alias fd="fdfind"
 
 # Git

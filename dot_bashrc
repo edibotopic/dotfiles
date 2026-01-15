@@ -120,8 +120,8 @@ bind "set show-all-if-ambiguous on"
 bind "TAB:menu-complete"
 
 # text editing
-export EDITOR=hx
-export VISUAL=hx
+export EDITOR=nv
+export VISUAL=nb
 set -o vi
 
 # env vars
@@ -130,6 +130,8 @@ set -o vi
 export GOPATH=$HOME/.go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+
+export STARDICT_DATA_DIR="$HOME/opt/dict/"
 
 # utils
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
