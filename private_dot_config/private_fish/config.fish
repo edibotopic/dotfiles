@@ -21,7 +21,7 @@ set -x GOBIN $GOPATH/bin
 set -x LOCALBIN $HOME/.local/bin
 
 # dict
-set -x STARDICT_DATA_DIR $HOME/bin/dict
+set -x STARDICT_DATA_DIR $HOME/opt/dict
 
 # emacs
 set -x EMACSPATH $HOME/.config/emacs/bin
