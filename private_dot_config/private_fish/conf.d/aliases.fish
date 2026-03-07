@@ -4,7 +4,7 @@ alias cls="clear"
 # alias cat="batcat"
 
 function d
-    sdcv "$1" | less
+    sdcv $argv | less
 end
 
 alias fd="fdfind"
@@ -57,4 +57,5 @@ alias opaque='gsettings set org.gnome.Ptyxis.Profile:/org/gnome/Ptyxis/Profiles/
 alias nopaque='gsettings set org.gnome.Ptyxis.Profile:/org/gnome/Ptyxis/Profiles/$PTYXIS_PROFILE/ opacity .94'
 
 # Apps
-alias zen="$HOME/opt/zen.linux-x86_64/zen/zen"
+# TODO
+#
