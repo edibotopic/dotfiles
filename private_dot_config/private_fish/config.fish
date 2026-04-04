@@ -27,7 +27,8 @@ set -x STARDICT_DATA_DIR $HOME/opt/dict
 set -x EMACSPATH $HOME/.config/emacs/bin
 
 # path
-set -x PATH $PATH $LOCALBIN $GOBIN $EMACSPATH $STARDICT_DATA_DIR
+set -x CARGOBIN $HOME/.cargo/bin
+set -x PATH $PATH $LOCALBIN $GOBIN $EMACSPATH $STARDICT_DATA_DIR $CARGOBIN
 
 # starship
 # starship init fish | source
