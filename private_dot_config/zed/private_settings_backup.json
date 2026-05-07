@@ -1,0 +1,48 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "context_servers": {
+    "todo-app": {
+      "command": {
+        "path": "/home/edibo/dev/gh-work/ai-experiments/mcp-fast/.venv/bin/python",
+        "args": ["/home/edibo/dev/gh-work/ai-experiments/mcp-fast/main.py"],
+      },
+    },
+  },
+  "agent": {
+    "default_profile": "write",
+    "default_model": {
+      "effort": "high",
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.6",
+      "enable_thinking": true,
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "buffer_font_weight": 600.0,
+  "buffer_font_family": "FiraCode Nerd Font",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
+  "helix_mode": false,
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "PaperColor Light",
+    "dark": "Base16 Black Metal (Burzum)",
+  },
+}

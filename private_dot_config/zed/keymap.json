@@ -5,9 +5,15 @@
       "ctrl-shift-r": [
         "task::Spawn",
         {
-          "task_name": "run file"
-        }
-      ]
-    }
-  }
+          "task_name": "run file",
+        },
+      ],
+    },
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "s a": "vim::PushAddSurrounds",
+    },
+  },
 ]

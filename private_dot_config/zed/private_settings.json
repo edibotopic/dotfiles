@@ -7,8 +7,67 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "mouse_wheel_zoom": true,
+  "language_models": {
+    "openai_compatible": {
+      "Open Gemma 4": {
+        "api_url": "http://localhost:8336/v1",
+        "available_models": [
+          {
+            "name": "gemma4",
+            "max_tokens": 131072,
+            "max_output_tokens": 8192,
+            "max_completion_tokens": 8192,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": false,
+            },
+          },
+        ],
+      },
+    },
+  },
+  "cli_default_open_behavior": "new_window",
+  "cursor_shape": "block",
+  "ui_font_weight": 500.0,
+  "buffer_line_height": "standard",
+  "vim": {
+    "cursor_shape": {
+      "replace": "block",
+      "insert": "block",
+    },
+    "toggle_relative_line_numbers": true,
+  },
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry",
+    },
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "project_panel": {
+    "dock": "right",
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "git_panel": {
+    "dock": "right",
+  },
   "edit_predictions": {
-    "provider": "copilot"
+    "mode": "subtle",
+    "copilot": {
+      "enable_next_edit_suggestions": true
+    },
+    "provider": "copilot",
   },
   "show_edit_predictions": true,
   "vim_mode": true,
@@ -19,23 +78,23 @@
     },
   },
   "agent": {
+    "dock": "left",
     "enable_feedback": false,
     "inline_assistant_model": {
       "provider": "copilot_chat",
       "model": "claude-haiku-4.5",
-      "enable_thinking": false
+      "enable_thinking": false,
     },
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
-      "effort": "high",
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-4.6",
-      "enable_thinking": true,
+      "provider": "Open Gemma 4",
+      "model": "gemma4",
+      "enable_thinking": false,
     },
     "favorite_models": [],
     "model_parameters": [],
   },
-  "buffer_font_weight": 600.0,
+  "buffer_font_weight": 800.0,
   "buffer_font_family": "FiraCode Nerd Font",
   "telemetry": {
     "diagnostics": false,
@@ -47,11 +106,11 @@
     "dark": "Zed (Default)",
   },
   "helix_mode": false,
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "ui_font_size": 16.0,
+  "buffer_font_size": 14.0,
   "theme": {
     "mode": "dark",
-    "light": "PaperColor Light",
-    "dark": "Base16 Black Metal (Burzum)",
+    "light": "Base16 Grayscale Light",
+    "dark": "Base16 Grayscale Dark",
   },
 }
