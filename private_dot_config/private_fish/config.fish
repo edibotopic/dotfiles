@@ -52,7 +52,6 @@ fish_add_path /home/shane/.opencode/bin
 # direnv
 direnv hook fish | source
 
-
 # pnpm
 set -gx PNPM_HOME "/home/shane/.local/share/pnpm"
 if not string match -q -- "$PNPM_HOME/bin" $PATH

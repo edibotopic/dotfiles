@@ -56,6 +56,7 @@ alias envac="source ./env/bin/activate.fish"
 alias deac="deactivate"
 
 # Notes
+alias nts="$EDITOR $HOME/Dropbox/notes.md"
 alias work="$EDITOR $HOME/Dropbox/vaults/work/"
 alias write="$EDITOR $HOME/Dropbox/vaults/write/"
 
