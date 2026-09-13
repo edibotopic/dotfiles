@@ -7,6 +7,13 @@ vim.g.maplocalleader = ","
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+-- Treat .jank files as Clojure
+vim.filetype.add({
+	extension = {
+		jank = "clojure",
+	},
+})
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
@@ -123,6 +130,12 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
+
+-- Clear multicursors
+vim.keymap.set("n", "<C-Space>", function()
+	local mc_ns = vim.api.nvim_create_namespace("nvim.multicursor")
+	vim.api.nvim_buf_clear_namespace(0, mc_ns, 0, -1)
+end, { desc = "Clear multicursors" })
 
 -- [[ Icons ]]
 local signs = {
@@ -550,6 +563,7 @@ require("lazy").setup({
 				ols = {},
 				pyright = {},
 				clojure_lsp = {},
+				ruby_lsp = {},
 				-- rust_analyzer = {},
 				-- ts_ls = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -594,6 +608,31 @@ require("lazy").setup({
 					end,
 				},
 			})
+
+			-- DragonRuby language intelligence via drenv lsp.
+			-- Prefer the spike binary while it exists; fall back to `drenv` once
+			-- `drenv lsp` ships in the main binary. Dormant outside DragonRuby
+			-- projects, so it's safe to enable globally for ruby filetypes.
+			local drenv = vim.fn.exepath("drenv-lsp-spike")
+			if drenv == "" then
+				drenv = vim.fn.exepath("drenv")
+			end
+
+			if drenv ~= "" then
+				vim.lsp.config("drenv", {
+					cmd = { drenv, "lsp" },
+					filetypes = { "ruby" },
+					root_markers = {
+						"dragonruby",
+						"dragonruby.exe",
+						"mygame",
+						"drenv.toml",
+						".git",
+					},
+				})
+
+				vim.lsp.enable("drenv")
+			end
 		end,
 	},
 
@@ -740,7 +779,7 @@ require("lazy").setup({
 
 	{
 		"Olical/conjure",
-		ft = { "clojure", "racket", "python" }, -- etc
+		ft = { "clojure", "racket", "fennel" }, -- etc
 		lazy = true,
 		init = function()
 			-- Set configuration options here
@@ -750,23 +789,23 @@ require("lazy").setup({
 		end,
 	},
 
-	{
-		"nvim-flutter/flutter-tools.nvim",
-		lazy = false,
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"stevearc/dressing.nvim", -- optional for vim.ui.select
-		},
-		config = function()
-			require("flutter-tools").setup({})
-			vim.keymap.set(
-				"n",
-				"<leader>g",
-				require("telescope").extensions.flutter.commands,
-				{ desc = "Open Flutter tools for [G]UIs" }
-			)
-		end,
-	},
+	-- {
+	-- 	"nvim-flutter/flutter-tools.nvim",
+	-- 	lazy = false,
+	-- 	dependencies = {
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"stevearc/dressing.nvim", -- optional for vim.ui.select
+	-- 	},
+	-- 	config = function()
+	-- 		require("flutter-tools").setup({})
+	-- 		vim.keymap.set(
+	-- 			"n",
+	-- 			"<leader>g",
+	-- 			require("telescope").extensions.flutter.commands,
+	-- 			{ desc = "Open Flutter tools for [G]UIs" }
+	-- 		)
+	-- 	end,
+	-- },
 
 	-- Highlight todo, notes, etc in comments
 	{
@@ -777,22 +816,18 @@ require("lazy").setup({
 	},
 
 	{
-		"itsfernn/auto-gnome-theme.nvim",
-		-- Ensure your chosen themes are installed!
-		dependencies = {
-			"oskarnurm/koda.nvim", -- dark
-			"yorik1984/newpaper.nvim", -- light
-		},
-
-		-- Configuration runs after the plugin is loaded
-		config = function()
-			require("auto-gnome-theme").setup({
-				-- See Configuration section below
-				-- theme = "koda",
-				dark_theme = "koda",
-				light_theme = "newpaper",
-			})
-		end,
+		"zenbones-theme/zenbones.nvim",
+		-- Optionally install Lush. Allows for more configuration or extending the colorscheme
+		-- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+		-- In Vim, compat mode is turned on as Lush only works in Neovim.
+		dependencies = "rktjmp/lush.nvim",
+		lazy = false,
+		priority = 1000,
+		-- you can set set configuration options here
+		-- config = function()
+		--     vim.g.zenbones_darken_comments = 45
+		--     vim.cmd.colorscheme('zenbones')
+		-- end
 	},
 
 	{ -- Collection of various small independent plugins/modules
@@ -820,6 +855,11 @@ require("lazy").setup({
 
 			-- leap-like motions
 			require("mini.jump2d").setup()
+
+			-- indentation scope visualization
+			require("mini.indentscope").setup({
+				symbol = "│",
+			})
 
 			-- oil-like file editing
 			require("mini.files").setup()
@@ -906,9 +946,9 @@ require("lazy").setup({
 vim.cmd("set termguicolors")
 -- vim.cmd("set background=dark")
 
+vim.cmd("set bg=dark")
 -- [[built-in themes]]
--- vim.cmd.colorscheme("lunaperche")
+vim.cmd.colorscheme("zenwritten")
 -- vim.cmd.colorscheme("quiet")
-
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

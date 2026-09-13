@@ -18,6 +18,11 @@ end
 # Files
 alias yz="yazi"
 
+# cd dropbox windows
+function cdw
+    cd /mnt/c/Users/shane/Dropbox/vaults/main/
+end
+
 # Editing
 function hf
     hx (fzf)
@@ -27,6 +32,11 @@ alias nv="/usr/local/bin/nvim"
 
 function nf
     nv (fzf)
+end
+
+# nvim dropbox windows
+function ndw
+    nv /mnt/c/Users/shane/Dropbox/vaults/main/
 end
 
 # Utils
