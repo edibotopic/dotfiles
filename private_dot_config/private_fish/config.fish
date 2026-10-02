@@ -47,14 +47,17 @@ if not contains $N_PREFIX/bin $PATH
 end
 
 # opencode
-fish_add_path /home/shane/.opencode/bin
+fish_add_path /home/edibotopic/.opencode/bin
 
 # direnv
 direnv hook fish | source
 
 # pnpm
-set -gx PNPM_HOME "/home/shane/.local/share/pnpm"
+set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 if not string match -q -- "$PNPM_HOME/bin" $PATH
   set -gx PATH "$PNPM_HOME/bin" $PATH
 end
 # pnpm end
+
+# dragonruby
+export PATH="$HOME/.drenv/bin:$PATH"
