@@ -29,7 +29,8 @@ set -x EMACSPATH $HOME/.config/emacs/bin
 # path
 set -x CARGOBIN $HOME/.cargo/bin
 set -x DRENVBIN $HOME/.drenv/bin
-set -x PATH $PATH $LOCALBIN $GOBIN $EMACSPATH $STARDICT_DATA_DIR $CARGOBIN $DRENVBIN
+set -x SCRIPTSBIN $HOME/scripts
+set -x PATH $PATH $LOCALBIN $GOBIN $EMACSPATH $STARDICT_DATA_DIR $CARGOBIN $DRENVBIN $SCRIPTSBIN
 
 # starship
 # starship init fish | source
