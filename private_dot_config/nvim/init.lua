@@ -560,13 +560,17 @@ require("lazy").setup({
 					"ols",
 					"pyright",
 					"clojure_lsp",
-					"ruby_lsp",
 					"lua_ls",
 					"stylua", -- Used to format Lua code
 				},
 			})
 
-			require("mason-lspconfig").setup()
+			-- ruby_lsp is excluded: DragonRuby projects use `drenv lsp` below,
+			-- and ruby_lsp was crashing (exit 127) from a stale Windows ruby
+			-- path picked up over WSL interop.
+			require("mason-lspconfig").setup({
+				automatic_enable = { exclude = { "ruby_lsp" } },
+			})
 
 			-- DragonRuby language intelligence via drenv lsp.
 			-- Prefer the spike binary while it exists; fall back to `drenv` once
