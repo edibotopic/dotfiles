@@ -51,3 +51,11 @@
 
 ;; N Λ N O theme (light & dark)
 (package! nano-theme :recipe (:host github :repo "rougier/nano-theme"))
+
+;; N Λ N O modeline (replaces Doom's modeline module)
+(package! nano-modeline :recipe (:host github :repo "rougier/nano-modeline"))
+
+;; N Λ N O splash/homepage (replaces Doom's dashboard module). Pulled from the
+;; main nano-emacs repo but only the splash file is needed/built.
+(package! nano-splash
+  :recipe (:host github :repo "rougier/nano-emacs" :files ("nano-splash.el")))
