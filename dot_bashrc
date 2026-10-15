@@ -1,3 +1,9 @@
+# source custom functions and aliases first (before interactivity check)
+[ -f ~/.bash_functions ] && source ~/.bash_functions
+[ -f ~/.aliases ] && source ~/.aliases
+
+export PATH="$HOME/.local/opt/nvim-0.12.6/bin:$PATH"
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -120,21 +126,64 @@ bind "set show-all-if-ambiguous on"
 bind "TAB:menu-complete"
 
 # text editing
-export EDITOR=nv
-export VISUAL=nb
+export EDITOR="$HOME/.local/opt/nvim-0.12.6/bin/nvim"
+export VISUAL="$EDITOR"
 set -o vi
 
 # env vars
 [ -f "$HOME/.odin" ] && source "$HOME/.odin"
 
+# go
 export GOPATH=$HOME/.go
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
+export LOCALBIN=$HOME/.local/bin
 
-export STARDICT_DATA_DIR="$HOME/opt/dict/"
+# dict
+export STARDICT_DATA_DIR="$HOME/opt/dict"
 
-# utils
+# emacs
+export EMACSPATH=$HOME/.config/emacs/bin
+
+# path - add all custom bin directories
+export CARGOBIN=$HOME/.cargo/bin
+export DRENVBIN=$HOME/.drenv/bin
+export SCRIPTSBIN=$HOME/scripts
+export N_PREFIX=$HOME/n
+
+for dir in $LOCALBIN $GOBIN $EMACSPATH $STARDICT_DATA_DIR $CARGOBIN $DRENVBIN $SCRIPTSBIN $N_PREFIX/bin; do
+    if [[ ":$PATH:" != *":$dir:"* ]]; then
+        export PATH="$PATH:$dir"
+    fi
+done
+
+# ruby (user-installed gem executables, e.g. rubocop)
+if command -v ruby &>/dev/null; then
+    export PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+fi
+
+# opencode
+if [ -d "$HOME/.opencode/bin" ]; then
+    export PATH="$PATH:$HOME/.opencode/bin"
+fi
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+if [[ ":$PATH:" != *":$PNPM_HOME/bin:"* ]]; then
+    export PATH="$PNPM_HOME/bin:$PATH"
+fi
+
+# direnv
+if command -v direnv &>/dev/null; then
+    eval "$(direnv hook bash)"
+fi
+
+# fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-eval "$(fzf --bash)"
+if command -v fzf &>/dev/null; then
+    eval "$(fzf --bash)"
+fi
 
-eval "$(starship init bash)"
+# starship prompt
+if command -v starship &>/dev/null; then
+    eval "$(starship init bash)"
+fi

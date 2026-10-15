@@ -1,14 +1,44 @@
 # dir search with yazi
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
+y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
 }
 
 # dictionary lookup
-function d() {
+d() {
     sdcv "$1" | less
+}
+
+# git root directory
+gr() {
+    cd "$(git rev-parse --show-toplevel)" || return
+}
+
+# open file with helix + fzf
+hf() {
+    hx "$(fzf)" || return
+}
+
+# open file with nvim + fzf
+nf() {
+    /usr/local/bin/nvim "$(fzf)" || return
+}
+
+# cd to windows dropbox
+cdw() {
+    cd /mnt/c/Users/shane/Dropbox/vaults/main/ || return
+}
+
+# nvim dropbox windows
+ndw() {
+    /usr/local/bin/nvim /mnt/c/Users/shane/Dropbox/vaults/main/ || return
+}
+
+# daily journal entry
+daily() {
+    $EDITOR "$HOME/Dropbox/vaults/write/habits/journal/$(date +%Y-%m-%d).md"
 }
