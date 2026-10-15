@@ -44,3 +44,7 @@ alias nopaque='gsettings set org.gnome.Ptyxis.Profile:/org/gnome/Ptyxis/Profiles
 
 # Apps
 alias zen='$HOME/opt/zen.linux-x86_64/zen/zen'
+
+# Doom Emacs (daemon-backed, snappy client)
+alias ec='emacsclient -c -n'
+alias et='emacsclient -t'

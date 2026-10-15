@@ -1,0 +1,13 @@
+[Unit]
+Description=Doom Emacs daemon
+Documentation=info:emacs man:emacs(1) https://gnu.org/software/emacs/
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/emacs28 --fg-daemon
+ExecStop=/usr/bin/emacsclient --eval "(kill-emacs)"
+Restart=on-failure
+TimeoutStartSec=30
+
+[Install]
+WantedBy=default.target
