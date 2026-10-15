@@ -62,8 +62,15 @@
                       'doom-nano-dark)))
     (mapc #'disable-theme custom-enabled-themes)
     (load-theme new-theme t)
-    (setq doom-theme new-theme)))
+    (setq doom-theme new-theme)
+    (+nano/apply-cursor-color (if (eq new-theme 'doom-nano-dark) 'dark 'light))))
 (map! :leader "t n" #'+nano/toggle-light-dark)
+
+;; Colorful cursor per mode: violet on dark (against #2E3440), mint on light
+;; (against #FFFFFF) — chosen for strong contrast against each background.
+(defun +nano/apply-cursor-color (appearance)
+  (set-face-background 'cursor (if (eq appearance 'dark) "#C792EA" "#00B894")))
+(+nano/apply-cursor-color (if (eq doom-theme 'doom-nano-dark) 'dark 'light))
 
 ;; Follow Ubuntu/GNOME's light/dark appearance setting automatically.
 ;; auto-dark-themes is (DARK-THEMES LIGHT-THEMES), not auto-dark-light-theme/
@@ -72,7 +79,20 @@
   :init
   (setq auto-dark-themes '((doom-nano-dark) (doom-nano-light)))
   :config
-  (auto-dark-mode 1))
+  (auto-dark-mode 1)
+  (add-hook 'auto-dark-dark-mode-hook (lambda () (+nano/apply-cursor-color 'dark)))
+  (add-hook 'auto-dark-light-mode-hook (lambda () (+nano/apply-cursor-color 'light))))
+
+;; DragonRuby/drenv language server (needs drenv >= 0.17.0 on PATH).
+;; Dormant outside DragonRuby projects, so safe to activate on all Ruby.
+(after! lsp-mode
+  (lsp-register-client
+   (make-lsp-client
+    :new-connection (lsp-stdio-connection '("drenv" "lsp"))
+    :activation-fn (lsp-activate-on "ruby")
+    :priority -1
+    :server-id 'drenv)))
+(add-hook 'ruby-mode-hook #'lsp-deferred)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
