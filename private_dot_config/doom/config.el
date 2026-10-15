@@ -34,7 +34,11 @@
 ;;
 (setq doom-font (font-spec :family "Roboto Mono" :size 14)
       doom-variable-pitch-font (font-spec :family "Roboto" :size 14)
-      doom-serif-font (font-spec :family "Roboto Slab" :size 14))
+      doom-serif-font (font-spec :family "Roboto Slab" :size 14)
+      ;; Without this, bullet/symbol glyphs (e.g. org-superstar's ●/○) fall
+      ;; back to whichever system font has them, which often has mismatched
+      ;; metrics and renders as warped/squished ellipses instead of circles.
+      doom-symbol-font (font-spec :family "DejaVu Sans Mono" :size 14))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -62,15 +66,8 @@
                       'doom-nano-dark)))
     (mapc #'disable-theme custom-enabled-themes)
     (load-theme new-theme t)
-    (setq doom-theme new-theme)
-    (+nano/apply-cursor-color (if (eq new-theme 'doom-nano-dark) 'dark 'light))))
+    (setq doom-theme new-theme)))
 (map! :leader "t n" #'+nano/toggle-light-dark)
-
-;; Colorful cursor per mode: violet on dark (against #2E3440), mint on light
-;; (against #FFFFFF) — chosen for strong contrast against each background.
-(defun +nano/apply-cursor-color (appearance)
-  (set-face-background 'cursor (if (eq appearance 'dark) "#C792EA" "#00B894")))
-(+nano/apply-cursor-color (if (eq doom-theme 'doom-nano-dark) 'dark 'light))
 
 ;; Follow Ubuntu/GNOME's light/dark appearance setting automatically.
 ;; auto-dark-themes is (DARK-THEMES LIGHT-THEMES), not auto-dark-light-theme/
@@ -86,9 +83,9 @@
   ;; hooks must be registered BEFORE `auto-dark-mode' is enabled below, since
   ;; enabling it immediately runs the initial check-and-set synchronously.
   (add-hook 'auto-dark-dark-mode-hook
-            (lambda () (setq doom-theme 'doom-nano-dark) (+nano/apply-cursor-color 'dark)))
+            (lambda () (setq doom-theme 'doom-nano-dark)))
   (add-hook 'auto-dark-light-mode-hook
-            (lambda () (setq doom-theme 'doom-nano-light) (+nano/apply-cursor-color 'light)))
+            (lambda () (setq doom-theme 'doom-nano-light)))
   (auto-dark-mode 1))
 
 ;; DragonRuby/drenv language server (needs drenv >= 0.17.0 on PATH).
