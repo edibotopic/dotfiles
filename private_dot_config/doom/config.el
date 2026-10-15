@@ -14,6 +14,43 @@
 (when (and (not IS-WINDOWS) (executable-find "bash"))
   (setq shell-file-name (executable-find "bash")))
 
+;; `ispell-personal-dictionary' lives under a gitignored cache dir (not
+;; chezmoi-tracked), so it won't exist on a fresh machine. aspell silently
+;; fails to save words you accept via `+spell/correct'/`ispell-word' if this
+;; directory is missing — the squiggle just comes back with no error. Doom's
+;; `spell' module only sets this variable lazily once `ispell' is actually
+;; loaded, so we hook the same way rather than checking it at startup.
+(after! ispell
+  (when ispell-personal-dictionary
+    (make-directory (file-name-directory ispell-personal-dictionary) t)))
+
+;; Sensible opening window size (default is tall/narrow). Sized as a
+;; percentage of the frame's actual monitor geometry (not fixed columns/rows),
+;; so it looks right on a small laptop screen, an external 4K monitor, or
+;; anything in between, and is centered on whichever monitor the frame opens
+;; on. Applies to every new frame, including the first one the daemon creates
+;; for emacsclient.
+(defun +nano/size-frame-to-monitor (&optional frame)
+  (when-let* ((frame (or frame (selected-frame)))
+              (workarea (and (display-graphic-p frame)
+                              (frame-monitor-attribute 'workarea frame))))
+    (let* ((mx (nth 0 workarea)) (my (nth 1 workarea))
+           (mw (nth 2 workarea)) (mh (nth 3 workarea))
+           (width (round (* mw 0.7)))
+           (height (round (* mh 0.8)))
+           (x (+ mx (round (/ (- mw width) 2))))
+           (y (+ my (round (/ (- mh height) 2)))))
+      (set-frame-size frame width height t)
+      (set-frame-position frame x y))))
+(defun +nano/size-frame-to-monitor-deferred (&optional frame)
+  "Resize FRAME after a short delay.
+`frame-monitor-attribute' can report stale/incomplete geometry immediately at
+frame-creation time, before the window manager/compositor has finished
+placing the frame, so we give it a moment to settle first."
+  (run-at-time 0.1 nil #'+nano/size-frame-to-monitor (or frame (selected-frame))))
+(add-hook 'window-setup-hook #'+nano/size-frame-to-monitor-deferred)
+(add-hook 'server-after-make-frame-hook #'+nano/size-frame-to-monitor-deferred)
+
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
