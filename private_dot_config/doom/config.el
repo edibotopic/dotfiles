@@ -3,6 +3,10 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
+;; Fish is your $SHELL, which can inject garbage output into child processes
+;; Emacs spawns (compile, vterm, lsp, etc). Force a POSIX shell for those.
+(setq shell-file-name (executable-find "bash"))
+
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
