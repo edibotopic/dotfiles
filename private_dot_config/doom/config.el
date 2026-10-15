@@ -79,9 +79,17 @@
   :init
   (setq auto-dark-themes '((doom-nano-dark) (doom-nano-light)))
   :config
-  (auto-dark-mode 1)
-  (add-hook 'auto-dark-dark-mode-hook (lambda () (+nano/apply-cursor-color 'dark)))
-  (add-hook 'auto-dark-light-mode-hook (lambda () (+nano/apply-cursor-color 'light))))
+  ;; Doom's `doom-init-theme-h' re-applies the `doom-theme' variable on every
+  ;; new frame (incl. each emacsclient window) via `server-after-make-frame-hook'.
+  ;; auto-dark only flips the *active* theme, not that variable, so without
+  ;; this it silently reverts to the stale default on the next frame. These
+  ;; hooks must be registered BEFORE `auto-dark-mode' is enabled below, since
+  ;; enabling it immediately runs the initial check-and-set synchronously.
+  (add-hook 'auto-dark-dark-mode-hook
+            (lambda () (setq doom-theme 'doom-nano-dark) (+nano/apply-cursor-color 'dark)))
+  (add-hook 'auto-dark-light-mode-hook
+            (lambda () (setq doom-theme 'doom-nano-light) (+nano/apply-cursor-color 'light)))
+  (auto-dark-mode 1))
 
 ;; DragonRuby/drenv language server (needs drenv >= 0.17.0 on PATH).
 ;; Dormant outside DragonRuby projects, so safe to activate on all Ruby.
