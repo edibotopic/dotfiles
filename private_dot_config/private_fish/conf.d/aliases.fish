@@ -28,7 +28,7 @@ function hf
     hx (fzf)
 end
 
-alias nv="/usr/local/bin/nvim"
+alias nv="nvim"
 
 function nf
     nv (fzf)

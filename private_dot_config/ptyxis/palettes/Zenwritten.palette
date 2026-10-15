@@ -1,0 +1,46 @@
+[Palette]
+Name=Zenwritten
+Primary=true
+UseSystemAccent=false
+
+[Light]
+Background= #eeeeeeff
+Foreground= #353535ff
+Cursor= #353535ff
+Color0= #eeeeeeff
+Color1= #a8334cff
+Color2= #4f6c31ff
+Color3= #944927ff
+Color4= #286486ff
+Color5= #88507dff
+Color6= #3b8992ff
+Color7= #353535ff
+Color8= #c6c3c3ff
+Color9= #94253eff
+Color10= #3f5a22ff
+Color11= #803d1cff
+Color12= #1d5573ff
+Color13= #7b3b70ff
+Color14= #2b747cff
+Color15= #5c5c5cff
+
+[Dark]
+Background= #191919ff
+Foreground= #bbbbbbff
+Cursor= #bbbbbbff
+Color0= #191919ff
+Color1= #de6e7cff
+Color2= #819b69ff
+Color3= #b77e64ff
+Color4= #6099c0ff
+Color5= #b279a7ff
+Color6= #66a5adff
+Color7= #bbbbbbff
+Color8= #3d3839ff
+Color9= #e8838fff
+Color10= #8bae68ff
+Color11= #d68c67ff
+Color12= #61abdaff
+Color13= #cf86c1ff
+Color14= #65b8c1ff
+Color15= #8e8e8eff
