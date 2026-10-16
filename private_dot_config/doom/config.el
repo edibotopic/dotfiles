@@ -85,22 +85,21 @@ placing the frame, so we give it a moment to settle first."
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-nano-dark)
+(setq doom-theme 'creamsody-darker)
 
-;; doom-nano-themes isn't a doom-themes-dir package, so load-theme can't find
+;; creamsody-theme isn't a doom-themes-dir package, so load-theme can't find
 ;; it via the normal theme search path — register its build dir explicitly.
-(when-let (path (locate-library "doom-nano-dark-theme"))
+(when-let (path (locate-library "creamsody-darker-theme"))
   (add-to-list 'custom-theme-load-path (file-name-directory path)))
 
-;; Toggle between N Λ N O light/dark variants (built on doom-themes, so no
-;; custom modeline/splash machinery involved — avoids the Emacs 28.1
-;; face-remap-set-base bug hit by the real nano-modeline/nano-splash).
+;; Toggle between the dark (creamsody-darker) and light (doom-opera-light,
+;; part of doom-themes) variants.
 (defun +nano/toggle-light-dark ()
-  "Toggle between doom-nano-light and doom-nano-dark."
+  "Toggle between doom-opera-light and creamsody-darker."
   (interactive)
-  (let ((new-theme (if (memq 'doom-nano-dark custom-enabled-themes)
-                        'doom-nano-light
-                      'doom-nano-dark)))
+  (let ((new-theme (if (memq 'creamsody-darker custom-enabled-themes)
+                        'doom-opera-light
+                      'creamsody-darker)))
     (mapc #'disable-theme custom-enabled-themes)
     (load-theme new-theme t)
     (setq doom-theme new-theme)))
@@ -111,7 +110,7 @@ placing the frame, so we give it a moment to settle first."
 ;; auto-dark-dark-theme (those don't exist in this package version).
 (use-package! auto-dark
   :init
-  (setq auto-dark-themes '((doom-nano-dark) (doom-nano-light)))
+  (setq auto-dark-themes '((creamsody-darker) (doom-opera-light)))
   :config
   ;; Doom's `doom-init-theme-h' re-applies the `doom-theme' variable on every
   ;; new frame (incl. each emacsclient window) via `server-after-make-frame-hook'.
@@ -120,9 +119,9 @@ placing the frame, so we give it a moment to settle first."
   ;; hooks must be registered BEFORE `auto-dark-mode' is enabled below, since
   ;; enabling it immediately runs the initial check-and-set synchronously.
   (add-hook 'auto-dark-dark-mode-hook
-            (lambda () (setq doom-theme 'doom-nano-dark)))
+            (lambda () (setq doom-theme 'creamsody-darker)))
   (add-hook 'auto-dark-light-mode-hook
-            (lambda () (setq doom-theme 'doom-nano-light)))
+            (lambda () (setq doom-theme 'doom-opera-light)))
   (auto-dark-mode 1))
 
 ;; DragonRuby/drenv language server (needs drenv >= 0.17.0 on PATH).

@@ -9,8 +9,11 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)
 
-(package! doom-nano-themes
-  :recipe (:host github :repo "ronisbr/doom-nano-themes"))
+;; creamsody-darker (dark) + doom-opera-light (light, ships with
+;; doom-themes, already a core Doom dependency). Replaces doom-nano-themes,
+;; whose minimal face coverage left faces like `evil-ex-search' unstyled and
+;; rendering as invisible (white-on-white) text.
+(package! creamsody-theme)
 (package! auto-dark)
 
 ;; To install a package directly from a remote git repo, you must specify a
