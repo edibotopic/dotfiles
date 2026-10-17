@@ -40,7 +40,7 @@ function ndw
 end
 
 # Utils
-alias ls="eza --icons"
+alias ls="eza --icons=auto"
 
 # Dev
 alias z="zellij"

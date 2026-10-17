@@ -30,3 +30,10 @@ vim.keymap.set("n", "<C-Space>", function()
 	local mc_ns = vim.api.nvim_create_namespace("nvim.multicursor")
 	vim.api.nvim_buf_clear_namespace(0, mc_ns, 0, -1)
 end, { desc = "Clear multicursors" })
+
+-- Place a multicursor at every remaining match of the last search
+-- (shorthand for "zqgn")
+vim.keymap.set("n", "<leader>m", "zqgn", { desc = "Add cursor at every search match" })
+
+-- Toggle multicursor 'follow' mode (shorthand for "q=")
+vim.keymap.set("n", "<leader>f", "q=", { desc = "Toggle multicursor follow mode" })
