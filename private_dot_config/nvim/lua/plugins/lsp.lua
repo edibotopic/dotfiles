@@ -201,7 +201,7 @@ return {
 			-- path picked up over WSL interop.
 			-- stylua is a formatter used by conform, not an LSP server.
 			require("mason-lspconfig").setup({
-				automatic_enable = { exclude = { "ruby_lsp", "stylua" } },
+				automatic_enable = { exclude = { "ruby_lsp", "solargraph", "stylua" } },
 			})
 
 			-- DragonRuby language intelligence via drenv lsp.

@@ -3,6 +3,16 @@ vim.o.termguicolors = true
 -- Follow the GNOME desktop light/dark preference for the colorscheme,
 -- since zenwritten looks best when it matches the OS theme.
 local function system_prefers_dark()
+	if vim.fn.has("win32") == 1 then
+		local ok, result = pcall(vim.fn.system, {
+			"reg",
+			"query",
+			[[HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]],
+			"/v",
+			"AppsUseLightTheme",
+		})
+		return ok and vim.v.shell_error == 0 and result:match("0x0%s*$") ~= nil
+	end
 	local ok, result = pcall(vim.fn.system, { "gsettings", "get", "org.gnome.desktop.interface", "color-scheme" })
 	if ok and vim.v.shell_error == 0 and result:match("prefer%-dark") then
 		return true
