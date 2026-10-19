@@ -51,6 +51,13 @@ return {
 				desc = "[S]earch [N]eovim files",
 			},
 			{
+				"<leader>so",
+				function()
+					require("telescope.builtin").find_files({ cwd = "~/Dropbox/org" })
+				end,
+				desc = "[S]earch [O]rg files",
+			},
+			{
 				"<leader>sp",
 				function()
 					local builtin = require("telescope.builtin")
