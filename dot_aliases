@@ -13,7 +13,7 @@ alias yz=yazi
 
 # Editing
 alias hf='hx $(fzf)'
-alias nv='hx'
+alias nv='nvim'
 
 # Utils
 alias ls='eza --icons=auto'
