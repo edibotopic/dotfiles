@@ -78,7 +78,100 @@ return {
 	{ -- Collection of various small independent plugins/modules
 		"echasnovski/mini.nvim",
 		config = function()
-			require("mini.starter").setup()
+			local MiniStarter = require("mini.starter")
+
+			-- Helper function to expand ~
+			local function expand_path(path)
+				return path:gsub("^~", os.getenv("HOME"))
+			end
+
+			-- Helper to get subdirectories
+			local function get_subdirs(path)
+				local expanded = expand_path(path)
+				local result = {}
+				for item in vim.fs.dir(expanded) do
+					local full_path = expanded .. "/" .. item
+					if vim.fn.isdirectory(full_path) == 1 then
+						table.insert(result, {
+							name = item,
+							path = full_path,
+						})
+					end
+				end
+				table.sort(result, function(a, b) return a.name < b.name end)
+				return result
+			end
+
+			-- Build project items
+			local work_projects = get_subdirs("~/dev/gh-work")
+			local personal_projects = get_subdirs("~/dev/gh-me")
+
+			-- Build org file items
+			local org_files = {}
+			local org_path = expand_path("~/Dropbox/org")
+			if vim.fn.isdirectory(org_path) == 1 then
+				for item in vim.fs.dir(org_path) do
+					if item:match("%.org$") then
+						table.insert(org_files, {
+							name = item:gsub("%.org$", ""),
+							path = org_path .. "/" .. item,
+						})
+					end
+				end
+				table.sort(org_files, function(a, b) return a.name < b.name end)
+			end
+
+			-- Build a flat list of starter items for a group of {name, path}
+			-- entries, tagged with the given section name and icon.
+			local function build_items(entries, section, icon)
+				local result = {}
+				for _, entry in ipairs(entries) do
+					table.insert(result, {
+						name = icon .. " " .. entry.name,
+						action = function() vim.cmd("edit " .. vim.fn.fnameescape(entry.path)) end,
+						section = section,
+					})
+				end
+				return result
+			end
+
+			-- Nerd Font icon glyphs, written as explicit UTF-8 byte escapes
+			-- since LuaJIT's \u{} unicode escape isn't supported and raw
+			-- private-use-area glyphs don't survive plain-text copy/paste.
+			local icon_new_file = "\239\133\156" -- nf-fa-file_text
+			local icon_quit = "\239\128\145" -- nf-fa-power_off
+			local icon_folder = "\239\129\187" -- nf-fa-folder
+			local icon_lightbulb = "\239\131\171" -- nf-fa-lightbulb_o
+			local icon_note = "\239\137\137" -- nf-fa-sticky_note
+
+			-- Build items list
+			local items = {
+				{ name = icon_new_file .. " New file", action = "enew", section = "Quick Actions" },
+				{ name = icon_quit .. " Quit", action = "qa", section = "Quick Actions" },
+			}
+
+			vim.list_extend(items, build_items(work_projects, "Work Projects", icon_folder))
+			vim.list_extend(items, build_items(personal_projects, "Personal Projects", icon_lightbulb))
+			vim.list_extend(items, build_items(org_files, "Org Files", icon_note))
+
+			-- Quotes shown at random as the splash header. Add more here.
+			local quotes = {
+				"a little every day, without hope, without despair — Isak Dinesen",
+				"fundamental accuracy of statement is the ONE sole morality of writing — Ezra Pound",
+			}
+
+			MiniStarter.setup({
+				evaluate_single = true,
+				items = items,
+				header = function()
+					return quotes[math.random(#quotes)]
+				end,
+				content_hooks = {
+					MiniStarter.gen_hook.adding_bullet(),
+					MiniStarter.gen_hook.indexing("all", { "Quick Actions" }),
+					MiniStarter.gen_hook.aligning("center", "center"),
+				},
+			})
 
 			-- Better Around/Inside textobjects
 			--
